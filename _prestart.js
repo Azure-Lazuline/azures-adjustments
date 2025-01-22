@@ -328,3 +328,19 @@ sc.EnemyType.inject({
 		this.parent(b, c);
 	}
 });
+
+//implement "NO_BOMB_HOMING" hint for fire attacks that don't send bombs directly towards you
+sc.BombEntity.inject({
+	ballHit(a){
+		if(a.attackInfo.hasHint("NO_BOMB_HOMING"))
+		{
+			var backup = a.attackInfo;
+			a.attackInfo.hints = ["CHARGED"];
+			var ret = this.parent(a);
+			a.attackInfo = backup;
+			return ret;
+		}
+		else
+			return this.parent(a);
+	}
+});

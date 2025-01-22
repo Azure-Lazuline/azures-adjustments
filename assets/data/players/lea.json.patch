@@ -170,7 +170,7 @@
 },{
 	"type": "SET_KEY",
 	"index": "value",
-	"content": 6000
+	"content": 3000
 },{
 	"type": "EXIT"
 },{
@@ -178,7 +178,7 @@
 	"index": 4,
 	"content":
 	{
-		"factor": 0.1,
+		"factor": 0.2,
 		"time": 0,
 		"keepEntityStatic": true,
 		"inversAccelerate": false,
@@ -214,7 +214,7 @@
 },{
 	"type": "SET_KEY",
 	"index": "value",
-	"content": 6000
+	"content": 3000
 },{
 	"type": "EXIT"
 },{
@@ -222,7 +222,7 @@
 	"index": 10,
 	"content":
 	{
-		"factor": 0.1,
+		"factor": 0.2,
 		"time": 0,
 		"keepEntityStatic": true,
 		"inversAccelerate": false,
@@ -443,7 +443,7 @@
 			"flyHeight": 1
 		},
 		"type": "GENERIC"
-	},
+	}
 },{
 	"type": "EXIT"
 
@@ -965,6 +965,50 @@
 	}
 },{
 	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+
+
+
+
+
+
+},{
+	"type": "ENTER",
+	"index": ["proxies", "iceOnWall", "action", 5]
+},{
+	"type": "SET_KEY",
+	"index": "startDist",
+	"content": 18
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["proxies", "iceSpecialSmallHoming", "behaviors", 0]
+},{
+	"type": "SET_KEY",
+	"index": "steerDegree",
+	"content": 1.4
+},{
+	"type": "SET_KEY",
+	"index": "adjustTime",
+	"content": 0.6
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "SET_KEY",
+	"index": "timer",
+	"content": 1.0
 },{
 	"type": "EXIT"
 },{

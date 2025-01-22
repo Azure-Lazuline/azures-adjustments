@@ -19,6 +19,8 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 
 - Dungeon enemies respawn much quicker after clearing the room, to help with getting materials from ones that are only in a single room. (Overworld enemies are unaffected.)
 
+- King Kaktorro's flamethrower fires in pulses instead of a constant stream, giving you better opportunities to escape.
+
 - The DLC temple midboss's phase transition attacks are in a randomized order but they're slightly easier to dodge, so it's not just a matter of memorizing where to place them.
 
 - A certain DLC bonus boss spends *significantly* less time flying around doing nothing, and has generally improved AI with much more attack variety.
@@ -33,6 +35,8 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 - Ashen Mine / Mine Valley: Small damage boost, to match its difficulty and lack of iframes compared to the alternative skills.
 
 - Ring of Fire (all 3): VFX improvements to all of them, and a damage boost to base Ring of Fire itself.
+
+- Hail Storm: Wider spread but better homing, to make it somewhat more consistent.
 
 - Frigid Flawke: Only does the camera pan if you actually hit an enemy, to prevent jarring camera movements.
 
