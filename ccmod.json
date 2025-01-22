@@ -5,7 +5,7 @@
   "description": {
     "en_US": "Lots of small fixes, balancing, and other tweaks, recommended for a first playthrough."
   },
-  "repository": "",
+  "repository": "https://github.com/Azure-Lazuline/azures-adjustments",
   "tags": ["cosmetic", "combat", "QoL"],
   "authors": "Azure Lazuline",
   "icons": {

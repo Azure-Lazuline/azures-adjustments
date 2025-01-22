@@ -549,7 +549,7 @@
 },{
 	"type": "SET_KEY",
 	"index": "attachedSpMultiplier",
-	"content": 0.6
+	"content": 0.5
 },{
 	"type": "EXIT"
 },{
@@ -565,7 +565,7 @@
 },{
 	"type": "SET_KEY",
 	"index": "attachedSpMultiplier",
-	"content": 0.5
+	"content": 0.4
 },{
 	"type": "EXIT"
 },{
