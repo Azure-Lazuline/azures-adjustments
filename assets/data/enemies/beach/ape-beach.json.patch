@@ -1,0 +1,436 @@
+[{
+	"type": "ENTER",
+	"index": ["actions", "Init" ]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 2,
+	"content": {
+		"changeType": "set",
+		"type": "SET_ATTRIB_BOOL",
+		"name": "newForceSpecial",
+		"value": false
+	}
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 2,
+	"content": {
+		"type": "SET_ATTRIB_BOOL",
+		"name": "forcedSpecialHeat",
+		"value": false
+	}
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 2,
+	"content": {
+		"type": "SET_ATTRIB_BOOL",
+		"name": "forcedSpecialCold",
+		"value": false
+	}
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 2,
+	"content": {
+		"type": "SET_ATTRIB_BOOL",
+		"name": "forcedSpecialShock",
+		"value": false
+	}
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 2,
+	"content": {
+		"type": "SET_ATTRIB_BOOL",
+		"name": "forcedSpecialWave",
+		"value": false
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["trackers", "special"]
+},{
+	"type": "SET_KEY",
+	"index": "target",
+	"content": 16
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["proxies", "shockBombL", "action"]
+},{
+	"type": "ENTER",
+	"index": 20
+},{
+	"type": "SET_KEY",
+	"index": "conditions",
+	"content":
+	[{
+		"min": 1,
+		"negated": false,
+		"type": "HP_BREAK"
+	}]
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": 21
+},{
+	"type": "SET_KEY",
+	"index": "conditions",
+	"content":
+	[{
+		"min": 1,
+		"negated": false,
+		"type": "HP_BREAK"
+	}]
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": 42
+},{
+	"type": "SET_KEY",
+	"index": "conditions",
+	"content":
+	[{
+		"min": 3,
+		"negated": false,
+		"type": "HP_BREAK"
+	}]
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["states", "CLOUD"]
+},{
+	"type": "SET_KEY",
+	"index": "choices",
+	"content": [
+		{
+			"req": [
+			{
+				"negated": false,
+				"type": "ENTERED_STATE"
+			}],
+			"action": "CloudInit"
+		},
+		{
+			"req": [
+			{
+				"name": "cloudOver",
+				"negated": false,
+				"type": "ATTRIB_IS_TRUE"
+			}],
+			"action": "CloudEnd",
+			"preSwitchState": "DEFAULT"
+		},
+		{
+			"req": [
+			{
+				"negated": false,
+				"type": "TRACKER_READY",
+				"name": "cloudTime"
+			}],
+			"action": "CloudAttackBig"
+		},
+		{
+			"req": [
+			{
+				"name": "cloudHeat",
+				"type": "!ATTRIB_IS_TRUE"
+			},
+			{
+				"max": 0.33,
+				"negated": false,
+				"type": "RANDOM"
+			}],
+			"action": "CloudAttackHeat"
+		},
+		{
+			"req": [
+			{
+				"name": "cloudCold",
+				"type": "!ATTRIB_IS_TRUE"
+			},
+			{
+				"max": 0.5,
+				"negated": false,
+				"type": "RANDOM"
+			}],
+			"action": "CloudAttackCold"
+		},
+		{
+			"req": [
+			{
+				"name": "cloudShock",
+				"type": "!ATTRIB_IS_TRUE"
+			}],
+			"action": "CloudAttackShock"
+		},
+		{
+			"action": "CloudeMove"
+		}
+	]
+},{
+	"type": "EXIT",
+},{
+	"type": "EXIT",
+},{
+	"type": "ENTER",
+	"index": ["states", "DEFAULT", "choices", 5]
+},{
+	"type": "SET_KEY",
+	"index": "req",
+	"content":
+	[
+		{
+			"negated": false,
+			"type": "VAR_CONDITION",
+			"condition": "!tmp.whape"
+		},
+		{
+			"noResetOnPerformed": true,
+			"negated": false,
+			"type": "TRACKER_READY",
+			"name": "cloudStart"
+		},
+		{
+			"min": 1,
+			"negated": false,
+			"type": "HP_BREAK"
+		}
+	]
+},{
+	"type": "EXIT",
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 5,
+	"content": {
+		"req": [
+		{
+			"noResetOnPerformed": true,
+			"negated": false,
+			"type": "TRACKER_READY",
+			"name": "cloudStart"
+		},
+		{
+			"min": 1,
+			"max": 1,
+			"negated": false,
+			"type": "HP_BREAK"
+		}],
+		"action": "NewPhaseTransition",
+		"ignoreStun": true
+	}
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 5,
+	"content": {
+		"req": [
+		{
+			"noResetOnPerformed": true,
+			"negated": false,
+			"type": "TRACKER_READY",
+			"name": "cloudStart"
+		},
+		{
+			"min": 3,
+			"max": 4,
+			"negated": false,
+			"type": "HP_BREAK"
+		}],
+		"action": "NewPhaseTransition",
+		"ignoreStun": true
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["states", "HEAT", "choices"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 1,
+	"content": {
+		"req": [
+		{
+			"negated": false,
+			"type": "VAR_CONDITION",
+			"condition": "entity.attrib.newForceSpecial"
+		}],
+		"postSwitchState": "HEAT",
+		"action": "SpecialStartForced"
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["states", "COLD", "choices"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 1,
+	"content": {
+		"req": [
+		{
+			"negated": false,
+			"type": "VAR_CONDITION",
+			"condition": "entity.attrib.newForceSpecial"
+		}],
+		"postSwitchState": "COLD",
+		"action": "SpecialStartForced"
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["states", "SHOCK", "choices"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 1,
+	"content": {
+		"req": [
+		{
+			"negated": false,
+			"type": "VAR_CONDITION",
+			"condition": "entity.attrib.newForceSpecial"
+		}],
+		"postSwitchState": "SHOCK",
+		"action": "SpecialStartForced"
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["states", "WAVE", "choices"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 1,
+	"content": {
+		"req": [
+		{
+			"negated": false,
+			"type": "VAR_CONDITION",
+			"condition": "entity.attrib.newForceSpecial"
+		}],
+		"postSwitchState": "WAVE",
+		"action": "SpecialStartForced"
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["actions"]
+},{
+	"type": "ENTER",
+	"index": ["CloudJump"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 20,
+	"content": {
+		"forceValue": 0,
+		"type": "RESET_TRACKER",
+		"tracker": "cloudStart"
+	}	
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["SpecialHeat"]
+},{
+	"type": "REMOVE_ARRAY_ELEMENT",
+	"index": 15
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 15,
+	"content": {
+		"type": "WAIT",
+		"time": 8
+	}
+},{
+	"type": "REMOVE_ARRAY_ELEMENT",
+	"index": 26
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["SpecialCold"]
+},{
+	"type": "REMOVE_ARRAY_ELEMENT",
+	"index": 38
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["SpecialShock"]
+},{
+	"type": "REMOVE_ARRAY_ELEMENT",
+	"index": 29
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["SpecialWave"]
+},{
+	"type": "REMOVE_ARRAY_ELEMENT",
+	"index": 28
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["CloudAttackHeat"]
+},{
+	"type": "REMOVE_ARRAY_ELEMENT",
+	"index": 16
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["CloudAttackCold"]
+},{
+	"type": "REMOVE_ARRAY_ELEMENT",
+	"index": 10
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["CloudAttackShock"]
+},{
+	"type": "REMOVE_ARRAY_ELEMENT",
+	"index": 10
+},{
+	"type": "EXIT"
+},{
+	"type": "IMPORT",
+	"src": "data/enemies/beach/ape-beach-changes.json"
+},{
+	"type": "EXIT"
+}
+]

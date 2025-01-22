@@ -1,0 +1,31 @@
+[{
+	"type": "ENTER",
+	"index": ["actions"]
+},{
+	"type": "ENTER",
+	"index": ["SpawnSpear"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 11,
+	"content": {
+		"sticking": false,
+		"group": "trail",
+		"ignoreSelf": false,
+		"type": "REMOVE_PROXIES"
+	}
+},{
+	"type": "EXIT",
+	"count": 1
+},{
+	"type": "SET_KEY",
+	"index": "FlySpawningA"
+},{
+	"type": "SET_KEY",
+	"index": "FlySpawningC"
+},{
+	"type": "IMPORT",
+	"src": "extension/post-game/data/enemies/final/gyntharchanges.json"
+},{
+	"type": "EXIT",
+	"count": 1
+}]

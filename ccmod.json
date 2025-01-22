@@ -1,0 +1,18 @@
+{
+  "id": "Azure's Adjustments",
+  "version": "1.0.0",
+  "title": "Azure's Adjustments",
+  "description": {
+    "en_US": "Lots of small fixes, balancing, and other tweaks, recommended for a first playthrough."
+  },
+  "repository": "",
+  "tags": ["cosmetic", "combat", "QoL"],
+  "authors": "Azure Lazuline",
+  "icons": {
+    "24": "icon24.png"
+  },
+  "prestart": "_prestart.js",
+  "dependencies": {
+		"extension-asset-preloader": ">=1.0.0"
+  }
+}

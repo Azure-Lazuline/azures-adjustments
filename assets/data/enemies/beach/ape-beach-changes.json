@@ -1,0 +1,517 @@
+{
+	"NewPhaseTransition": [
+		{
+			"stateReset": false,
+			"type": "DO_ENEMY_ACTION_INLINE",
+			"actionName": "NewSpecialInit"
+		},
+		{
+			"changeType": "set",
+			"type": "SET_ATTRIB_BOOL",
+			"name": "newForceSpecial",
+			"value": true
+		},
+		{
+			"type": "SELECT_RANDOM",
+			"options": 
+			[
+                {
+                    "0": " ",
+                    "count": 1,
+                    "weight": 1,
+                    "activeCondition": "!entity.attrib.forcedSpecialHeat"
+                },
+                {
+                    "0": " ",
+                    "count": 1,
+                    "weight": 1,
+                    "activeCondition": "!entity.attrib.forcedSpecialCold"
+                },
+                {
+                    "0": " ",
+                    "count": 1,
+                    "weight": 1,
+                    "activeCondition": "!entity.attrib.forcedSpecialShock"
+                },
+                {
+                    "0": " ",
+                    "count": 1,
+                    "weight": 1,
+                    "activeCondition": "!entity.attrib.forcedSpecialWave"
+                }],
+                "0_0": [
+				{
+					"type": "SET_ATTRIB_BOOL",
+					"name": "forcedSpecialHeat",
+					"value": true
+				},
+                {
+					"stateReset": false,
+					"type": "DO_ENEMY_ACTION_INLINE",
+					"actionName": "SwitchHeat"
+                }],
+                "1_0": [
+				{
+					"type": "SET_ATTRIB_BOOL",
+					"name": "forcedSpecialCold",
+					"value": true
+				},
+                {
+					"stateReset": false,
+					"type": "DO_ENEMY_ACTION_INLINE",
+					"actionName": "SwitchCold"
+                }],
+                "2_0": [
+				{
+					"type": "SET_ATTRIB_BOOL",
+					"name": "forcedSpecialShock",
+					"value": true
+				},
+                {
+					"stateReset": false,
+					"type": "DO_ENEMY_ACTION_INLINE",
+					"actionName": "SwitchShock"
+                }],
+                "3_0": [
+				{
+					"type": "SET_ATTRIB_BOOL",
+					"name": "forcedSpecialWave",
+					"value": true
+				},
+                {
+					"stateReset": false,
+					"type": "DO_ENEMY_ACTION_INLINE",
+					"actionName": "SwitchWave"
+                }
+			]
+		}
+	],
+	"SpecialStartForced": [
+		{
+			"changeType": "set",
+			"type": "SET_ATTRIB_BOOL",
+			"name": "newForceSpecial",
+			"value": false
+		},
+		{
+			"forceValue": 0,
+			"type": "RESET_TRACKER",
+			"tracker": "cloudStart"
+		},
+		{
+			"conditions": [
+            {
+                "negated": false,
+                "type": "CURRENT_STATE",
+                "state": "WAVE"
+            }],
+            "withElse": true,
+            "type": "COMBAT_IF",
+            "thenStep": 
+			[
+				{
+					"type": "SET_ATTRIB_BOOL",
+					"name": "specialWave",
+					"value": true
+				},
+				{
+					"noStateReset": false,
+					"type": "DO_ENEMY_ACTION_INLINE",
+					"actionName": "SpecialWave"
+				}
+			],
+			"elseStep": 
+			[
+				{
+					"type": "DISABLE_REACTION",
+					"reaction": "BALL_DODGE_SHOCK"
+				},
+				{
+					"type": "SET_ATTRIB_BOOL",
+					"name": "specialHeat",
+					"value": false
+				},
+				{
+					"type": "SET_ATTRIB_BOOL",
+					"name": "specialCold",
+					"value": false
+				},
+				{
+					"type": "SET_ATTRIB_BOOL",
+					"name": "specialShock",
+					"value": false
+				},
+				{
+					"changeType": "set",
+					"type": "SET_ATTRIB_NUMBER",
+					"attribName": "specialIntensity",
+					"value": 1
+				},
+				{
+					"changeType": "add",
+					"type": "SET_ATTRIB_NUMBER",
+					"attribName": "specialIntensity",
+					"value":
+					{
+						"varName": "entity.hpBreak"
+					}
+				},
+				{
+					"changeType": "set",
+					"type": "SET_ATTRIB_NUMBER",
+					"attribName": "specialNumber",
+					"value": 0
+				},
+				{
+					"value": -1,
+					"type": "SET_WEIGHT"
+				},
+				{
+					"value": "MASSIVE",
+					"type": "SET_HIT_STABLE"
+				},
+				{
+					"kind": "NAMED_ENTITY",
+					"key": "center",
+					"type": "SET_TEMP_TARGET"
+				},
+				{
+					"conditions": [
+					{
+						"min": 0,
+						"max": 24,
+						"type": "!TARGET_DISTANCE"
+					}],
+					"withElse": false,
+					"type": "COMBAT_IF",
+					"thenStep": [
+					{
+						"type": "CLEAR_TEMP_TARGET"
+					},
+					{
+						"value": "IGNORE",
+						"type": "SET_COLL_TYPE"
+					},
+					{
+						"value": false,
+						"immediately": true,
+						"type": "FACE_TO_TARGET"
+					},
+					{
+						"wait": false,
+						"viaWalkConfig": false,
+						"type": "SHOW_ANIMATION",
+						"anim": "preJump"
+					},
+					{
+						"time": 0.15,
+						"type": "WAIT"
+					},
+					{
+						"value": false,
+						"immediately": true,
+						"type": "FACE_TO_TARGET"
+					},
+					{
+						"wait": false,
+						"viaWalkConfig": false,
+						"type": "SHOW_ANIMATION",
+						"anim": "fall"
+					},
+					{
+						"value": 200,
+						"type": "SET_Z_VEL"
+					},
+					{
+						"value": 2.5,
+						"type": "SET_RELATIVE_SPEED"
+					},
+					{
+						"kind": "NAMED_ENTITY",
+						"key": "center",
+						"type": "SET_TEMP_TARGET"
+					},
+					{
+						"maxTime": 1.5,
+						"forceTime": false,
+						"distance": 0,
+						"planOnly": false,
+						"targetType": "ENEMY",
+						"precise": true,
+						"type": "NAVIGATE_TO_TARGET"
+					},
+					{
+						"time": 0.016,
+						"type": "WAIT"
+					},
+					{
+						"type": "WAIT_UNTIL_ON_GROUND"
+					},
+					{
+						"wait": false,
+						"viaWalkConfig": false,
+						"type": "SHOW_ANIMATION",
+						"anim": "postJump"
+					},
+					{
+						"time": 0.1,
+						"type": "WAIT"
+					},
+					{
+						"wait": true,
+						"viaWalkConfig": false,
+						"type": "SHOW_ANIMATION",
+						"anim": "postJump2"
+					},
+					{
+						"value": "VIRTUAL",
+						"type": "SET_COLL_TYPE"
+					}]
+				},
+				{
+					"type": "CLEAR_TEMP_TARGET"
+				},
+				{
+					"value": 0.5,
+					"type": "SET_DAMAGE_FACTOR"
+				},
+				{
+					"offsetX": 0,
+					"offsetY": 0,
+					"speed": "NORMAL",
+					"transition": "EASE_IN_OUT",
+					"wait": false,
+					"waitSkip": 0,
+					"zoom": 1,
+					"focusType": "SELF",
+					"type": "FOCUS_CAMERA"
+				},
+				{
+					"value": false,
+					"type": "FACE_TO_TARGET"
+				},
+				{
+					"searchType": "ENEMY_DIR",
+					"rotate": true,
+					"rotateSpeed": 3,
+					"type": "SET_CLOSEST_FACE",
+					"faces": ["SOUTH_EAST", "SOUTH_WEST"]
+				},
+				{
+					"wait": false,
+					"viaWalkConfig": false,
+					"type": "SHOW_ANIMATION",
+					"anim": "preSpecial"
+				},
+				{
+					"time": 0.5,
+					"type": "WAIT"
+				},
+				{
+					"wait": false,
+					"viaWalkConfig": false,
+					"type": "SHOW_ANIMATION",
+					"anim": "preSpecial2"
+				},
+				{
+					"time": 0.3,
+					"type": "WAIT"
+				},
+				{
+					"speed": "NORMAL",
+					"transition": "EASE_IN_OUT",
+					"wait": false,
+					"waitSkip": 0,
+					"type": "RESET_CAMERA"
+				},
+				{
+					"time": 0.1,
+					"type": "WAIT"
+				},
+				{
+					"conditions": [
+					{
+						"negated": false,
+						"type": "CURRENT_STATE",
+						"state": "HEAT"
+					}],
+					"withElse": false,
+					"type": "COMBAT_IF",
+					"thenStep": [
+					{
+						"type": "SET_ATTRIB_BOOL",
+						"name": "specialHeat",
+						"value": true
+					},
+					{
+						"noStateReset": false,
+						"type": "DO_ENEMY_ACTION_INLINE",
+						"actionName": "SpecialHeat"
+					}]
+				},
+				{
+					"conditions": [
+					{
+						"negated": false,
+						"type": "CURRENT_STATE",
+						"state": "COLD"
+					}],
+					"withElse": false,
+					"type": "COMBAT_IF",
+					"thenStep": [
+					{
+						"type": "SET_ATTRIB_BOOL",
+						"name": "specialCold",
+						"value": true
+					},
+					{
+						"noStateReset": false,
+						"type": "DO_ENEMY_ACTION_INLINE",
+						"actionName": "SpecialCold"
+					}]
+				},
+				{
+					"conditions": [
+					{
+						"negated": false,
+						"type": "CURRENT_STATE",
+						"state": "SHOCK"
+					}],
+					"withElse": false,
+					"type": "COMBAT_IF",
+					"thenStep": [
+					{
+						"type": "SET_ATTRIB_BOOL",
+						"name": "specialShock",
+						"value": true
+					},
+					{
+						"noStateReset": false,
+						"type": "DO_ENEMY_ACTION_INLINE",
+						"actionName": "SpecialShock"
+					}]
+				}
+			]
+		},
+		{
+			"forceValue": 0,
+			"type": "RESET_TRACKER",
+			"tracker": "special"
+		}
+	],
+	"NewSpecialInit": [
+        {
+            "type": "DISABLE_REACTION",
+            "reaction": "BALL_DODGE_SHOCK"
+        },
+        {
+            "value": -1,
+            "type": "SET_WEIGHT"
+        },
+        {
+            "value": "MASSIVE",
+            "type": "SET_HIT_STABLE"
+        },
+        {
+            "kind": "NAMED_ENTITY",
+            "key": "center",
+            "type": "SET_TEMP_TARGET"
+        },
+        {
+            "conditions": [
+            {
+                "min": 0,
+                "max": 24,
+                "type": "!TARGET_DISTANCE"
+            }],
+            "withElse": false,
+            "type": "COMBAT_IF",
+            "thenStep": [
+            {
+                "type": "CLEAR_TEMP_TARGET"
+            },
+            {
+                "value": "IGNORE",
+                "type": "SET_COLL_TYPE"
+            },
+            {
+                "value": false,
+                "immediately": true,
+                "type": "FACE_TO_TARGET"
+            },
+            {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "preJump"
+            },
+            {
+                "time": 0.15,
+                "type": "WAIT"
+            },
+            {
+                "value": false,
+                "immediately": true,
+                "type": "FACE_TO_TARGET"
+            },
+            {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "fall"
+            },
+            {
+                "value": 200,
+                "type": "SET_Z_VEL"
+            },
+            {
+                "value": 3.5,
+                "type": "SET_RELATIVE_SPEED"
+            },
+            {
+                "kind": "NAMED_ENTITY",
+                "key": "center",
+                "type": "SET_TEMP_TARGET"
+            },
+            {
+                "maxTime": 1.5,
+                "forceTime": false,
+                "distance": 0,
+                "planOnly": false,
+                "targetType": "ENEMY",
+                "precise": true,
+                "type": "NAVIGATE_TO_TARGET"
+            },
+            {
+                "time": 0.016,
+                "type": "WAIT"
+            },
+            {
+                "type": "WAIT_UNTIL_ON_GROUND"
+            },
+            {
+                "wait": false,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "postJump"
+            },
+            {
+                "time": 0.1,
+                "type": "WAIT"
+            },
+            {
+                "wait": true,
+                "viaWalkConfig": false,
+                "type": "SHOW_ANIMATION",
+                "anim": "postJump2"
+            },
+            {
+                "value": "VIRTUAL",
+                "type": "SET_COLL_TYPE"
+            }]
+        },
+        {
+            "type": "CLEAR_TEMP_TARGET"
+        }
+	]
+}

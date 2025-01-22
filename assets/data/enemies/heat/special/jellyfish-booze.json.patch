@@ -1,0 +1,10 @@
+[{
+	"type": "ENTER",
+	"index": ["params"]
+},{
+	"type": "SET_KEY",
+	"index": "hp",
+	"content": 12500
+},{
+	"type": "EXIT"
+}]

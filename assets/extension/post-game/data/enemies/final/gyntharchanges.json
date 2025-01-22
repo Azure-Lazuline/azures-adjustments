@@ -1,0 +1,768 @@
+{
+	"FlySpawningA": [
+	{
+		"type": "SELECT_RANDOM",
+		"options": [
+			{
+				"0":" ",
+				"count": 2,
+				"weight": 1
+			}
+		],		
+		"0_0":[
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFirstPt1"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFirstSword"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFirstHammer"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFirstEither"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFirstPt2"
+			}
+		],
+		"0_1":[
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFirstPt1"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFirstHammer"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFirstSword"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFirstEither"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFirstPt2"
+			}
+		]
+	}
+	],
+	"RandomFirstPt1": [
+	{
+		"changeType": "set",
+		"attribName": "weapon",
+		"type": "SET_ATTRIB_NUMBER",
+		"value": 0
+	},
+	{
+		"changeType": "set",
+		"attribName": "attack",
+		"type": "SET_ATTRIB_NUMBER",
+		"value": 0
+	},
+	{
+		"type": "WAIT",
+		"time": 0.2
+	},
+	{
+		"wait": false,
+		"viaWalkConfig": false,
+		"type": "SHOW_ANIMATION",
+		"anim": "charge"
+	}],
+	"RandomFirstSword": [
+	{
+		"stateReset": false,
+		"type": "DO_ENEMY_ACTION_INLINE",
+		"actionName": "SpawnSword"
+	},
+	{
+		"type": "WAIT",
+		"time": 0.8
+	}],
+	"RandomFirstHammer": [
+	{
+		"stateReset": false,
+		"type": "DO_ENEMY_ACTION_INLINE",
+		"actionName": "SpawnHammer"
+	},
+	{
+		"type": "WAIT",
+		"time": 0.8
+	}],
+	"RandomFirstEither": [
+	{
+		"type": "SELECT_RANDOM",
+		"options": [
+			{
+				"0":" ",
+				"count": 2,
+				"weight": 1
+			}
+		],		
+		"0_0":[
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "SpawnSword"
+			}
+		],
+		"0_1":[
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "SpawnHammer"
+			}
+		]
+	}],
+	"RandomFirstPt2": [
+	{
+		"speed": "NORMAL",
+		"transition": "EASE_IN_OUT",
+		"wait": false,
+		"waitSkip": 0,
+		"type": "RESET_CAMERA"
+	},
+	{
+		"wait": false,
+		"viaWalkConfig": false,
+		"type": "SHOW_ANIMATION",
+		"anim": "fly"
+	},
+	{
+		"type": "WAIT",
+		"time": 0.3
+	},
+	{
+		"variance": 12,
+		"accel": 3,
+		"speed": 100,
+		"type": "SET_FLOAT_PARAMS"
+	},
+	{
+		"value": 96,
+		"type": "SET_FLY_HEIGHT"
+	},
+	{
+		"type": "SET_RELATIVE_SPEED",
+		"value": 0.5
+	},
+	{
+		"value": 0.5,
+		"type": "SET_ACCEL_SPEED"
+	},
+	{
+		"value": 0.4,
+		"type": "SET_AIR_FRICTION"
+	},
+	{
+		"value": true,
+		"type": "FACE_TO_TARGET"
+	},
+	{
+		"value": 0.8,
+		"type": "FACE_TO_TARGET_SPEED"
+	},
+	{
+		"value": 1.2,
+		"type": "SET_Z_GRAVITY_FACTOR"
+	},
+	{
+		"min": 0,
+		"max": 16,
+		"maxTime": 1,
+		"offset":
+		{
+			"x": 0,
+			"y": -48
+		},
+		"forceTime": true,
+		"stopBeforeEdge": false,
+		"type": "MOVE_TO_DISTANCE"
+	},
+	{
+		"stateReset": false,
+		"type": "DO_ENEMY_ACTION_INLINE",
+		"actionName": "ShootNext"
+	},
+	{
+		"min": 0,
+		"max": 16,
+		"maxTime": 0.6,
+		"offset":
+		{
+			"x": 0,
+			"y": -48
+		},
+		"forceTime": true,
+		"stopBeforeEdge": false,
+		"type": "MOVE_TO_DISTANCE"
+	},
+	{
+		"stateReset": false,
+		"type": "DO_ENEMY_ACTION_INLINE",
+		"actionName": "ShootNext"
+	},
+	{
+		"min": 0,
+		"max": 16,
+		"maxTime": 0.6,
+		"offset":
+		{
+			"x": 0,
+			"y": -48
+		},
+		"forceTime": true,
+		"stopBeforeEdge": false,
+		"type": "MOVE_TO_DISTANCE"
+	},
+	{
+		"stateReset": false,
+		"type": "DO_ENEMY_ACTION_INLINE",
+		"actionName": "ShootNext"
+	},
+	{
+		"min": 0,
+		"max": 16,
+		"maxTime": 0.5,
+		"offset":
+		{
+			"x": 0,
+			"y": -48
+		},
+		"forceTime": true,
+		"stopBeforeEdge": false,
+		"type": "MOVE_TO_DISTANCE"
+	},
+	{
+		"wait": false,
+		"viaWalkConfig": false,
+		"type": "SHOW_ANIMATION",
+		"anim": "fly"
+	}],
+
+
+	
+	"FlySpawningC": [
+	{
+		"type": "SELECT_RANDOM",
+		"options": [
+			{
+				"0":" ",
+				"count": 6,
+				"weight": 1
+			}
+		],
+		"0_0":[
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt1"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalSword"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalHammer"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalCards"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt2"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootShort"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootShort"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootLong"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt3"
+			}
+		],
+		"0_1":[
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt1"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalSword"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalCards"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalHammer"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt2"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootShort"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootLong"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootShort"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt3"
+			}
+		],
+		"0_2":[
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt1"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalHammer"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalSword"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalCards"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt2"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootShort"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootShort"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootLong"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt3"
+			}
+		],
+		"0_3":[
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt1"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalHammer"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalCards"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalSword"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt2"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootShort"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootLong"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootShort"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt3"
+			}
+		],
+		"0_4":[
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt1"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalCards"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalSword"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalHammer"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt2"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootLong"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootShort"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootShort"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt3"
+			}
+		],
+		"0_5":[
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt1"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalCards"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalHammer"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalSword"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt2"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootLong"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootShort"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalShootShort"
+			},
+			{
+				"stateReset": false,
+				"type": "DO_ENEMY_ACTION_INLINE",
+				"actionName": "RandomFinalPt3"
+			}
+		]
+	}
+	],
+	
+	
+	"RandomFinalPt1": [
+	{
+		"changeType": "set",
+		"attribName": "weapon",
+		"type": "SET_ATTRIB_NUMBER",
+		"value": 0
+	},
+	{
+		"changeType": "set",
+		"attribName": "attack",
+		"type": "SET_ATTRIB_NUMBER",
+		"value": 0
+	},
+	{
+		"type": "WAIT",
+		"time": 0.2
+	},
+	{
+		"wait": false,
+		"viaWalkConfig": false,
+		"type": "SHOW_ANIMATION",
+		"anim": "charge"
+	}
+	],
+	"RandomFinalSword": [
+	{
+		"stateReset": false,
+		"type": "DO_ENEMY_ACTION_INLINE",
+		"actionName": "SpawnSword"
+	},
+	{
+		"type": "WAIT",
+		"time": 0.6
+	}
+	],
+	"RandomFinalHammer": [
+	{
+		"stateReset": false,
+		"type": "DO_ENEMY_ACTION_INLINE",
+		"actionName": "SpawnHammer"
+	},
+	{
+		"type": "WAIT",
+		"time": 0.6
+	}
+	],
+	"RandomFinalCards": [
+	{
+		"speed": "NORMAL",
+		"transition": "EASE_IN_OUT",
+		"wait": false,
+		"waitSkip": 0,
+		"type": "RESET_CAMERA"
+	},
+	{
+		"stateReset": false,
+		"type": "DO_ENEMY_ACTION_INLINE",
+		"actionName": "SpawnCards"
+	},
+	{
+		"type": "WAIT",
+		"time": 0.6
+	}
+	],
+	"RandomFinalPt2": [
+	{
+		"stateReset": false,
+		"type": "DO_ENEMY_ACTION_INLINE",
+		"actionName": "SpawnClaw"
+	},
+	{
+		"wait": false,
+		"viaWalkConfig": false,
+		"type": "SHOW_ANIMATION",
+		"anim": "fly"
+	},
+	{
+		"type": "WAIT",
+		"time": 0.3
+	},
+	{
+		"variance": 12,
+		"accel": 3,
+		"speed": 100,
+		"type": "SET_FLOAT_PARAMS"
+	},
+	{
+		"value": 96,
+		"type": "SET_FLY_HEIGHT"
+	},
+	{
+		"type": "SET_RELATIVE_SPEED",
+		"value": 0.5
+	},
+	{
+		"value": 0.5,
+		"type": "SET_ACCEL_SPEED"
+	},
+	{
+		"value": 0.4,
+		"type": "SET_AIR_FRICTION"
+	},
+	{
+		"value": true,
+		"type": "FACE_TO_TARGET"
+	},
+	{
+		"value": 0.8,
+		"type": "FACE_TO_TARGET_SPEED"
+	},
+	{
+		"value": 1.2,
+		"type": "SET_Z_GRAVITY_FACTOR"
+	},
+	{
+		"min": 0,
+		"max": 16,
+		"maxTime": 1,
+		"offset":
+		{
+			"x": 0,
+			"y": -48
+		},
+		"forceTime": true,
+		"stopBeforeEdge": false,
+		"type": "MOVE_TO_DISTANCE"
+	}],
+	"RandomFinalShootShort": [
+	{
+		"stateReset": false,
+		"type": "DO_ENEMY_ACTION_INLINE",
+		"actionName": "ShootNext"
+	},
+	{
+		"min": 0,
+		"max": 16,
+		"maxTime": 0.3,
+		"offset":
+		{
+			"x": 0,
+			"y": -48
+		},
+		"forceTime": true,
+		"stopBeforeEdge": false,
+		"type": "MOVE_TO_DISTANCE"
+	}],
+	"RandomFinalShootLong": [
+	{
+		"stateReset": false,
+		"type": "DO_ENEMY_ACTION_INLINE",
+		"actionName": "ShootNext"
+	},
+	{
+		"min": 0,
+		"max": 16,
+		"maxTime": 1,
+		"offset":
+		{
+			"x": 0,
+			"y": -48
+		},
+		"forceTime": true,
+		"stopBeforeEdge": false,
+		"type": "MOVE_TO_DISTANCE"
+	}],
+	"RandomFinalPt3": [
+	{
+		"stateReset": false,
+		"type": "DO_ENEMY_ACTION_INLINE",
+		"actionName": "ShootNext"
+	},
+	{
+		"min": 0,
+		"max": 16,
+		"maxTime": 1,
+		"offset":
+		{
+			"x": 0,
+			"y": -48
+		},
+		"forceTime": true,
+		"stopBeforeEdge": false,
+		"type": "MOVE_TO_DISTANCE"
+	},
+	{
+		"wait": false,
+		"viaWalkConfig": false,
+		"type": "SHOW_ANIMATION",
+		"anim": "fly"
+	},
+	{
+		"min": 0,
+		"max": 16,
+		"maxTime": 1,
+		"offset":
+		{
+			"x": 0,
+			"y": -48
+		},
+		"forceTime": true,
+		"stopBeforeEdge": false,
+		"type": "MOVE_TO_DISTANCE"
+	},
+	{
+		"stateReset": false,
+		"type": "DO_ENEMY_ACTION_INLINE",
+		"actionName": "SpawnSpear"
+	}]
+}
