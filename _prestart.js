@@ -344,3 +344,31 @@ sc.BombEntity.inject({
 			return this.parent(a);
 	}
 });
+
+//fix music triggers in Vermillion Cup rush mode. It used to overwrite the music when you got to the turrets. This is a bit hacky but i don't feel it's practical for a patch file...
+//they forgot the "not rush mode" conditional on the play music trigger for the turrets even though they remembered it for "fade out previous track", which is why it's so sudden
+ig.EVENT_STEP.PLAY_BGM.inject({
+	run()
+	{
+		if (ig.vars.currentLevelName=="arena/dlc/turrets")
+		{
+			//do nothing
+			return true;
+		}
+		else
+		{
+			return this.parent();
+		}
+	}
+});
+//the turret music is definitely a bug but they intentionally made the Snail and Designer music not play - but at least for the Designer i feel it should
+ig.EVENT_STEP.IF.inject({
+	init(a)
+	{
+		this.parent(a);
+		if (ig.vars.currentLevelName=="arena/dlc/designer" && a.condition == "!arena.isRush")
+		{
+			this.condition = new ig.VarCondition("true");
+		}
+	}
+});

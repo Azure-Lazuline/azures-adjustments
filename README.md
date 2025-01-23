@@ -61,6 +61,8 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 
 - The sandbag (Baggy-kun) at the First Scholars HQ gives SP when hit. What kind of guild has a non-functional training dummy?
 
+- The music triggers in Vermillion Cup rush mode have been fixed.
+
 - Pets are automatically hidden during emotional or important scenes.
 
 - A few small typo fixes.
