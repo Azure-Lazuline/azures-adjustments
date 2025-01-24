@@ -398,3 +398,39 @@ sc.Arena.inject({
 		}
 	}
 });
+
+//fix the inconsistency in arena stats. Damage Taken used to always say "x25" instead of how much you actually took.
+//all other stats showed the actual stat there, but Damage Taken showed the multiplier, which was much less useful and it was inconsistent.
+//also applies this to the "HP Recovered" stat from El's Tweaks that makes platinum medals completely free in case anyone has that toggled
+sc.ArenaSummary.inject({
+	_addEntry(a, b, d)
+	{
+		var ret = this.parent(a, b, d);
+		if (a == "DAMAGE_TAKEN") ret.keyGui.setText("\\c[1]Damage Taken\\i[timesRed]" + (b.value/-25) + "\\c[0]");
+		if (a == "DAMAGE_HEALED") ret.keyGui.setText("\\i[insetArrow]\\c[2]HP Recovered\\i[timesGreen]" + (b.value/15) + "\\c[0]");
+		return ret;
+	}
+});
+
+//on controller, set trade menu to highlighting the item by default instead of the trade button, so you can read the description without needing to manually scroll to it each time
+sc.TradeDialogMenu.inject({
+	_createContent()
+	{
+		this.parent();
+		this._setOffer();
+	}
+});
+sc.TradeDialogMenu.inject({
+	_setOffer()
+	{
+		//this.tradeButton.setData({
+		//	key: "trade",
+		//	description: ig.lang.get("sc.gui.trade.description")
+		//});
+		this.parent();
+		if(!ig.input.mouseGuiActive)
+		{
+			this.buttongroup.focusCurrentButton(0, 1, false, true);
+		}
+	}
+});

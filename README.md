@@ -55,17 +55,21 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 
 - The equipment comparison menu always puts changed modifiers at the top of the list, so you don't need to expand it each time.
 
+- On controller, the trade menu now highlights the item by default, so you can read the description without manually selecting it each time.
+
 - Traders get added to the trader book from just passing by them rather than needing to open the trade menu.
 
 - Traders don't reset your "compare mode" setting when switching between different items.
 
 - The sandbag (Baggy-kun) at the First Scholars HQ gives SP when hit. What kind of guild has a non-functional training dummy?
 
+- Pets are automatically hidden during emotional or important scenes.
+
+- Changed the arena end screen to show the base damage that you took, instead of just the resulting score.
+
 - Fixed the music triggers in Vermillion Cup rush mode.
 
 - Fixed an obscure bug where you could die in the Arena from things that are supposed to be zero damage, if you had the one-hit-kill NG+ modifier active.
-
-- Pets are automatically hidden during emotional or important scenes.
 
 - A few small typo fixes.
 </details>
