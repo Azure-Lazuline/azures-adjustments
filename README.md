@@ -13,7 +13,7 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 
 - Added timing rings to hedgehags and behesloths so you know exactly when they'll dash. Go for the perfect guard!
   
-- Ectovolts have a more obvious flash before they use their melee attack.
+- Added a more obvious flash to ectovolts and digmos when they're preparing their attacks.
 
 - Fixed the erroneously swapped heat/cold weaknesses on the mecha fish enemies and boss.
 
@@ -61,7 +61,9 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 
 - The sandbag (Baggy-kun) at the First Scholars HQ gives SP when hit. What kind of guild has a non-functional training dummy?
 
-- The music triggers in Vermillion Cup rush mode have been fixed. 
+- Fixed the music triggers in Vermillion Cup rush mode.
+
+- Fixed an obscure bug where you could die in the Arena from things that are supposed to be zero damage, if you had the one-hit-kill NG+ modifier active.
 
 - Pets are automatically hidden during emotional or important scenes.
 

@@ -524,7 +524,7 @@
 },{
 	"type": "SET_KEY",
 	"index": "damageFactor",
-	"content": 5.5
+	"content": 5.0
 },{
 	"type": "SET_KEY",
 	"index": "hints",

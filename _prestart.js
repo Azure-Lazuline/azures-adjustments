@@ -372,3 +372,29 @@ ig.EVENT_STEP.IF.inject({
 		}
 	}
 });
+
+//fix cases where the Prepare to Hi modifier can make you die in the arena from something that's supposed to not hurt you (the noDmg limiter)
+ig.ENTITY.Player.inject({
+	onDamage(a, c, g)
+	{
+		if (c && c.limiter)
+			ig.limiterForLastPlayerHit = c.limiter; //save limiters globally
+
+		var ret = this.parent(a, c, g); //because it's needed somewhere in here, in the part that calls the arena code below...
+		ig.limiterForLastPlayerHit = null; //then delete them so they don't spill over into other damage checks
+		return ret;
+	}
+});
+sc.Arena.inject({
+	onPreDamageModification(...args)
+	{
+		if(ig.limiterForLastPlayerHit && ig.limiterForLastPlayerHit.noDmg)
+		{
+			return; //exit instead of running the rest of the code
+		}
+		else
+		{
+			this.parent(...args);
+		}
+	}
+});

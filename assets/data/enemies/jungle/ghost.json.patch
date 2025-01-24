@@ -6,7 +6,7 @@
 	"index": 0,
 	"content":
 	{
-		"duration": 0.5,
+		"duration": 1,
 		"align": "CENTER",
 		"rotateFace": 0,
 		"flipLeftFace": false,
@@ -18,13 +18,13 @@
 		"effect":
 		{
 			"sheet": "azure",
-			"name": "ghostCharge"
+			"name": "shockCharge"
 		},
 		"offset":
 		{
 			"x": 0,
 			"y": 0,
-			"z": 8
+			"z": 0
 		}
 	}
 },{

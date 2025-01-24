@@ -1,0 +1,96 @@
+[{
+	"type": "ENTER",
+	"index": ["actions", "DashAttack"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 5,
+	"content":
+	{
+		"duration": 0.5,
+		"align": "CENTER",
+		"rotateFace": 0,
+		"flipLeftFace": false,
+		"wait": false,
+		"waitSkip": 0,
+		"actionDetached": false,
+		"fixPos": false,
+		"type": "SHOW_EFFECT",
+		"effect":
+		{
+			"sheet": "azure",
+			"name": "iceCharge"
+		},
+		"offset":
+		{
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["IceDash"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 6,
+	"content":
+	{
+		"duration": 0.5,
+		"align": "CENTER",
+		"rotateFace": 0,
+		"flipLeftFace": false,
+		"wait": false,
+		"waitSkip": 0,
+		"actionDetached": false,
+		"fixPos": false,
+		"type": "SHOW_EFFECT",
+		"effect":
+		{
+			"sheet": "azure",
+			"name": "coldCharge"
+		},
+		"offset":
+		{
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["HeatDash"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 6,
+	"content":
+	{
+		"duration": 0.5,
+		"align": "CENTER",
+		"rotateFace": 0,
+		"flipLeftFace": false,
+		"wait": false,
+		"waitSkip": 0,
+		"actionDetached": false,
+		"fixPos": false,
+		"type": "SHOW_EFFECT",
+		"effect":
+		{
+			"sheet": "azure",
+			"name": "heatCharge"
+		},
+		"offset":
+		{
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+}]
