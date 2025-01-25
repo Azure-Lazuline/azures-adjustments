@@ -17,7 +17,9 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 
 - Fixed the erroneously swapped heat/cold weaknesses on the mecha fish enemies and boss.
 
-- Dungeon enemies respawn much quicker after clearing the room, to help with getting materials from ones that are only in a single room. (Overworld enemies are unaffected.)
+- Dungeon enemies respawn much quicker after clearing the room, to help with getting materials from ones that are only in a single room.
+
+- Hillkat Bandleader consistently calls for reinforcements at the intended HP thresholds, instead of also accidentally relying on RNG. (This helps arena scores not be luck-dependent.)
 
 - King Kaktorro's flamethrower fires in pulses instead of a constant stream, giving you better opportunities to escape.
 
@@ -36,13 +38,15 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 
 - Ring of Fire (all 3): VFX improvements to all of them, and a damage boost to base Ring of Fire itself.
 
-- Hail Storm: Wider spread but better homing, to make it somewhat more consistent.
+- Hail Storm: Wider spread but better homing, to make it somewhat more reliable but still situational.
 
 - Frigid Flawke: Only does the camera pan if you actually hit an enemy, to prevent jarring camera movements.
 
 - Tesla Twist / Tesla Waltz: Small damage boost, and a little easier to control.
 
 - Thunder Dart / Storm Walker: Slows down time during the dash, so enemies are less likely to escape it before it goes off.
+
+- Guarding Gale / Poltergeist: Stronger push force.
 
 - Ether Snipe: Lower damage at first, but ramps back up to its old extremely high power level as it bounces more. You gotta go for the bank shots!
 
@@ -52,6 +56,8 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 </details>
 <details>
 <summary><b>Other</b></summary>
+
+- Most flying enemies no longer follow you into the air during jumping arts like Flare Burn, inadvertently dodging your attacks. (Parrots still do though since they're jerks and it forced a more interesting approach.)
 
 - The equipment comparison menu always puts changed modifiers at the top of the list, so you don't need to expand it each time.
 

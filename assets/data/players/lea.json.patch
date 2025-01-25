@@ -969,6 +969,69 @@
 	"type": "EXIT"
 },{
 	"type": "EXIT"
+	
+
+
+
+},{
+	"type": "ENTER",
+	"index": ["proxies", "wavePushAura", "action", 2]
+},{
+	"type": "SET_KEY",
+	"index": "strength",
+	"content": "RUN_ESCAPE"
+},{
+	"type": "SET_KEY",
+	"index": "radius",
+	"content": 64
+},{
+	"type": "SET_KEY",
+	"index": "fadeRadius",
+	"content": 64
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+	
+
+
+
+},{
+	"type": "ENTER",
+	"index": ["proxies", "wavePushAura2", "action", 2]
+},{
+	"type": "SET_KEY",
+	"index": "strength",
+	"content": "RUN_ESCAPE"
+},{
+	"type": "SET_KEY",
+	"index": "radius",
+	"content": 72
+},{
+	"type": "SET_KEY",
+	"index": "fadeRadius",
+	"content": 48
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": [3]
+},{
+	"type": "SET_KEY",
+	"index": "value",
+	"content": 60
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
 
 
 
@@ -1009,6 +1072,93 @@
 	"type": "SET_KEY",
 	"index": "timer",
 	"content": 1.0
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+
+
+
+
+},{
+	"type": "ENTER",
+	"index": ["actions", "HEAT", "THROW_SPECIAL2_A"]
+},{
+	"type": "SET_KEY",
+	"index": "dontFollowZ",
+	"content": true
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+
+},{
+	"type": "ENTER",
+	"index": ["actions", "HEAT", "GUARD_SPECIAL2_A"]
+},{
+	"type": "SET_KEY",
+	"index": "dontFollowZ",
+	"content": true
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+	
+},{
+	"type": "ENTER",
+	"index": ["actions", "HEAT", "GUARD_SPECIAL3_A"]
+},{
+	"type": "SET_KEY",
+	"index": "dontFollowZ",
+	"content": true
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+	
+},{
+	"type": "ENTER",
+	"index": ["actions", "HEAT", "ATTACK_SPECIAL3_A"]
+},{
+	"type": "SET_KEY",
+	"index": "dontFollowZ",
+	"content": true
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+	
+},{
+	"type": "ENTER",
+	"index": ["actions", "HEAT", "ATTACK_SPECIAL3_B"]
+},{
+	"type": "SET_KEY",
+	"index": "dontFollowZ",
+	"content": true
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+	
+},{
+	"type": "ENTER",
+	"index": ["actions", "SHOCK", "ATTACK_SPECIAL3_A"]
+},{
+	"type": "SET_KEY",
+	"index": "dontFollowZ",
+	"content": true
+},{
+	"type": "EXIT"
 },{
 	"type": "EXIT"
 },{

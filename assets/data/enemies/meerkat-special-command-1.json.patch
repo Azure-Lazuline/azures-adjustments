@@ -1,0 +1,98 @@
+[{
+	"type": "ENTER",
+	"index": ["states", "DEFAULT"]
+},{
+	"type": "SET_KEY",
+	"index": "choices",
+	"content":
+	[{
+		"req": [{
+				"name": "init",
+				"type": "!ATTRIB_IS_TRUE"
+			}
+		],
+		"action": "Init"
+	}, {
+		"req": [{
+				"type": "!HAS_TARGET"
+			}
+		],
+		"postSwitchState": "IDLE"
+	}, {
+		"req": [{
+				"value": 0.8,
+				"negated": false,
+				"type": "HP_BELOW"
+			}, {
+				"negated": false,
+				"type": "VAR_CONDITION",
+				"condition": "entity.attrib.reinforcementsCalled < 1"
+			}
+		],
+		"action": "Reinforcements"
+	}, {
+		"req": [{
+				"value": 0.6,
+				"negated": false,
+				"type": "HP_BELOW"
+			}, {
+				"negated": false,
+				"type": "VAR_CONDITION",
+				"condition": "entity.attrib.reinforcementsCalled == 1"
+			}
+		],
+		"action": "Reinforcements"
+	}, {
+		"req": [{
+				"value": 0.4,
+				"negated": false,
+				"type": "HP_BELOW"
+			}, {
+				"negated": false,
+				"type": "VAR_CONDITION",
+				"condition": "entity.attrib.reinforcementsCalled == 2"
+			}
+		],
+		"action": "Reinforcements"
+	}, {
+		"req": [{
+				"value": 0.33,
+				"negated": false,
+				"type": "HP_BELOW"
+			}, {
+				"negated": false,
+				"type": "VAR_CONDITION",
+				"condition": "entity.attrib.reinforcementsCalled == 3 && combat.activeCnt.meerkat <= 0 && combat.activeCnt.meerkat-alt <= 0"
+			}
+		],
+		"action": "Reinforcements"
+	}, {
+		"req": [{
+				"distance": 220,
+				"throwing": true,
+				"type": "!TARGET_REACHABLE"
+			}
+		],
+		"action": "Adjust"
+	}, {
+		"action": "SpecialAttack",
+		"frequency": "SOMETIMES"
+	}, {
+		"action": "Attack",
+		"frequency": "OFTEN"
+	}, {
+		"req": [{
+				"negated": false,
+				"type": "TRACKER_READY",
+				"name": "move"
+			}
+		],
+		"action": "Sideways"
+	}, {
+		"action": "BattleIdle"
+	}]
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+}]

@@ -434,3 +434,52 @@ sc.TradeDialogMenu.inject({
 		}
 	}
 });
+
+
+//make flying enemies not follow you into the air when you're doing Flare Burn etc
+sc.PlayerAction.inject({
+	init(a, c, e){
+		this.parent(a, c, e);
+		if (c)
+		{
+			if (c.dontFollowZ)
+			{
+				this.action.dontFollowZ = true; //custom property. You can add it to your own actions in their root, next to dmgType and stunType
+			}
+		}
+	}
+});
+ig.ENTITY.Enemy.inject({
+	update(){
+		var dontFollowZ = false;
+
+		var target = this.getTarget();
+		if (!this.isPlayer && target && target.isPlayer && !target.jumping && target.currentAction)
+		{
+			if (target.currentAction.dontFollowZ)
+				dontFollowZ = true;
+		}
+		
+		if (this.isParrot == null)
+		{
+			this.isParrot = false;
+			if (this.enemyName == "jungle.parrot" || this.enemyName == "jungle.special.parrot-gangster-1"
+			 || this.enemyName == "jungle.special.parrot-gangster-2" || this.enemyName == "jungle.special.parrot-gangster-boss-1")
+				this.isParrot = true;
+		}
+		if (this.isParrot) dontFollowZ = false; //parrots still do it since they're jerks
+		
+		//the code responsible for no-z-tracking is somewhere very difficult to access. There's already the "jumping" property that makes them not follow,
+		//but that's read in a dozen other places so i don't feel confident that setting it directly during Flare Burn won't break something. So i did it like this
+		if (dontFollowZ)
+		{
+			target.jumping = true; //temporarily set Lea to "jumping" so that vertical tracking is turned off during this.parent
+			this.parent();
+			target.jumping = false; //then restore it
+		}
+		else
+		{
+			this.parent();
+		}
+	}
+});
