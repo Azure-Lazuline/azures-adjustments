@@ -1,0 +1,14 @@
+{
+    "labels": {
+        "options": {
+            "all-quest-type": {
+                "name": "Quest Window Display",
+                "description": "Toggles which quests are displayed in the collapsible sidebar.",
+				"group": [
+					"All Quests",
+					"Only Favorites",
+				]
+            },
+        }
+    }
+}

@@ -34,7 +34,9 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 
 - Azure Surge: VFX improvements for a bit more punch.
 
-- Ashen Mine / Mine Valley: Small damage boost, to match its difficulty and lack of iframes compared to the alternative skills.
+- Ball of Boomerang: It hits multiple times (but deals the same damage overall), since it's a buzzsaw.
+
+- Ashen Mine / Mine Valley: Small damage boost, to match their difficulty and lack of iframes compared to the alternative skills.
 
 - Ring of Fire (all 3): VFX improvements to all of them, and a damage boost to base Ring of Fire itself.
 
@@ -66,6 +68,8 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 - Traders get added to the trader book from just passing by them rather than needing to open the trade menu.
 
 - Traders don't reset your "compare mode" setting when switching between different items.
+
+- Adds an option to swap between *all* quests on the sidebar instead of just ones marked as a favorite.
 
 - The sandbag (Baggy-kun) at the First Scholars HQ gives SP when hit. What kind of guild has a non-functional training dummy?
 

@@ -483,3 +483,26 @@ ig.ENTITY.Enemy.inject({
 		}
 	}
 });
+
+
+//add menu options
+sc.ALL_QUEST_TYPE = {
+    ALL: 0,
+    ONLYFAVORITES: 1
+};
+let options = {};
+for (let [key, value] of Object.entries(sc.OPTIONS_DEFINITION)) {
+    options[key] = value;
+    switch (key) {
+        case "item-hud-size":
+            options["all-quest-type"] = {
+				type: 'BUTTON_GROUP',
+				cat: sc.OPTION_CATEGORY.INTERFACE,
+				data: sc.ALL_QUEST_TYPE,
+				init: 0
+            };
+            break;
+    }
+}
+
+sc.OPTIONS_DEFINITION = options;

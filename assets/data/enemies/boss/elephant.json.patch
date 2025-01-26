@@ -1,0 +1,42 @@
+[{
+	"type": "ENTER",
+	"index": "elementModes"
+},{
+	"type": "SET_KEY",
+	"index": "NEUTRAL",
+	"content": {
+		"hp": 300000,
+		"attack": 380,
+		"defense": 350,
+		"focus": 370,
+		"elemFactor": [1, 1, 1, 1]
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["actions", "puzzleFinal"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 0,
+	"content":
+	[
+		{
+			"withElse": false,
+			"type": "IF",
+			"condition": "tmp.finalAttackOver",
+			"thenStep": 
+			[
+				{
+					"element": "NEUTRAL",
+					"skipEffect": true,
+					"type": "SET_ENEMY_ELEMENT_MODE"
+				}
+			]
+		}
+	]
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+}]
