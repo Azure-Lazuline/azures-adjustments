@@ -69,7 +69,7 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 
 - Traders don't reset your "compare mode" setting when switching between different items.
 
-- Adds an option to swap between *all* quests on the sidebar instead of just ones marked as a favorite.
+- Added an option to swap between *all* quests on the sidebar instead of just ones marked as a favorite.
 
 - The sandbag (Baggy-kun) at the First Scholars HQ gives SP when hit. What kind of guild has a non-functional training dummy?
 
