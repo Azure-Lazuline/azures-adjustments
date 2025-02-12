@@ -1,0 +1,109 @@
+[{
+	"type": "ENTER",
+	"index": ["states", "DEFAULT"]
+},{
+	"type": "SET_KEY",
+	"index": "choices",
+	"content": 
+	[
+		{
+			"req": [{
+					"type": "!HAS_TARGET"
+				}
+			],
+			"postSwitchState": "IDLE"
+		}, {
+			"req": [{
+					"distance": 250,
+					"throwing": true,
+					"type": "!TARGET_REACHABLE"
+				}
+			],
+			"action": "Adjust"
+		}, {
+			"req": [{
+				"negated": false,
+				"type": "VAR_CONDITION",
+				"condition": "entity.attrib.bombReady == 1"
+			}],
+			"frequency": "NORMAL",
+			"action": "ShootBomb"
+		}, {
+			"action": "FireWheel",
+			"frequency": "RARE",
+			"ignoreStun": true
+		}, {
+			"action": "ShootSingle",
+			"frequency": "NORMAL",
+			"ignoreStun": true
+		}, {
+			"req": [{
+					"negated": false,
+					"type": "TRACKER_READY",
+					"name": "MOVE"
+				}
+			],
+			"sub": [{
+					"action": "Circle"
+				}
+			]
+		}, {
+			"action": "Idle"
+		}
+	]
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["actions", "FireWheel"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 0,
+	"content": {
+		"attribName": "bombReady",
+		"changeType": "set",
+		"proxyOwner": false,
+		"type": "SET_ATTRIB_NUMBER",
+		"value": 1
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["actions", "ShootSingle"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 0,
+	"content": {
+		"attribName": "bombReady",
+		"changeType": "set",
+		"proxyOwner": false,
+		"type": "SET_ATTRIB_NUMBER",
+		"value": 1
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "ENTER",
+	"index": ["actions", "ShootBomb"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 0,
+	"content": {
+		"attribName": "bombReady",
+		"changeType": "set",
+		"proxyOwner": false,
+		"type": "SET_ATTRIB_NUMBER",
+		"value": 0
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+}]

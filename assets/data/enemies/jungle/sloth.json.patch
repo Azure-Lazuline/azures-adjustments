@@ -1,53 +1,60 @@
-[{
-	"type": "ENTER",
-	"index": ["actions", "SpinAttack"]
-},{
-	"type": "REMOVE_ARRAY_ELEMENT",
-	"index": 6
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 6,
-	"content":
-	{
-		"time": 0.5,
-		"type": "WAIT"
-	}
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 7,
-	"content":
-	{
-		"duration": 0.5,
-		"align": "CENTER",
-		"rotateFace": 0,
-		"flipLeftFace": false,
-		"wait": false,
-		"waitSkip": 0,
-		"actionDetached": false,
-		"fixPos": false,
-		"type": "SHOW_EFFECT",
-		"effect":
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-enemyvisuals\") != \"false\"",
+	"thenSteps":
+	[
 		{
-			"sheet": "azure",
-			"name": "slothCharge"
-		},
-		"offset":
-		{
-			"x": 0,
-			"y": 0,
-			"z": -8
+			"type": "ENTER",
+			"index": ["actions", "SpinAttack"]
+		},{
+			"type": "REMOVE_ARRAY_ELEMENT",
+			"index": 6
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 6,
+			"content":
+			{
+				"time": 0.5,
+				"type": "WAIT"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 7,
+			"content":
+			{
+				"duration": 0.5,
+				"align": "CENTER",
+				"rotateFace": 0,
+				"flipLeftFace": false,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect":
+				{
+					"sheet": "azure",
+					"name": "slothCharge"
+				},
+				"offset":
+				{
+					"x": 0,
+					"y": 0,
+					"z": -8
+				}
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 8,
+			"content":
+			{
+				"time": 0.5,
+				"type": "WAIT"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
 		}
-	}
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 8,
-	"content":
-	{
-		"time": 0.5,
-		"type": "WAIT"
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
+	]
 }]

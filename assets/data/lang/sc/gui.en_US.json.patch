@@ -1,14 +1,96 @@
 {
-    "labels": {
-        "options": {
-            "all-quest-type": {
-                "name": "Quest Window Display",
-                "description": "Toggles which quests are displayed in the collapsible sidebar.",
+	"labels": {
+		"options": {
+			"headers": {
+				"azure-tweaks": "Azure's Balancing & Extras",
+				"azure-combat-arts": "Combat Arts",
+				"azure-enemy-changes": "Enemies & Bosses",
+			},
+			"all-quest-type": {
+				"name": "Quest Window",
+				"description": "Toggles which quests are displayed in the collapsible sidebar.",
 				"group": [
 					"All Quests",
 					"Only Favorites",
 				]
-            },
-        }
+			},
+			"enter-map-names": {
+				"name": "Show Location Names",
+				"description": "Tick to show the location name in the corner when you enter a new area."
+			},
+			"trader-location-details": {
+				"name": "Show Trade Item Locations",
+				"description": "Tick to show where you can find each item, directly in the trade interface."
+			},
+			"melee-ranged-res": {
+				"name": "Show Melee/Ranged Resist",
+				"description": "Tick to show enemy vulnerabilities in the quick analysis menu."
+			},
+			"analog-menus": {
+				"name": "Menu Analog Control",
+				"description": "Tick to allow analog movement on the map and circuit menus. Only affects controllers."
+			},
+
+
+			"azure-open-balance-menu": {
+				"name": "Balance Changes",
+				"description": "Change individual balancing options. Any changes here need a restart to take effect."
+			},
+			"azure-balance-arts-visuals": {
+				"name": "Upgrade Visuals",
+				"description": "Tick to make a few combat arts look nicer, mostly in the Neutral tree."
+			},
+			"azure-balance-arts-buffs": {
+				"name": "Enable Buffs",
+				"description": "Tick to strengthen lots of weaker combat arts to bring them in line with the rest."
+			},
+			"azure-balance-arts-nerfs": {
+				"name": "Enable Nerfs",
+				"description": "Tick to lower the power level of the few strongest combat arts by a little."
+			},
+
+			"azure-balance-bosses": {
+				"name": "Boss Improvements",
+				"description": "Tick to improve (IMO) a few bosses, most notably the bonus boss at the Archipelago."
+			},
+			"azure-balance-bovines": {
+				"name": "Bovine Stun",
+				"description": "Tick to enable stunning Bovines with repeated melee attacks from behind."
+			},
+			"azure-balance-timingrings": {
+				"name": "Timing Rings",
+				"description": "Tick to put timing rings on some enemies like Hedgehags to make guarding them easier."
+			},
+			"azure-balance-enemyvisuals": {
+				"name": "Other Visuals",
+				"description": "Tick to improve the visuals of some enemy attacks, making them easier to see."
+			},
+		},
+		"menu": {
+			"map-menu": {
+				"stamps": {
+					"DEFAULT": "Stamp",
+					"CHEST": "Chest",
+					"ENEMY": "Chest",
+					"GREEN": "Chest",
+					"SECRET": "Secret",
+					"QUEST": "Quest",
+					"UNKNOWN": "Unknown",
+					"XXX": "Enemy",
+					"ARROW_RIGHT": "Heat",
+					"ARROW_LEFT": "Cold",
+					"ARROW_UP": "Shock",
+					"ARROW_DOWN": "Wave",
+					"ARROW_DOWN_RIGHT": "East",
+					"ARROW_DOWN_LEFT": "West",
+					"ARROW_UP_RIGHT": "North",
+					"ARROW_UP_LEFT": "South"
+				}
+			},
+			"options-open-menu-button": "Open Menu",
+			"menu-titles": {
+				"azure-balance-changes": "Balance Changes"
+			},
+		}
     }
 }

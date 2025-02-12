@@ -1,1433 +1,2166 @@
-[{
-	"type": "ENTER",
-	"index": ["proxies", "iceSnowExplode2", "action"]
-},{
-	"type": "REMOVE_ARRAY_ELEMENT",
-	"index": 1
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": ["proxies", "iceSnowball2", "action", 4]
-},{
-	"type": "SET_KEY",
-	"index": "withBranches",
-	"content": true
-},{
-	"type": "SET_KEY",
-	"index": "hit",
-	"content": [
-		{
-			"offsetX": 0,
-			"offsetY": 0,
-			"speed": "FASTEST",
-			"transition": "EASE_IN_OUT",
-			"wait": false,
-			"waitSkip": 0,
-			"zoom": 1.25,
-			"focusType": "SELF",
-			"type": "FOCUS_CAMERA"		
-		}
-	]
-},{
-	"type": "EXIT"
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 9,
-	"content": 
-	{
-		"wait": false,
-		"viaWalkConfig": false,
-		"type": "SHOW_ANIMATION",
-		"anim": "hidden"
-	}
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 10,
-	"content": 
-	{
-		"time": 0.4,
-		"type": "WAIT"
-	}
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 11,
-	"content": 
-	{
-		"speed": "FAST",
-		"transition": "EASE_IN_OUT",
-		"wait": false,
-		"waitSkip": 0,
-		"type": "RESET_CAMERA"
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "SET_KEY",
-	"index": "animation",
-	"content":
-	{
-		"shapeType": "Y_FLAT",
-		"wallY": 1,
-		"frames": [0],
-		"SUB": [
-		{
-			"name": "default",
-			"sheet":
-			{
-				"src": "media\/entity\/effects\/cold.png",
-				"offX": 160,
-				"offY": 0,
-				"width": 32,
-				"height": 32
-			},
-			"time": 0.05,
-			"repeat": true,
-			"frames": [0]
-		},
-		{
-			"name": "hidden",
-			"sheet":
-			{
-				"src": "media\/entity\/effects\/cold.png",
-				"offX": 160,
-				"offY": 0,
-				"width": 1,
-				"height": 1
-			},
-			"time": 0.05,
-			"repeat": true,
-			"frames": [0]
-		}]
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-	
-	
-	
-	
-},{
-	"type": "ENTER",
-	"index": ["proxies", "waveGunExplosion", "action"]
-},{
-	"type": "ENTER",
-	"index": 17
-},{
-	"type": "SET_KEY",
-	"index": "value",
-	"content": 3
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": [18, "thenStep", 0]
-},{
-	"type": "SET_KEY",
-	"index": "value",
-	"content": 8
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": [19, "thenStep", 0]
-},{
-	"type": "SET_KEY",
-	"index": "value",
-	"content": 14
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["actions", "SHOCK", "DASH_SPECIAL1_B", "steps"]
-},{
-	"type": "ENTER",
-	"index": 4
-},{
-	"type": "SET_KEY",
-	"index": "value",
-	"content": 3000
-},{
-	"type": "EXIT"
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 4,
-	"content":
-	{
-		"factor": 0.2,
-		"time": 0,
-		"keepEntityStatic": true,
-		"inversAccelerate": false,
-		"type": "ADD_SLOW_MOTION"
-	}
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 21,
-	"content":
-	{
-		"time": 0,
-		"removeEntityStatic": false,
-		"type": "CLEAR_SLOW_MOTION"
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["actions", "SHOCK", "DASH_SPECIAL2_B", "steps"]
-},{
-	"type": "ENTER",
-	"index": 3
-},{
-	"type": "SET_KEY",
-	"index": "value",
-	"content": 3000
-},{
-	"type": "EXIT"
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 10,
-	"content":
-	{
-		"factor": 0.2,
-		"time": 0,
-		"keepEntityStatic": true,
-		"inversAccelerate": false,
-		"type": "ADD_SLOW_MOTION"
-	}
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 31,
-	"content":
-	{
-		"time": 0,
-		"removeEntityStatic": false,
-		"type": "CLEAR_SLOW_MOTION"
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-	
-	
-	
-	
-},{
-	"type": "ENTER",
-	"index": ["actions", "SHOCK", "ATTACK_SPECIAL1_A", "steps", 3, "attack"]
-},{
-	"type": "SET_KEY",
-	"index": "damageFactor",
-	"content": 0.9
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["proxies", "flameRing", "action", 3, "attack"]
-},{
-	"type": "SET_KEY",
-	"index": "damageFactor",
-	"content": 0.5
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": [2]
-},{
-	"type": "SET_KEY",
-	"index": "effect",
-	"content":
-	{
-		"sheet": "azure",
-		"name": "flameRingCustom"
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["proxies", "flameRing2", "action", 2]
-},{
-	"type": "SET_KEY",
-	"index": "effect",
-	"content":
-	{
-		"sheet": "azure",
-		"name": "flameRingCustom"
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["proxies", "flameRing3", "action"]
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 3,
-	"content":
-	{
-		"duration": -1,
-		"align": "BOTTOM",
-		"rotateFace": 0,
-		"flipLeftFace": false,
-		"wait": false,
-		"waitSkip": 0,
-		"actionDetached": false,
-		"fixPos": false,
-		"type": "SHOW_EFFECT",
-		"effect":
-		{
-			"sheet": "azure",
-			"name": "flameRingCustomStrong"
-		},
-		"offset":
-		{
-			"x": 0,
-			"y": 0,
-			"z": 0
-		}
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": ["proxies", "flameRingMelee", "action"]
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 0,
-	"content":
-	{
-		"type": "SET_HIT_PROXY",
-		"align": "CENTER",
-		"posType": "TARGET",
-		"proxy": "azureFlameRingHit",
-		"offset":
-		{
-			"x": 0,
-			"y": 0,
-			"z": 0
-		}
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": ["proxies"]
-},{
-	"type": "SET_KEY",
-	"index": "azureFlameRingHit",
-	"content":
-	{
-		"copyOwnerAnims": false,
-		"breakType": "COMBATANT",
-		"action": [
-		{
-			"duration": 0,
-			"align": "BOTTOM",
-			"rotateFace": 0,
-			"flipLeftFace": false,
-			"wait": false,
-			"waitSkip": 0,
-			"actionDetached": true,
-			"fixPos": false,
-			"type": "SHOW_EFFECT",
-			"effect":
-			{
-				"sheet": "azure",
-				"name": "flameRingHit"
-			},
-			"offset":
-			{
-				"x": 0,
-				"y": 0,
-				"z": 0
-			}
-		},{
-			"time": 0.4,
-			"type": "WAIT"
-		}],
-		"invisible": false,
-		"hp": 0,
-		"stickToSource": "NONE",
-		"stickFaceAlign": false,
-		"group": "",
-		"startAnim": "",
-		"size":
-		{
-			"x": 16,
-			"y": 16,
-			"z": 32
-		},
-		"config":
-		{
-			"collType": "NONE",
-			"floatVariance": 0,
-			"flyHeight": 1
-		},
-		"type": "GENERIC"
-	}
-},{
-	"type": "EXIT"
-
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["actions", "SHOCK", "ATTACK_SPECIAL2_A", "steps", 3, "attack"]
-},{
-	"type": "SET_KEY",
-	"index": "damageFactor",
-	"content": 0.83
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": [9]
-},{
-	"type": "SET_KEY",
-	"index": "stopBeforeEdge",
-	"content": true
-},{
-	"type": "SET_KEY",
-	"index": "rotateSpeed",
-	"content": 1.0
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": [24, "attack"]
-},{
-	"type": "SET_KEY",
-	"index": "damageFactor",
-	"content": 2.1
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["proxies", "mine", "action", 8, "attack"]
-},{
-	"type": "SET_KEY",
-	"index": "damageFactor",
-	"content": 6
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["proxies", "moveMine", "action", 12, "attack"]
-},{
-	"type": "SET_KEY",
-	"index": "damageFactor",
-	"content": 5.0
-},{
-	"type": "SET_KEY",
-	"index": "hints",
-	"content": ["CHARGED"]
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["proxies", "lightningSlowMo"]
-},{
-	"type": "SET_KEY",
-	"index": "attachedSpMultiplier",
-	"content": 0.5
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["proxies", "lightningStop"]
-},{
-	"type": "SET_KEY",
-	"index": "attachedSpMultiplier",
-	"content": 0.4
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["actions", "NEUTRAL", "GUARD_SPECIAL1_B", "steps", 3]
-},{
-	"type": "SET_KEY",
-	"index": "attachedSpMultiplier",
-	"content": 0.2
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["actions", "NEUTRAL", "DASH_SPECIAL1_B"]
-},{
-	"type": "SET_KEY",
-	"index": "steps",
-	"content":
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-visuals\") != \"false\"",
+	"thenSteps":
 	[
 		{
-			"type": "SET_PLAYER_ACTION_BLOCK",
-			"blockData":
-			{
-				"dash": 1.5,
-				"action": 1.5,
-				"move": 1.5,
-				"reaim": 1.5
-			}
-		},
-		{
-			"volume": 0.9,
-			"global": false,
-			"loop": false,
-			"type": "PLAY_SOUND",
-			"sound": "media\/sound\/battle\/dash-3.ogg"
-		},
-		{
-			"wait": false,
-			"viaWalkConfig": false,
-			"type": "SHOW_ANIMATION",
-			"anim": "dash"
-		},
-		{
-			"value": false,
-			"type": "SET_JUMPING"
-		},
-		{
-			"value": 450,
-			"type": "SET_SPEED"
-		},
-		{
-			"value": 2,
-			"type": "SET_ACCEL_SPEED"
-		},
-		{
-			"value": "IGNORE",
-			"type": "SET_COLL_TYPE"
-		},
-		{
-			"duration": 0.5,
-			"align": "BOTTOM",
-			"rotateFace": 0,
-			"flipLeftFace": false,
-			"wait": false,
-			"waitSkip": 0,
-			"actionDetached": false,
-			"fixPos": false,
-			"type": "SHOW_EFFECT",
-			"effect":
-			{
-				"sheet": "dust",
-				"name": "line"
-			},
-			"offset":
-			{
-				"x": 0,
-				"y": 3,
-				"z": 6
-			}
-		},
-		{
-			"dir":
-			{
-				"actorAttrib": "dashDir"
-			},
-			"type": "SET_FACE_TO_DIR"
-		},
-		{
-			"value": 0.4,
-			"type": "SET_INVINCIBLE"
-		},
-		{
-			"time": 0.4,
-			"cancelOnHit": true,
-			"orthoDirFactor": 0,
-			"ignoreLastHit": false,
-			"collideSlip": false,
-			"withBranches": true,
-			"type": "TACKLE",
-			"attack":
-			{
-				"type": "MASSIVE",
-				"visualType": "HEAVY",
-				"damageFactor": 1,
-				"skillBonus": "MELEE_DMG",
-				"spFactor": 0,
-				"stunSteps": [
+			"type": "ENTER",
+			"index": ["proxies", "iceSnowExplode2", "action"]
+		},{
+			"type": "REMOVE_ARRAY_ELEMENT",
+			"index": 1
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "iceSnowball2", "action", 4]
+		},{
+			"type": "SET_KEY",
+			"index": "withBranches",
+			"content": true
+		},{
+			"type": "SET_KEY",
+			"index": "hit",
+			"content": [
 				{
-					"type": "START_LOCK"
-				},
-				{
-					"type": "BLOCK_XY"
-				}]
-			},
-			"hit":[
-				{
-					"time": 0.1,
-					"stopBeforeEdge": false,
-					"type": "MOVE_FORWARD"
-				},
-				{
+					"offsetX": 0,
+					"offsetY": 0,
+					"speed": "FASTEST",
+					"transition": "EASE_IN_OUT",
 					"wait": false,
-					"viaWalkConfig": false,
-					"type": "SHOW_ANIMATION",
-					"anim": "attackMirrEnd"
+					"waitSkip": 0,
+					"zoom": 1.25,
+					"focusType": "SELF",
+					"type": "FOCUS_CAMERA"		
+				}
+			]
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 9,
+			"content": 
+			{
+				"wait": false,
+				"viaWalkConfig": false,
+				"type": "SHOW_ANIMATION",
+				"anim": "hidden"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 10,
+			"content": 
+			{
+				"time": 0.4,
+				"type": "WAIT"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 11,
+			"content": 
+			{
+				"speed": "FAST",
+				"transition": "EASE_IN_OUT",
+				"wait": false,
+				"waitSkip": 0,
+				"type": "RESET_CAMERA"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "SET_KEY",
+			"index": "animation",
+			"content":
+			{
+				"shapeType": "Y_FLAT",
+				"wallY": 1,
+				"frames": [0],
+				"SUB": [
+				{
+					"name": "default",
+					"sheet":
+					{
+						"src": "media\/entity\/effects\/cold.png",
+						"offX": 160,
+						"offY": 0,
+						"width": 32,
+						"height": 32
+					},
+					"time": 0.05,
+					"repeat": true,
+					"frames": [0]
 				},
 				{
-					"value": "VIRTUAL",
-					"type": "SET_COLL_TYPE"
-				},
+					"name": "hidden",
+					"sheet":
+					{
+						"src": "media\/entity\/effects\/cold.png",
+						"offX": 160,
+						"offY": 0,
+						"width": 1,
+						"height": 1
+					},
+					"time": 0.05,
+					"repeat": true,
+					"frames": [0]
+				}]
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-nerfs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "waveGunExplosion", "action"]
+		},{
+			"type": "ENTER",
+			"index": 17
+		},{
+			"type": "SET_KEY",
+			"index": "value",
+			"content": 3
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": [18, "thenStep", 0]
+		},{
+			"type": "SET_KEY",
+			"index": "value",
+			"content": 8
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": [19, "thenStep", 0]
+		},{
+			"type": "SET_KEY",
+			"index": "value",
+			"content": 14
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "SHOCK", "DASH_SPECIAL1_B", "steps"]
+		},{
+			"type": "ENTER",
+			"index": 4
+		},{
+			"type": "SET_KEY",
+			"index": "value",
+			"content": 3000
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 4,
+			"content":
+			{
+				"factor": 0.2,
+				"time": 0,
+				"keepEntityStatic": true,
+				"inversAccelerate": false,
+				"type": "ADD_SLOW_MOTION"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 21,
+			"content":
+			{
+				"time": 0,
+				"removeEntityStatic": false,
+				"type": "CLEAR_SLOW_MOTION"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+
+
+
+
+		},{
+			"type": "ENTER",
+			"index": ["actions", "SHOCK", "DASH_SPECIAL2_B", "steps"]
+		},{
+			"type": "ENTER",
+			"index": 3
+		},{
+			"type": "SET_KEY",
+			"index": "value",
+			"content": 3000
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 10,
+			"content":
+			{
+				"factor": 0.2,
+				"time": 0,
+				"keepEntityStatic": true,
+				"inversAccelerate": false,
+				"type": "ADD_SLOW_MOTION"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 31,
+			"content":
+			{
+				"time": 0,
+				"removeEntityStatic": false,
+				"type": "CLEAR_SLOW_MOTION"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "SHOCK", "ATTACK_SPECIAL1_A", "steps", 3, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "damageFactor",
+			"content": 0.9
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "flameRing", "action", 3, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "damageFactor",
+			"content": 0.5
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-visuals\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "flameRing", "action", 2]
+		},{
+			"type": "SET_KEY",
+			"index": "effect",
+			"content":
+			{
+				"sheet": "azure",
+				"name": "flameRingCustom"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+
+
+
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "flameRing2", "action", 2]
+		},{
+			"type": "SET_KEY",
+			"index": "effect",
+			"content":
+			{
+				"sheet": "azure",
+				"name": "flameRingCustom"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+
+
+
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "flameRing3", "action"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 3,
+			"content":
+			{
+				"duration": -1,
+				"align": "BOTTOM",
+				"rotateFace": 0,
+				"flipLeftFace": false,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect":
 				{
-					"time": 0.5,
+					"sheet": "azure",
+					"name": "flameRingCustomStrong"
+				},
+				"offset":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "flameRingMelee", "action"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 0,
+			"content":
+			{
+				"type": "SET_HIT_PROXY",
+				"align": "CENTER",
+				"posType": "TARGET",
+				"proxy": "azureFlameRingHit",
+				"offset":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["proxies"]
+		},{
+			"type": "SET_KEY",
+			"index": "azureFlameRingHit",
+			"content":
+			{
+				"copyOwnerAnims": false,
+				"breakType": "COMBATANT",
+				"action": [
+				{
+					"duration": 0,
+					"align": "BOTTOM",
+					"rotateFace": 0,
+					"flipLeftFace": false,
+					"wait": false,
+					"waitSkip": 0,
+					"actionDetached": true,
+					"fixPos": false,
+					"type": "SHOW_EFFECT",
+					"effect":
+					{
+						"sheet": "azure",
+						"name": "flameRingHit"
+					},
+					"offset":
+					{
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				},{
+					"time": 0.4,
 					"type": "WAIT"
+				}],
+				"invisible": false,
+				"hp": 0,
+				"stickToSource": "NONE",
+				"stickFaceAlign": false,
+				"group": "",
+				"startAnim": "",
+				"size":
+				{
+					"x": 16,
+					"y": 16,
+					"z": 32
+				},
+				"config":
+				{
+					"collType": "NONE",
+					"floatVariance": 0,
+					"flyHeight": 1
+				},
+				"type": "GENERIC"
+			}
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "SHOCK", "ATTACK_SPECIAL2_A", "steps", 3, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "damageFactor",
+			"content": 0.83
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": [9]
+		},{
+			"type": "SET_KEY",
+			"index": "stopBeforeEdge",
+			"content": true
+		},{
+			"type": "SET_KEY",
+			"index": "rotateSpeed",
+			"content": 1.0
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": [24, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "damageFactor",
+			"content": 2.1
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "mine", "action", 8, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "damageFactor",
+			"content": 6
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+
+
+
+
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "moveMine", "action", 12, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "hints",
+			"content": ["CHARGED"]
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-nerfs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "lightningSlowMo"]
+		},{
+			"type": "SET_KEY",
+			"index": "attachedSpMultiplier",
+			"content": 0.5
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+
+
+
+
+
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "lightningStop"]
+		},{
+			"type": "SET_KEY",
+			"index": "attachedSpMultiplier",
+			"content": 0.4
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+
+
+
+
+		},{
+			"type": "ENTER",
+			"index": ["actions", "NEUTRAL", "GUARD_SPECIAL1_B", "steps", 3]
+		},{
+			"type": "SET_KEY",
+			"index": "attachedSpMultiplier",
+			"content": 0.2
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-visuals\") != \"false\" && window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "NEUTRAL", "DASH_SPECIAL1_B"]
+		},{
+			"type": "SET_KEY",
+			"index": "steps",
+			"content":
+			[
+				{
+					"type": "SET_PLAYER_ACTION_BLOCK",
+					"blockData":
+					{
+						"dash": 1.5,
+						"action": 1.5,
+						"move": 1.5,
+						"reaim": 1.5
+					}
 				},
 				{
 					"volume": 0.9,
 					"global": false,
 					"loop": false,
 					"type": "PLAY_SOUND",
-					"speed": 1.2,
-					"sound": "media\/sound\/battle\/airon\/close-combat-hit-hard4.ogg"
-				}
-			],
-			"missed":[
-				{
-					"time": 0.1,
-					"stopBeforeEdge": false,
-					"type": "MOVE_FORWARD"
+					"sound": "media\/sound\/battle\/dash-3.ogg"
 				},
 				{
 					"wait": false,
 					"viaWalkConfig": false,
 					"type": "SHOW_ANIMATION",
-					"anim": "attackMirrEnd"
+					"anim": "dash"
 				},
 				{
-					"value": "VIRTUAL",
+					"value": false,
+					"type": "SET_JUMPING"
+				},
+				{
+					"value": 450,
+					"type": "SET_SPEED"
+				},
+				{
+					"value": 2,
+					"type": "SET_ACCEL_SPEED"
+				},
+				{
+					"value": "IGNORE",
 					"type": "SET_COLL_TYPE"
+				},
+				{
+					"duration": 0.5,
+					"align": "BOTTOM",
+					"rotateFace": 0,
+					"flipLeftFace": false,
+					"wait": false,
+					"waitSkip": 0,
+					"actionDetached": false,
+					"fixPos": false,
+					"type": "SHOW_EFFECT",
+					"effect":
+					{
+						"sheet": "dust",
+						"name": "line"
+					},
+					"offset":
+					{
+						"x": 0,
+						"y": 3,
+						"z": 6
+					}
+				},
+				{
+					"dir":
+					{
+						"actorAttrib": "dashDir"
+					},
+					"type": "SET_FACE_TO_DIR"
+				},
+				{
+					"value": 0.4,
+					"type": "SET_INVINCIBLE"
+				},
+				{
+					"time": 0.4,
+					"cancelOnHit": true,
+					"orthoDirFactor": 0,
+					"ignoreLastHit": false,
+					"collideSlip": false,
+					"withBranches": true,
+					"type": "TACKLE",
+					"attack":
+					{
+						"type": "MASSIVE",
+						"visualType": "HEAVY",
+						"damageFactor": 1,
+						"skillBonus": "MELEE_DMG",
+						"spFactor": 0,
+						"stunSteps": [
+						{
+							"type": "START_LOCK"
+						},
+						{
+							"type": "BLOCK_XY"
+						}]
+					},
+					"hit":[
+						{
+							"time": 0.1,
+							"stopBeforeEdge": false,
+							"type": "MOVE_FORWARD"
+						},
+						{
+							"wait": false,
+							"viaWalkConfig": false,
+							"type": "SHOW_ANIMATION",
+							"anim": "attackMirrEnd"
+						},
+						{
+							"value": "VIRTUAL",
+							"type": "SET_COLL_TYPE"
+						},
+						{
+							"time": 0.5,
+							"type": "WAIT"
+						},
+						{
+							"volume": 0.9,
+							"global": false,
+							"loop": false,
+							"type": "PLAY_SOUND",
+							"speed": 1.2,
+							"sound": "media\/sound\/battle\/airon\/close-combat-hit-hard4.ogg"
+						}
+					],
+					"missed":[
+						{
+							"time": 0.1,
+							"stopBeforeEdge": false,
+							"type": "MOVE_FORWARD"
+						},
+						{
+							"wait": false,
+							"viaWalkConfig": false,
+							"type": "SHOW_ANIMATION",
+							"anim": "attackMirrEnd"
+						},
+						{
+							"value": "VIRTUAL",
+							"type": "SET_COLL_TYPE"
+						},
+						{
+							"time": 0.2,
+							"type": "WAIT"
+						}			
+					]
+				},
+				{
+					"selectType": "PREVIOUSLY_HIT",
+					"hitDir": "AWAY",
+					"align": "BOTTOM",
+					"hitCount": 1,
+					"hitDelay": 0,
+					"type": "DIRECT_HIT",
+					"attack":
+					{
+						"type": "MASSIVE",
+						"element": "NEUTRAL",
+						"damageFactor": 4.5,
+						"fly": "MASSIVE+",
+						"spFactor": 0,
+						"stunSteps": [
+						{
+							"type": "END_LOCK"
+						}],
+						"guardable": "",
+						"skillBonus": "MELEE_DMG"
+					}
 				},
 				{
 					"time": 0.2,
 					"type": "WAIT"
-				}			
-			]
-		},
-		{
-			"selectType": "PREVIOUSLY_HIT",
-			"hitDir": "AWAY",
-			"align": "BOTTOM",
-			"hitCount": 1,
-			"hitDelay": 0,
-			"type": "DIRECT_HIT",
-			"attack":
-			{
-				"type": "MASSIVE",
-				"element": "NEUTRAL",
-				"damageFactor": 4.5,
-				"fly": "MASSIVE+",
-				"spFactor": 0,
-				"stunSteps": [
+				},
 				{
-					"type": "END_LOCK"
-				}],
-				"guardable": "",
-				"skillBonus": "MELEE_DMG"
-			}
-		},
-		{
-			"time": 0.2,
-			"type": "WAIT"
-		},
-		{
-			"followUp": "idle",
-			"wait": false,
-			"viaWalkConfig": false,
-			"type": "SHOW_ANIMATION",
-			"anim": "preIdle"
-		},
-		{
-			"time": 0.1,
-			"type": "WAIT"
-		}
-	]
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
+					"followUp": "idle",
+					"wait": false,
+					"viaWalkConfig": false,
+					"type": "SHOW_ANIMATION",
+					"anim": "preIdle"
+				},
+				{
+					"time": 0.1,
+					"type": "WAIT"
+				}
+			]
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
 
 
 
 
-},{
-	"type": "ENTER",
-	"index": ["actions", "NEUTRAL", "DASH_SPECIAL2_B", "steps", 10]
-},{
-	"type": "SET_KEY",
-	"index": "hit",
-	"content": 
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-visuals\") != \"false\"",
+	"thenSteps":
 	[
 		{
-			"value": -1,
-			"type": "SET_WEIGHT"
-		}, {
-			"duration": -1,
-			"align": "BOTTOM",
-			"rotateFace": 0,
-			"flipLeftFace": false,
-			"wait": false,
-			"waitSkip": 0,
-			"actionDetached": false,
-			"group": "hidden",
-			"fixPos": false,
-			"type": "SHOW_EFFECT",
-			"effect": {
-				"sheet": "specials.neutral",
-				"name": "dashCopyHide"
-			},
-			"offset": {
-				"x": 0,
-				"y": 0,
-				"z": 0
-			}
-		}, {
-			"zoomType": "LIGHT",
-			"fadeIn": 0,
-			"duration": 0.2,
-			"fadeOut": 0.2,
-			"type": "SET_ZOOM_BLUR"
-		}, {
-			"offsetX": 0,
-			"offsetY": 0,
-			"speed": "FASTEST",
-			"transition": "EASE_IN_OUT",
-			"wait": false,
-			"waitSkip": 0,
-			"zoom": 1.2,
-			"focusType": "BETWEEN_TARGET",
-			"type": "FOCUS_CAMERA"
-		}, {
-			"type": "STOP_XY"
-		}, {
-			"kind": "FIRST_HIT",
-			"type": "SET_TEMP_TARGET"
-		}, {
-			"align": "BOTTOM",
-			"centralAngle": 4,
-			"startAngle": 0,
-			"angleVary": 0.2,
-			"startDist": 32,
-			"startDistCollide": false,
-			"random": false,
-			"count": 8,
-			"duration": 1,
-			"clockwise": false,
-			"flipLeftFace": 0,
-			"circularArea": false,
-			"uniformDir": 0,
-			"delay": 0,
-			"repeat": false,
-			"posEntity": "TARGET",
-			"type": "SHOOT_PROXY_RANGE",
-			"proxy": "neutralDashDummy",
-			"offset": {
-				"x": 0,
-				"y": 0,
-				"z": 0
-			}
-		}, {
-			"time": 0.1,
-			"type": "WAIT"
-		}, {
-			"offsetX": 0,
-			"offsetY": -48,
-			"speed": "SLOWER",
-			"transition": "EASE_IN_OUT",
-			"wait": false,
-			"waitSkip": 0,
-			"zoom": 1,
-			"focusType": "BETWEEN_TARGET",
-			"type": "FOCUS_CAMERA"
-		}, {
-			"time": 1.1,
-			"type": "WAIT"
-		}, {
-			"group": "hidden",
-			"type": "CLEAR_EFFECTS"
+			"type": "ENTER",
+			"index": ["actions", "NEUTRAL", "DASH_SPECIAL2_B", "steps", 10]
 		},{
-			"factor": 0.25,
-			"time": 0.01,
-			"keepEntityStatic": false,
-			"inversAccelerate": true,
-			"type": "ADD_SLOW_MOTION"
-		}, {
-			"offsetX": 0,
-			"offsetY": 0,
-			"speed": "FASTEST",
-			"transition": "EASE_IN_OUT",
-			"wait": false,
-			"waitSkip": 0,
-			"zoom": 1.2,
-			"focusType": "BETWEEN_TARGET",
-			"type": "FOCUS_CAMERA"
+			"type": "SET_KEY",
+			"index": "hit",
+			"content": 
+			[
+				{
+					"value": -1,
+					"type": "SET_WEIGHT"
+				}, {
+					"duration": -1,
+					"align": "BOTTOM",
+					"rotateFace": 0,
+					"flipLeftFace": false,
+					"wait": false,
+					"waitSkip": 0,
+					"actionDetached": false,
+					"group": "hidden",
+					"fixPos": false,
+					"type": "SHOW_EFFECT",
+					"effect": {
+						"sheet": "specials.neutral",
+						"name": "dashCopyHide"
+					},
+					"offset": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				}, {
+					"zoomType": "LIGHT",
+					"fadeIn": 0,
+					"duration": 0.2,
+					"fadeOut": 0.2,
+					"type": "SET_ZOOM_BLUR"
+				}, {
+					"offsetX": 0,
+					"offsetY": 0,
+					"speed": "FASTEST",
+					"transition": "EASE_IN_OUT",
+					"wait": false,
+					"waitSkip": 0,
+					"zoom": 1.2,
+					"focusType": "BETWEEN_TARGET",
+					"type": "FOCUS_CAMERA"
+				}, {
+					"type": "STOP_XY"
+				}, {
+					"kind": "FIRST_HIT",
+					"type": "SET_TEMP_TARGET"
+				}, {
+					"align": "BOTTOM",
+					"centralAngle": 4,
+					"startAngle": 0,
+					"angleVary": 0.2,
+					"startDist": 32,
+					"startDistCollide": false,
+					"random": false,
+					"count": 8,
+					"duration": 1,
+					"clockwise": false,
+					"flipLeftFace": 0,
+					"circularArea": false,
+					"uniformDir": 0,
+					"delay": 0,
+					"repeat": false,
+					"posEntity": "TARGET",
+					"type": "SHOOT_PROXY_RANGE",
+					"proxy": "neutralDashDummy",
+					"offset": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				}, {
+					"time": 0.1,
+					"type": "WAIT"
+				}, {
+					"offsetX": 0,
+					"offsetY": -48,
+					"speed": "SLOWER",
+					"transition": "EASE_IN_OUT",
+					"wait": false,
+					"waitSkip": 0,
+					"zoom": 1,
+					"focusType": "BETWEEN_TARGET",
+					"type": "FOCUS_CAMERA"
+				}, {
+					"time": 1.1,
+					"type": "WAIT"
+				}, {
+					"group": "hidden",
+					"type": "CLEAR_EFFECTS"
+				},{
+					"factor": 0.25,
+					"time": 0.01,
+					"keepEntityStatic": false,
+					"inversAccelerate": true,
+					"type": "ADD_SLOW_MOTION"
+				}, {
+					"offsetX": 0,
+					"offsetY": 0,
+					"speed": "FASTEST",
+					"transition": "EASE_IN_OUT",
+					"wait": false,
+					"waitSkip": 0,
+					"zoom": 1.2,
+					"focusType": "BETWEEN_TARGET",
+					"type": "FOCUS_CAMERA"
+				},{
+					"selectType": "PREVIOUSLY_HIT",
+					"hitDir": "AWAY",
+					"align": "BOTTOM",
+					"hitCount": 1,
+					"hitDelay": 0,
+					"type": "DIRECT_HIT",
+					"attack": {
+						"type": "HEAVY",
+						"element": "NEUTRAL",
+						"damageFactor": 0.3,
+						"fly": "HEAVY",
+						"reverse": false,
+						"spFactor": 0,
+						"stunSteps": [{
+								"type": "BLOCK_XY"
+							}, {
+								"value": 50,
+								"type": "Z_VEL"
+							}
+						],
+						"guardable": "",
+						"skillBonus": "MELEE_DMG"
+					}
+				}, {
+					"duration": -1,
+					"align": "BOTTOM",
+					"rotateFace": 0,
+					"flipLeftFace": false,
+					"wait": false,
+					"waitSkip": 0,
+					"actionDetached": false,
+					"group": "trail",
+					"fixPos": false,
+					"type": "SHOW_EFFECT",
+					"effect": {
+						"sheet": "specials.neutral",
+						"name": "dashCopyReappear"
+					},
+					"offset": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				}, {
+					"time": 0.15,
+					"stopBeforeEdge": true,
+					"type": "MOVE_FORWARD"
+				}, {
+					"wait": false,
+					"viaWalkConfig": false,
+					"type": "SHOW_ANIMATION",
+					"anim": "attackMirrEnd"
+				}, {
+					"time": 0.4,
+					"type": "WAIT"
+				}, {
+					"zoomType": "LIGHT",
+					"fadeIn": 0,
+					"duration": 0.2,
+					"fadeOut": 0.2,
+					"type": "SET_ZOOM_BLUR"
+				},{
+					"rumbleType":"RANDOM",
+					"duration":0.2,
+					"power":"STRONG",
+					"speed":"FASTER",
+					"fade":false,
+					"type":"RUMBLE_SCREEN"
+				},{
+					"selectType": "PREVIOUSLY_HIT",
+					"hitDir": "AWAY",
+					"align": "BOTTOM",
+					"hitCount": 1,
+					"hitDelay": 0,
+					"type": "DIRECT_HIT",
+					"attack": {
+						"type": "MASSIVE",
+						"element": "NEUTRAL",
+						"damageFactor": 5,
+						"fly": "MASSIVE++",
+						"reverse": false,
+						"spFactor": 0,
+						"stunSteps": [{
+								"type": "BLOCK_XY"
+							}, {
+								"value": 200,
+								"accel": 0,
+								"offZ": 0,
+								"maxTime": 0,
+								"type": "Z_VEL"
+							}, {
+								"type": "END_LOCK"
+							}
+						],
+						"guardable": "",
+						"skillBonus": "MELEE_DMG"
+					}
+				},{
+					"duration": 0,
+					"target": "TARGET",
+					"align": "BOTTOM",
+					"rotateFace": 0,
+					"flipLeftFace": false,
+					"wait": false,
+					"waitSkip": 0,
+					"actionDetached": true,
+					"ignoreSlowMo": true,
+					"fixPos": false,
+					"type": "SHOW_EFFECT",
+					"effect":
+					{
+						"sheet": "default-hit",
+						"name": "heavy"
+					},
+					"offset":
+					{
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				},{
+					"volume": 0.9,
+					"global": false,
+					"loop": false,
+					"type": "PLAY_SOUND",
+					"speed": 0.8,
+					"sound": "media\/sound\/battle\/airon\/close-combat-hit-hard4.ogg"
+				}, {
+					"volume": 0.9,
+					"global": false,
+					"loop": false,
+					"type": "PLAY_SOUND",
+					"speed": 1.2,
+					"sound": "media\/sound\/battle\/airon\/close-combat-hit-hard3.ogg"
+				}
+			]
 		},{
-			"selectType": "PREVIOUSLY_HIT",
-			"hitDir": "AWAY",
-			"align": "BOTTOM",
-			"hitCount": 1,
-			"hitDelay": 0,
-			"type": "DIRECT_HIT",
-			"attack": {
+			"type": "SET_KEY",
+			"index": "missed",
+			"content":
+			[{
+				"wait": false,
+				"viaWalkConfig": false,
+				"type": "SHOW_ANIMATION",
+				"anim": "attackMirrEnd"
+			}]
+		},{
+			"type": "EXIT"
+		},{
+			"type": "REMOVE_ARRAY_ELEMENT",
+			"index": 13
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-visuals\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "NEUTRAL","DASH_SPECIAL2_A", "steps", 12, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "damageFactor",
+			"content": 1.5
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "neutralDashWave", "action"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 4,
+			"content":
+			{
+				"duration": 0,
+				"align": "BOTTOM",
+				"rotateFace": 0,
+				"flipLeftFace": false,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect":
+				{
+					"sheet": "azure",
+					"name": "tinyExplosion"
+				},
+				"offset":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},{
+			"type": "ENTER",
+			"index": [6, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "damageFactor",
+			"content": 5.5
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "wavePushAura", "action", 2]
+		},{
+			"type": "SET_KEY",
+			"index": "strength",
+			"content": "RUN_ESCAPE"
+		},{
+			"type": "SET_KEY",
+			"index": "radius",
+			"content": 64
+		},{
+			"type": "SET_KEY",
+			"index": "fadeRadius",
+			"content": 64
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+			
+
+
+
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "wavePushAura2", "action", 2]
+		},{
+			"type": "SET_KEY",
+			"index": "strength",
+			"content": "RUN_ESCAPE"
+		},{
+			"type": "SET_KEY",
+			"index": "radius",
+			"content": 72
+		},{
+			"type": "SET_KEY",
+			"index": "fadeRadius",
+			"content": 48
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": [3]
+		},{
+			"type": "SET_KEY",
+			"index": "value",
+			"content": 60
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "iceOnWall", "action", 5]
+		},{
+			"type": "SET_KEY",
+			"index": "startDist",
+			"content": 18
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "iceSpecialSmallHoming", "behaviors", 0]
+		},{
+			"type": "SET_KEY",
+			"index": "steerDegree",
+			"content": 1.4
+		},{
+			"type": "SET_KEY",
+			"index": "adjustTime",
+			"content": 0.6
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "SET_KEY",
+			"index": "timer",
+			"content": 1.0
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-visuals\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "specialSmallHoming", "behaviors", 0]
+		},{
+			"type": "SET_KEY",
+			"index": "steerDegree",
+			"content": 1.3
+		},{
+			"type": "SET_KEY",
+			"index": "adjustTime",
+			"content": 1.5
+		},{
+			"type": "EXIT"
+		},{
+			"type": "SET_KEY",
+			"index": "timer",
+			"content": 1.5
+		},{
+			"type": "EXIT"
+		},{
+			"type": "SET_KEY",
+			"index": "attack",
+			"content": {
 				"type": "HEAVY",
 				"element": "NEUTRAL",
-				"damageFactor": 0.3,
-				"fly": "HEAVY",
+				"damageFactor": 0.9,
 				"reverse": false,
 				"spFactor": 0,
-				"stunSteps": [{
-						"type": "BLOCK_XY"
+				"guardable": "",
+				"skillBonus": "RANGED_DMG",
+				"limiter": ""
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["actions", "NEUTRAL", "THROW_SPECIAL2_B", "steps", 25]
+		},{
+			"type": "SET_KEY",
+			"index": "startAngle",
+			"content": -0.75
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 25,
+			"content": 
+			{
+				"followUp": "attackMirrEnd",
+				"wait": false,
+				"viaWalkConfig": false,
+				"type": "SHOW_ANIMATION",
+				"anim": "attackLong"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 25,
+			"content": 
+			{
+				"volume": 1.2,
+				"global": false,
+				"loop": false,
+				"sound": "media\/sound\/battle\/airon\/close-combat-sweep-massive.ogg",
+				"type": "PLAY_SOUND"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 25,
+			"content": 
+			{
+				"volume": 0.9,
+				"speed": 0.8,
+				"global": false,
+				"loop": false,
+				"sound": "media\/sound\/battle\/airon\/throw-ball-charged.ogg",
+				"type": "PLAY_SOUND"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 17,
+			"content": 
+			{
+				"volume": 0.9,
+				"global": false,
+				"loop": false,
+				"sound": "media\/sound\/battle\/airon\/close-combat-sweep-3.ogg",
+				"type": "PLAY_SOUND"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 11,
+			"content": 
+			{
+				"volume": 0.9,
+				"global": false,
+				"loop": false,
+				"sound": "media\/sound\/battle\/airon\/close-combat-sweep-2.ogg",
+				"type": "PLAY_SOUND"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 5,
+			"content": 
+			{
+				"volume": 0.9,
+				"global": false,
+				"loop": false,
+				"sound": "media\/sound\/battle\/airon\/close-combat-sweep-1.ogg",
+				"type": "PLAY_SOUND"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-visuals\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "NEUTRAL", "THROW_SPECIAL1_A", "steps"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 1,
+			"content": 
+			{
+				"volume": 0.9,
+				"speed": 1.0,
+				"global": false,
+				"loop": false,
+				"sound": "media\/sound\/battle\/airon\/throw-ball-charged.ogg",
+				"type": "PLAY_SOUND"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "neutralHugeDisk", "action"]
+		},{
+			"type": "SET_KEY",
+			"index": 2,
+			"content": {
+				"align": "BOTTOM",
+				"radius": 32,
+				"yScale": 0,
+				"zHeight": 24,
+				"centralAngle": 1,
+				"duration": 0.12,
+				"expandRadius": 0,
+				"alwaysFull": true,
+				"clockwise": false,
+				"flipLeftFace": 0,
+				"rectangular": false,
+				"repeat": true,
+				"uniformHitDir": false,
+				"fixPos": false,
+				"checkCollision": true,
+				"type": "CIRCLE_ATTACK",
+				"attack": {
+					"type": "HEAVY",
+					"element": "NEUTRAL",
+					"damageFactor": 2,
+					"reverse": false,
+					"guardable": "",
+					"skillBonus": "RANGED_DMG"
+				},
+				"offset": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},{
+			"type": "SET_KEY",
+			"index": 10,
+			"content": {
+				"align": "BOTTOM",
+				"radius": 32,
+				"yScale": 0,
+				"zHeight": 24,
+				"centralAngle": 1,
+				"duration": 0.11,
+				"expandRadius": 0,
+				"alwaysFull": true,
+				"clockwise": false,
+				"flipLeftFace": 0,
+				"rectangular": false,
+				"repeat": true,
+				"uniformHitDir": false,
+				"fixPos": false,
+				"checkCollision": true,
+				"type": "CIRCLE_ATTACK",
+				"attack": {
+					"type": "HEAVY",
+					"element": "NEUTRAL",
+					"damageFactor": 2,
+					"reverse": false,
+					"guardable": "",
+					"skillBonus": "RANGED_DMG"
+				},
+				"offset": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 0,
+			"content": {
+				"posType": "TARGET",
+				"align": "CENTER",
+				"type": "SET_HIT_PROXY",
+				"proxy": "azureSlashSound",
+				"offset": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": "proxies"
+		},{
+			"type": "SET_KEY",
+			"index": "azureSlashSound",
+			"content": {
+				"copyOwnerAnims": false,
+				"breakType": "COMBATANT",
+				"action": 
+				[{
+					"volume": 1,
+					"variance": 0.1,
+					"global": false,
+					"loop": false,
+					"type": "PLAY_SOUND",
+					"speed": 1.3,
+					"sound": "media\/sound\/battle\/airon\/close-combat-hit-hard1.ogg"
+				}],
+				"invisible": false,
+				"hp": 0,
+				"stickToSource": "TARGET",
+				"stickFaceAlign": false,
+				"size": {
+					"x": 8,
+					"y": 8,
+					"z": 8
+				},
+				"config": {},
+				"type": "GENERIC"
+			}
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "HEAT", "THROW_SPECIAL2_A"]
+		},{
+			"type": "SET_KEY",
+			"index": "dontFollowZ",
+			"content": true
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+
+		},{
+			"type": "ENTER",
+			"index": ["actions", "HEAT", "GUARD_SPECIAL2_A"]
+		},{
+			"type": "SET_KEY",
+			"index": "dontFollowZ",
+			"content": true
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+			
+		},{
+			"type": "ENTER",
+			"index": ["actions", "HEAT", "GUARD_SPECIAL3_A"]
+		},{
+			"type": "SET_KEY",
+			"index": "dontFollowZ",
+			"content": true
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+			
+		},{
+			"type": "ENTER",
+			"index": ["actions", "HEAT", "ATTACK_SPECIAL3_A"]
+		},{
+			"type": "SET_KEY",
+			"index": "dontFollowZ",
+			"content": true
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+			
+		},{
+			"type": "ENTER",
+			"index": ["actions", "HEAT", "ATTACK_SPECIAL3_B"]
+		},{
+			"type": "SET_KEY",
+			"index": "dontFollowZ",
+			"content": true
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+			
+		},{
+			"type": "ENTER",
+			"index": ["actions", "SHOCK", "ATTACK_SPECIAL3_A"]
+		},{
+			"type": "SET_KEY",
+			"index": "dontFollowZ",
+			"content": true
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-visuals\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "HEAT", "ATTACK_SPECIAL1_B", "steps"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 0,
+			"content":
+			{
+				"volume": 1.0,
+				"speed": -0.3,
+				"global": false,
+				"loop": false,
+				"type": "PLAY_SOUND",
+				"sound": "media\/sound\/battle\/airon\/fire-generic-attack-1.ogg"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies"]
+		},{
+			"type": "SET_KEY",
+			"index": "icicleSmallMoreKnockback",
+			"content":
+			{
+				"animation": {
+					"shapeType": "Y_FLAT",
+					"wallY": 1,
+					"frames": [0],
+					"SUB": [{
+							"name": "default",
+							"pivot": {
+								"x": 20,
+								"y": 40
+							},
+							"offset": {
+								"x": 0,
+								"y": -4,
+								"z": 0
+							},
+							"gfxOffset": {
+								"x": 0,
+								"y": 8
+							},
+							"sheet": {
+								"src": "media\/entity\/effects\/icicles.png  ",
+								"offX": 88,
+								"offY": 0,
+								"width": 40,
+								"height": 56
+							}
+						}, {
+							"name": "alt",
+							"pivot": {
+								"x": 20,
+								"y": 40
+							},
+							"sheet": {
+								"src": "media\/entity\/effects\/icicles.png  ",
+								"offX": 88,
+								"offY": 56,
+								"width": 48,
+								"height": 40
+							}
+						}
+					]
+				},
+				"copyOwnerAnims": false,
+				"breakType": "COMBATANT",
+				"action": [{
+						"type": "SHOW_RANDOM_ANIMATION",
+						"randAnims": ["default", "alt"]
 					}, {
-						"value": 50,
-						"type": "Z_VEL"
+						"duration": 0,
+						"align": "BOTTOM",
+						"rotateFace": 0,
+						"flipLeftFace": false,
+						"wait": false,
+						"waitSkip": 0,
+						"actionDetached": false,
+						"fixPos": false,
+						"type": "SHOW_EFFECT",
+						"effect": {
+							"sheet": "specials.icicles",
+							"name": "smallAppear"
+						},
+						"offset": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						}
+					}, {
+						"value": 0,
+						"type": "SET_SPEED"
+					}, {
+						"time": 0.3,
+						"type": "WAIT"
+					}, {
+						"time": 5,
+						"cancelOnHit": true,
+						"orthoDirFactor": 0,
+						"ignoreLastHit": false,
+						"type": "TACKLE",
+						"attack": {
+							"type": "HEAVY",
+							"element": "COLD",
+							"damageFactor": 0.75,
+							"reverse": false,
+							"fly": "MEDIUM",
+							"spFactor": 0,
+							"status": 1,
+							"guardable": "",
+							"skillBonus": "MELEE_DMG"
+						}
 					}
 				],
-				"guardable": "",
-				"skillBonus": "MELEE_DMG"
-			}
-		}, {
-			"duration": -1,
-			"align": "BOTTOM",
-			"rotateFace": 0,
-			"flipLeftFace": false,
-			"wait": false,
-			"waitSkip": 0,
-			"actionDetached": false,
-			"group": "trail",
-			"fixPos": false,
-			"type": "SHOW_EFFECT",
-			"effect": {
-				"sheet": "specials.neutral",
-				"name": "dashCopyReappear"
-			},
-			"offset": {
-				"x": 0,
-				"y": 0,
-				"z": 0
-			}
-		}, {
-			"time": 0.15,
-			"stopBeforeEdge": true,
-			"type": "MOVE_FORWARD"
-		}, {
-			"wait": false,
-			"viaWalkConfig": false,
-			"type": "SHOW_ANIMATION",
-			"anim": "attackMirrEnd"
-		}, {
-			"time": 0.4,
-			"type": "WAIT"
-		}, {
-			"zoomType": "LIGHT",
-			"fadeIn": 0,
-			"duration": 0.2,
-			"fadeOut": 0.2,
-			"type": "SET_ZOOM_BLUR"
-		},{
-			"rumbleType":"RANDOM",
-			"duration":0.2,
-			"power":"STRONG",
-			"speed":"FASTER",
-			"fade":false,
-			"type":"RUMBLE_SCREEN"
-		},{
-			"selectType": "PREVIOUSLY_HIT",
-			"hitDir": "AWAY",
-			"align": "BOTTOM",
-			"hitCount": 1,
-			"hitDelay": 0,
-			"type": "DIRECT_HIT",
-			"attack": {
-				"type": "MASSIVE",
-				"element": "NEUTRAL",
-				"damageFactor": 5,
-				"fly": "MASSIVE++",
-				"reverse": false,
-				"spFactor": 0,
-				"stunSteps": [{
-						"type": "BLOCK_XY"
-					}, {
-						"value": 200,
-						"accel": 0,
-						"offZ": 0,
-						"maxTime": 0,
-						"type": "Z_VEL"
-					}, {
-						"type": "END_LOCK"
-					}
-				],
-				"guardable": "",
-				"skillBonus": "MELEE_DMG"
+				"invisible": true,
+				"hp": 0.5,
+				"killEffect": {
+					"sheet": "specials.icicles",
+					"name": "icicleExplodeSmall"
+				},
+				"stickToSource": "NONE",
+				"stickFaceAlign": false,
+				"group": "wall",
+				"size": {
+					"x": 24,
+					"y": 24,
+					"z": 24
+				},
+				"config": {
+					"collType": "IGNORE"
+				},
+				"type": "GENERIC"
 			}
 		},{
-			"duration": 0,
-			"target": "TARGET",
-			"align": "BOTTOM",
-			"rotateFace": 0,
-			"flipLeftFace": false,
-			"wait": false,
-			"waitSkip": 0,
-			"actionDetached": true,
-			"ignoreSlowMo": true,
-			"fixPos": false,
-			"type": "SHOW_EFFECT",
-			"effect":
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["actions", "COLD", "GUARD_SPECIAL1_B", "steps"]
+		},{
+			"type": "ENTER",
+			"index": [8]
+		},{
+			"type": "SET_KEY",
+			"index": "proxy",
+			"content": "icicleSmallMoreKnockback"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": [9]
+		},{
+			"type": "SET_KEY",
+			"index": "proxy",
+			"content": "icicleSmallMoreKnockback"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["actions", "COLD", "GUARD_SPECIAL2_B", "steps"]
+		},{
+			"type": "ENTER",
+			"index": [13]
+		},{
+			"type": "SET_KEY",
+			"index": "proxy",
+			"content": "icicleSmallMoreKnockback"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": [15]
+		},{
+			"type": "SET_KEY",
+			"index": "proxy",
+			"content": "icicleSmallMoreKnockback"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": [17]
+		},{
+			"type": "SET_KEY",
+			"index": "proxy",
+			"content": "icicleSmallMoreKnockback"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-nerfs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "COLD", "DASH_SPECIAL2_A", "steps", 14, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "damageFactor",
+			"content": 1
+		},{
+			"type": "SET_KEY",
+			"index": "status",
+			"content": 0.1
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-nerfs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "waveDummy", "action", 3]
+		},{
+			"type": "SET_KEY",
+			"index": "time",
+			"content": 1.5
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-nerfs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "waveDummy2", "action", 7]
+		},{
+			"type": "SET_KEY",
+			"index": "time",
+			"content": 4.5
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-visuals\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "waveDummy", "action"]
+		},{
+			"type": "SET_KEY",
+			"index": 2,
+			"content": 
 			{
-				"sheet": "default-hit",
-				"name": "heavy"
-			},
-			"offset":
-			{
-				"x": 0,
-				"y": 0,
-				"z": 0
+				"wait": false,
+				"viaWalkConfig": false,
+				"type": "SHOW_ANIMATION",
+				"anim": "guard"
 			}
 		},{
-			"volume": 0.9,
-			"global": false,
-			"loop": false,
-			"type": "PLAY_SOUND",
-			"speed": 0.8,
-			"sound": "media\/sound\/battle\/airon\/close-combat-hit-hard4.ogg"
-		}, {
-			"volume": 0.9,
-			"global": false,
-			"loop": false,
-			"type": "PLAY_SOUND",
-			"speed": 1.2,
-			"sound": "media\/sound\/battle\/airon\/close-combat-hit-hard3.ogg"
-		}
-	]
-},{
-	"type": "SET_KEY",
-	"index": "missed",
-	"content":
-	[{
-		"wait": false,
-		"viaWalkConfig": false,
-		"type": "SHOW_ANIMATION",
-		"anim": "attackMirrEnd"
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 1,
+			"content": 
+			{
+				"searchType": "CLOSE_RANGE",
+				"distance": 512,
+				"type": "SET_CLOSE_TEMP_TARGET"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 4,
+			"content": 
+			{
+			  "withElse": false,
+			  "type": "IF",
+			  "condition": "entity.hasTmpTarget",
+			  "thenStep": [
+				{
+				  "value": true,
+				  "type": "FACE_TO_TARGET"
+				}
+			  ]
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-visuals\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "waveDummy2", "action"]
+		},{
+			"type": "SET_KEY",
+			"index": 6,
+			"content": 
+			{
+				"wait": false,
+				"viaWalkConfig": false,
+				"type": "SHOW_ANIMATION",
+				"anim": "guard"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 1,
+			"content": 
+			{
+				"searchType": "CLOSE_RANGE",
+				"distance": 512,
+				"type": "SET_CLOSE_TEMP_TARGET"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 8,
+			"content": 
+			{
+			  "withElse": false,
+			  "type": "IF",
+			  "condition": "entity.hasTmpTarget",
+			  "thenStep": [
+				{
+				  "value": true,
+				  "type": "FACE_TO_TARGET"
+				}
+			  ]
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
 	}]
-},{
-	"type": "EXIT"
-},{
-	"type": "REMOVE_ARRAY_ELEMENT",
-	"index": 13
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-	
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["proxies", "neutralDashWave", "action"]
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 4,
-	"content":
-	{
-		"duration": 0,
-		"align": "BOTTOM",
-		"rotateFace": 0,
-		"flipLeftFace": false,
-		"wait": false,
-		"waitSkip": 0,
-		"actionDetached": false,
-		"fixPos": false,
-		"type": "SHOW_EFFECT",
-		"effect":
-		{
-			"sheet": "azure",
-			"name": "tinyExplosion"
-		},
-		"offset":
-		{
-			"x": 0,
-			"y": 0,
-			"z": 0
-		}
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-	
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["proxies", "wavePushAura", "action", 2]
-},{
-	"type": "SET_KEY",
-	"index": "strength",
-	"content": "RUN_ESCAPE"
-},{
-	"type": "SET_KEY",
-	"index": "radius",
-	"content": 64
-},{
-	"type": "SET_KEY",
-	"index": "fadeRadius",
-	"content": 64
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-	
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["proxies", "wavePushAura2", "action", 2]
-},{
-	"type": "SET_KEY",
-	"index": "strength",
-	"content": "RUN_ESCAPE"
-},{
-	"type": "SET_KEY",
-	"index": "radius",
-	"content": 72
-},{
-	"type": "SET_KEY",
-	"index": "fadeRadius",
-	"content": 48
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": [3]
-},{
-	"type": "SET_KEY",
-	"index": "value",
-	"content": 60
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-
-
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["proxies", "iceOnWall", "action", 5]
-},{
-	"type": "SET_KEY",
-	"index": "startDist",
-	"content": 18
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": ["proxies", "iceSpecialSmallHoming", "behaviors", 0]
-},{
-	"type": "SET_KEY",
-	"index": "steerDegree",
-	"content": 1.4
-},{
-	"type": "SET_KEY",
-	"index": "adjustTime",
-	"content": 0.6
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "SET_KEY",
-	"index": "timer",
-	"content": 1.0
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["proxies", "neutralHugeDisk", "action"]
-},{
-	"type": "SET_KEY",
-	"index": 2,
-	"content": {
-		"align": "BOTTOM",
-		"radius": 32,
-		"yScale": 0,
-		"zHeight": 24,
-		"centralAngle": 1,
-		"duration": 0.13,
-		"expandRadius": 0,
-		"alwaysFull": true,
-		"clockwise": false,
-		"flipLeftFace": 0,
-		"rectangular": false,
-		"repeat": true,
-		"uniformHitDir": false,
-		"fixPos": false,
-		"checkCollision": true,
-		"type": "CIRCLE_ATTACK",
-		"attack": {
-			"type": "HEAVY",
-			"element": "NEUTRAL",
-			"damageFactor": 1.5,
-			"reverse": false,
-			"guardable": "",
-			"skillBonus": "RANGED_DMG"
-		},
-		"offset": {
-			"x": 0,
-			"y": 0,
-			"z": 0
-		}
-	}
-},{
-	"type": "SET_KEY",
-	"index": 10,
-	"content": {
-		"align": "BOTTOM",
-		"radius": 32,
-		"yScale": 0,
-		"zHeight": 24,
-		"centralAngle": 1,
-		"duration": 0.13,
-		"expandRadius": 0,
-		"alwaysFull": true,
-		"clockwise": false,
-		"flipLeftFace": 0,
-		"rectangular": false,
-		"repeat": true,
-		"uniformHitDir": false,
-		"fixPos": false,
-		"checkCollision": true,
-		"type": "CIRCLE_ATTACK",
-		"attack": {
-			"type": "HEAVY",
-			"element": "NEUTRAL",
-			"damageFactor": 1.5,
-			"reverse": false,
-			"guardable": "",
-			"skillBonus": "RANGED_DMG"
-		},
-		"offset": {
-			"x": 0,
-			"y": 0,
-			"z": 0
-		}
-	}
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 0,
-	"content": {
-		"posType": "TARGET",
-		"align": "CENTER",
-		"type": "SET_HIT_PROXY",
-		"proxy": "azureSlashSound",
-		"offset": {
-			"x": 0,
-			"y": 0,
-			"z": 0
-		}
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": "proxies"
-},{
-	"type": "SET_KEY",
-	"index": "azureSlashSound",
-	"content": {
-		"copyOwnerAnims": false,
-		"breakType": "COMBATANT",
-		"action": 
-		[{
-			"volume": 1,
-			"variance": 0.1,
-			"global": false,
-			"loop": false,
-			"type": "PLAY_SOUND",
-			"speed": 1.3,
-			"sound": "media\/sound\/battle\/airon\/close-combat-hit-hard1.ogg"
-		}],
-		"invisible": false,
-		"hp": 0,
-		"stickToSource": "TARGET",
-		"stickFaceAlign": false,
-		"size": {
-			"x": 8,
-			"y": 8,
-			"z": 8
-		},
-		"config": {},
-		"type": "GENERIC"
-	}
-},{
-	"type": "EXIT"
-
-
-
-
-},{
-	"type": "ENTER",
-	"index": ["actions", "HEAT", "THROW_SPECIAL2_A"]
-},{
-	"type": "SET_KEY",
-	"index": "dontFollowZ",
-	"content": true
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-
-},{
-	"type": "ENTER",
-	"index": ["actions", "HEAT", "GUARD_SPECIAL2_A"]
-},{
-	"type": "SET_KEY",
-	"index": "dontFollowZ",
-	"content": true
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-	
-},{
-	"type": "ENTER",
-	"index": ["actions", "HEAT", "GUARD_SPECIAL3_A"]
-},{
-	"type": "SET_KEY",
-	"index": "dontFollowZ",
-	"content": true
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-	
-},{
-	"type": "ENTER",
-	"index": ["actions", "HEAT", "ATTACK_SPECIAL3_A"]
-},{
-	"type": "SET_KEY",
-	"index": "dontFollowZ",
-	"content": true
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-	
-},{
-	"type": "ENTER",
-	"index": ["actions", "HEAT", "ATTACK_SPECIAL3_B"]
-},{
-	"type": "SET_KEY",
-	"index": "dontFollowZ",
-	"content": true
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-	
-},{
-	"type": "ENTER",
-	"index": ["actions", "SHOCK", "ATTACK_SPECIAL3_A"]
-},{
-	"type": "SET_KEY",
-	"index": "dontFollowZ",
-	"content": true
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
 }]

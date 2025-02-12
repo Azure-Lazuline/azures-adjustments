@@ -1,58 +1,65 @@
-[{
-	"type": "ENTER",
-	"index": ["actions", "Attack"]
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 0,
-	"content":
-	{
-		"duration": 1,
-		"align": "CENTER",
-		"rotateFace": 0,
-		"flipLeftFace": false,
-		"wait": false,
-		"waitSkip": 0,
-		"actionDetached": false,
-		"fixPos": false,
-		"type": "SHOW_EFFECT",
-		"effect":
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-enemyvisuals\") != \"false\"",
+	"thenSteps":
+	[
 		{
-			"sheet": "azure",
-			"name": "shockCharge"
-		},
-		"offset":
-		{
-			"x": 0,
-			"y": 0,
-			"z": 0
+			"type": "ENTER",
+			"index": ["actions", "Attack"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 0,
+			"content":
+			{
+				"duration": 1,
+				"align": "CENTER",
+				"rotateFace": 0,
+				"flipLeftFace": false,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect":
+				{
+					"sheet": "azure",
+					"name": "shockCharge"
+				},
+				"offset":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 19,
+			"content":
+			{
+				"volume": 0.9,
+				"global": false,
+				"loop": false,
+				"speed": 1.6,
+				"sound": "media\/sound\/battle\/airon\/shock\/close-combat-shock-sweep-1.ogg",
+				"type": "PLAY_SOUND"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 29,
+			"content":
+			{
+				"volume": 0.9,
+				"global": false,
+				"loop": false,
+				"speed": 1.6,
+				"sound": "media\/sound\/battle\/airon\/shock\/close-combat-shock-sweep-1.ogg",
+				"type": "PLAY_SOUND"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
 		}
-	}
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 19,
-	"content":
-	{
-		"volume": 0.9,
-		"global": false,
-		"loop": false,
-		"speed": 1.6,
-		"sound": "media\/sound\/battle\/airon\/shock\/close-combat-shock-sweep-1.ogg",
-		"type": "PLAY_SOUND"
-	}
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 29,
-	"content":
-	{
-		"volume": 0.9,
-		"global": false,
-		"loop": false,
-		"speed": 1.6,
-		"sound": "media\/sound\/battle\/airon\/shock\/close-combat-shock-sweep-1.ogg",
-		"type": "PLAY_SOUND"
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
+	]
 }]

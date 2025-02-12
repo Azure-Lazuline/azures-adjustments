@@ -1,57 +1,64 @@
-[{
-	"type": "ENTER",
-	"index": ["states"]
-},{
-	"type": "ADD_KEY",
-	"index": "HPBREAK",
-	"content": 
-	{
-		"enabledReactions": ["KILL_HIT"],
-		"damageFactor": 0.5,
-		"choices": [
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-bosses\") != \"false\"",
+	"thenSteps":
+	[
 		{
-			"postSwitchState": "DEFAULT"
-		}]
-	}
-},{
-	"type": "ADD_KEY",
-	"index": "HPBREAKWEAK",
-	"content": 
-	{
-		"enabledReactions": ["KILL_HIT"],
-		"damageFactor": 0.5,
-		"walkAnims": "weak",
-		"shadow": 24,
-		"choices": [
-		{
-			"postSwitchState": "DEFAULT"
-		}]
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": ["reactions", "HP_BREAK"]
-},{
-	"type": "SET_KEY",
-	"index": "preSwitchState",
-	"content": "HPBREAK"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": ["reactions", "HP_BREAK_WEAK"]
-},{
-	"type": "SET_KEY",
-	"index": "preSwitchState",
-	"content": "HPBREAKWEAK"
-},{
-	"type": "SET_KEY",
-	"index": "postSwitchState"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
+			"type": "ENTER",
+			"index": ["states"]
+		},{
+			"type": "SET_KEY",
+			"index": "HPBREAK",
+			"content": 
+			{
+				"enabledReactions": ["KILL_HIT"],
+				"damageFactor": 0.5,
+				"choices": [
+				{
+					"postSwitchState": "DEFAULT"
+				}]
+			}
+		},{
+			"type": "SET_KEY",
+			"index": "HPBREAKWEAK",
+			"content": 
+			{
+				"enabledReactions": ["KILL_HIT"],
+				"damageFactor": 0.5,
+				"walkAnims": "weak",
+				"shadow": 24,
+				"choices": [
+				{
+					"postSwitchState": "DEFAULT"
+				}]
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["reactions", "HP_BREAK"]
+		},{
+			"type": "SET_KEY",
+			"index": "preSwitchState",
+			"content": "HPBREAK"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["reactions", "HP_BREAK_WEAK"]
+		},{
+			"type": "SET_KEY",
+			"index": "preSwitchState",
+			"content": "HPBREAKWEAK"
+		},{
+			"type": "SET_KEY",
+			"index": "postSwitchState"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		}
+	]
 }]

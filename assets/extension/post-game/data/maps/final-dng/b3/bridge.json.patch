@@ -1,0 +1,41 @@
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"IG_LANG\") == \"en_US\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["entities", 83, "settings", "npcStates", 0, "event", 7, "elseStep"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 14,
+			"content": 
+			{
+				"message": {
+					"en_US": "Anyway, I'm thinking this might be our last chance to go get some gear upgrades before the end.",
+				},
+				"autoContinue": false,
+				"type": "SHOW_MSG",
+				"person": {
+					"person": "main.luke",
+					"expression": "WONDERING"
+				}
+			}
+		},{
+			"type": "SET_KEY",
+			"index": 15,
+			"content":
+			{
+				"message": {
+					"en_US": "Or are you ready to just continue with the dungeon?",
+				},
+				"autoContinue": false,
+				"type": "SHOW_MSG",
+				"person": {
+					"person": "main.luke",
+					"expression": "DEFAULT"
+				}
+			}
+		}
+	]
+}]

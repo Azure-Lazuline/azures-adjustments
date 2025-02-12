@@ -1,0 +1,18 @@
+[{
+	"type": "ENTER",
+	"index": ["proxies", "Fist", "action", 18, "attack"]
+},{
+	"type": "SET_KEY",
+	"index": "guardable",
+	"content": "ALWAYS"
+},{
+	"type": "EXIT",
+},{
+	"type": "EXIT",
+},{
+	"type": "EXIT",
+},{
+	"type": "EXIT",
+},{
+	"type": "EXIT",
+}]

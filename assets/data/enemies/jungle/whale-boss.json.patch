@@ -1,0 +1,17 @@
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-bosses\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["trackers", "rageWeakRegen"]
+		},{
+			"type": "SET_KEY",
+			"index": "target",
+			"content": 10
+		},{
+			"type": "EXIT"
+		}
+	]
+}]

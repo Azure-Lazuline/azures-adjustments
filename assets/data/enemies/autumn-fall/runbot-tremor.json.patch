@@ -1,10 +1,17 @@
-[{
-	"type": "ENTER",
-	"index": ["params"]
-},{
-	"type": "SET_KEY",
-	"index": "hp",
-	"content": 99999
-},{
-	"type": "EXIT"
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-bosses\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["params"]
+		},{
+			"type": "SET_KEY",
+			"index": "hp",
+			"content": 99999
+		},{
+			"type": "EXIT"
+		}
+	]
 }]

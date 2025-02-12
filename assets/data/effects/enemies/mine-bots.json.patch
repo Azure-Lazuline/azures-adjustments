@@ -1,0 +1,109 @@
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-enemyvisuals\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["ANIMS", "SUB"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 0,
+			"content": {
+				"name": "NEW_CROSSHAIR",
+				"sheet": {
+					"src": "media\/entity\/effects\/newcrosshair.png",
+					"offX": 0,
+					"offY": 0,
+					"width": 16,
+					"height": 16
+				},
+				"guiSprites": true,
+				"renderMode": "lighter",
+				"time": 0.05,
+				"repeat": true,
+				"frames": [0, 1],
+				"framesAlpha": [0.6, 1.0]
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 0,
+			"content": {
+				"name": "CROSSHAIR_CIRCLE",
+				"sheet":
+				{
+					"src": "media\/entity\/effects\/crab-effects.png",
+					"offX": 64,
+					"offY": 32,
+					"width": 32,
+					"height": 32
+				},
+				"renderMode": "lighter",
+				"guiSprites": true,
+				"time": 0.4,
+				"frames": [0]
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["EFFECTS"]
+		},{
+			"type": "SET_KEY",
+			"index": "crosshair",
+			"content": 
+			[
+				{
+					"useTargetAngle": false,
+					"particleDuration": -1,
+					"anim": "NEW_CROSSHAIR",
+					"type": "PLAY_ANIM"
+				}, {
+					"useTargetAngle": false,
+					"keepAngleSync": false,
+					"pAlpha":
+					{
+						"init": 1.0,
+						"start":
+						{
+							"value": 0.0,
+							"spline": ""
+						}
+					},
+					"pScale":
+					{
+						"init":
+						{
+							"x": 1.0,
+							"y": 1.0
+						},
+						"start":
+						{
+							"value":
+							{
+								"x": 1.4,
+								"y": 1.4
+							},
+							"spline": "EASE_OUT"
+						}
+					},
+					"moveWithTarget": 0,
+					"particleDuration": 0.25,
+					"anim": "CROSSHAIR_CIRCLE",
+					"type": "PLAY_ANIM"
+				}, {
+					"type": "LOOP_START"
+				}, {
+					"time": 0.05,
+					"type": "WAIT"
+				}, {
+					"type": "LOOP_END"
+				}
+			]
+		},{
+			"type": "EXIT"
+		}
+	]
+}]

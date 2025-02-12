@@ -1,0 +1,175 @@
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-nerfs\") != \"false\" && activeMods.find(e => e.name === \"xenons-playable-classes\")",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "daybreakStuck", "action", 8, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "damageFactor",
+			"content": 0.6
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": [6]
+		},{
+			"type": "SET_KEY",
+			"index": "value",
+			"content": 14
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+
+
+
+
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "fireDaggerStuck", "action", 7]
+		},{
+			"type": "SET_KEY",
+			"index": "value",
+			"content": 6
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-nerfs\") != \"false\" && activeMods.find(e => e.name === \"xenons-playable-classes\")",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "HEAT", "DASH_SPECIAL3_A", "steps", 14, "hit"]
+		},{
+			"type": "SET_KEY",
+			"index": 41,
+			"content":               
+			{
+				"value": 0,
+				"type": "SET_SPEED"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-nerfs\") != \"false\" && activeMods.find(e => e.name === \"xenons-playable-classes\")",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "iceFreeze", "action", 4]
+		},{
+			"type": "SET_KEY",
+			"index": "timeScale",
+			"content": 0.1
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\" && activeMods.find(e => e.name === \"xenons-playable-classes\")",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "solarEruptionTipL", "action", 6, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "damageFactor",
+			"content": 3
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "solarEruptionTipR", "action", 6, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "damageFactor",
+			"content": 3
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "solarEruptionChainHitbox", "action", 5, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "damageFactor",
+			"content": 0.05
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		}
+	]
+}]

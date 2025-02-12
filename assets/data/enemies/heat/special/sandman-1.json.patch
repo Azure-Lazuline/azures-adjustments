@@ -1,33 +1,40 @@
-[{
-	"type": "ENTER",
-	"index": ["actions", "MidFlameShoot"]
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 56,
-	"content": {
-		"type": "FACE_TO_TARGET_SPEED",
-		"value": 0.2
-	}
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 57,
-	"content": {
-		"type": "WAIT",
-		"time": 0.65
-	}
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "ENTER",
-	"index": ["trackers", "megaShot"]
-},{
-	"type": "SET_KEY",
-	"index": "target",
-	"content": 14
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-bosses\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "MidFlameShoot"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 56,
+			"content": {
+				"type": "FACE_TO_TARGET_SPEED",
+				"value": 0.2
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 57,
+			"content": {
+				"type": "WAIT",
+				"time": 0.65
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["trackers", "megaShot"]
+		},{
+			"type": "SET_KEY",
+			"index": "target",
+			"content": 14
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		}
+	]
 }]

@@ -1,0 +1,42 @@
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-enemyvisuals\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["EFFECTS", "steelBounce"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 0,
+			"content": {
+				"volume": 0.8,
+				"global": false,
+				"loop": false,
+				"type": "PLAY_SOUND",
+				"sound": "media\/sound\/battle\/thud-5.ogg"				
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["EFFECTS", "steelWall"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 0,
+			"content": {
+				"volume": 0.8,
+				"global": false,
+				"loop": false,
+				"type": "PLAY_SOUND",
+				"sound": "media\/sound\/battle\/thud-5.ogg"				
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		}
+	]
+}]

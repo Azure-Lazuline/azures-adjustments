@@ -1,16 +1,23 @@
-[{
-	"type": "ENTER",
-	"index": ["proxies", "flame", "attack", "hints"]
-},{
-	"type": "ADD_ARRAY_ELEMENT",
-	"index": 0,
-	"content": "NO_BOMB_HOMING"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
-},{
-	"type": "EXIT"
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-bosses\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "flame", "attack", "hints"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 0,
+			"content": "NO_BOMB_HOMING"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		}
+	]
 }]

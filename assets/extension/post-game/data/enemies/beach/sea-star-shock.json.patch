@@ -1,0 +1,142 @@
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-timingrings\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "Attack"]
+		},{
+			"type": "REMOVE_ARRAY_ELEMENT",
+			"index": 11
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 11,
+			"content":
+			{
+				"time": 0.5,
+				"stopBeforeEdge": true,
+				"type": "MOVE_BACKWARD"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 12,
+			"content":
+			{
+				"duration": 0.5,
+				"align": "CENTER",
+				"rotateFace": 0,
+				"flipLeftFace": false,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect":
+				{
+					"sheet": "azure",
+					"name": "tinyCharge"
+				},
+				"offset":
+				{
+					"x": 0,
+					"y": 0,
+					"z": -8
+				}
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 13,
+			"content":
+			{
+				"time": 0.5,
+				"stopBeforeEdge": true,
+				"type": "MOVE_BACKWARD"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": ["actions", "Special"]
+		},{
+			"type": "REMOVE_ARRAY_ELEMENT",
+			"index": 11
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 11,
+			"content":
+			{
+				"time": 1.0,
+				"stopBeforeEdge": true,
+				"type": "MOVE_BACKWARD"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 12,
+			"content":
+			{
+				"duration": 0.5,
+				"align": "CENTER",
+				"rotateFace": 0,
+				"flipLeftFace": false,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect":
+				{
+					"sheet": "azure",
+					"name": "shockCharge"
+				},
+				"offset":
+				{
+					"x": 0,
+					"y": 0,
+					"z": -8
+				}
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 13,
+			"content":
+			{
+				"duration": 0.5,
+				"align": "CENTER",
+				"rotateFace": 0,
+				"flipLeftFace": false,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect":
+				{
+					"sheet": "azure",
+					"name": "tinyCharge"
+				},
+				"offset":
+				{
+					"x": 0,
+					"y": 0,
+					"z": -8
+				}
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 14,
+			"content":
+			{
+				"time": 0.5,
+				"stopBeforeEdge": true,
+				"type": "MOVE_BACKWARD"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		}
+	]
+}]

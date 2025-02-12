@@ -1,0 +1,17 @@
+[{
+	"type": "ENTER",
+	"index": ["core"]
+},{
+	"type": "SET_KEY",
+	"index": "banner",
+	"content": 
+	{
+		"src": "media\/gui\/arena-banners.png",
+		"offX": 0,
+		"offY": 128,
+		"width": 280,
+		"height": 64
+	}
+},{
+	"type": "EXIT"
+}]
