@@ -5,6 +5,47 @@
 	[
 		{
 			"type": "ENTER",
+			"index": ["proxies", "lightningBallMelee", "action" ]
+		},{
+			"type": "REMOVE_ARRAY_ELEMENT",
+			"index": 26
+		},{
+			"type": "REMOVE_ARRAY_ELEMENT",
+			"index": 26
+		},{
+			"type": "REMOVE_ARRAY_ELEMENT",
+			"index": 26
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 24,
+			"content": {
+				"time": 0.1,
+				"stopBeforeEdge": false,
+				"type": "MOVE_FORWARD"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 25,
+			"content": {
+				"value": 0.1,
+				"type": "SET_AIR_FRICTION"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 26,
+			"content": {
+				"maxTime": 1.4,
+				"type": "WAIT_UNTIL",
+				"condition": "entity.ownerAttrib.fire"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
 			"index": ["actions", "Init" ]
 		},{
 			"type": "ADD_ARRAY_ELEMENT",
@@ -186,9 +227,9 @@
 				}
 			]
 		},{
-			"type": "EXIT",
+			"type": "EXIT"
 		},{
-			"type": "EXIT",
+			"type": "EXIT"
 		},{
 			"type": "ENTER",
 			"index": ["states", "DEFAULT", "choices", 5]
@@ -215,7 +256,7 @@
 				}
 			]
 		},{
-			"type": "EXIT",
+			"type": "EXIT"
 		},{
 			"type": "ADD_ARRAY_ELEMENT",
 			"index": 5,

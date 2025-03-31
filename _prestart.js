@@ -194,7 +194,7 @@ sc.TradeModel.inject({
 //text replacements
 window.azuretweaks.textReplace=function(message)
 {
-	//"Al" and "AI" both being used frequently bugged the heck out of me when the font makes them exactly identical, and one of them is a core theme of the game
+	//"Al" and "AI" both being used frequently was very confusing to me when the font makes them exactly identical, and one of them is a core theme of the game
 	message = message.replace("Al ", "Albert ");
 	message = message.replace("Al.", "Albert.");
 	message = message.replace("Al,", "Albert,");
@@ -271,8 +271,8 @@ sc.DreamMsgGui.inject({
 	},
 });
 
-//force scaling in Arena cups. El's Tweaks has similar functionality, implemented in a different way - i just wanted something basic.
-//this gets disabled if El's Tweaks is active though since that one has a UI to toggle it, and some bugfixes i think.
+//force scaling in Arena cups. EL's Tweaks has similar functionality, implemented in a different way - i just wanted something basic.
+//this gets disabled if EL's Tweaks is active though since that one has a UI to toggle it, and some bugfixes i think.
 //theirs might override this anyway depending on load order, since they don't use proper injection syntax and just clobber the whole function... ah well
 sc.Arena.inject({
     hasAscendedChallenge(a) {
@@ -433,7 +433,7 @@ sc.Arena.inject({
 
 //fix the inconsistency in arena stats. Damage Taken used to always say "x25" instead of how much you actually took.
 //all other stats showed the actual stat there, but Damage Taken showed the multiplier, which was much less useful and it was inconsistent.
-//also applies this to the "HP Recovered" stat from El's Tweaks that makes platinum medals completely free in case anyone has that toggled
+//also applies this to the "HP Recovered" stat from EL's Tweaks that makes platinum medals completely free in case anyone has that toggled
 sc.ArenaSummary.inject({
 	_addEntry(a, b, d)
 	{
@@ -997,7 +997,7 @@ sc.AzureLocationBox = ig.BoxGui.extend({
 	},
 	show: function (a) {
 		var mapname = ig.vars.currentLevelName;
-		//console.warn(mapname);
+		console.warn(mapname);
 		var notOnThisMap = false;
 		if (mapname.startsWith("bergenTrail/excluded") || mapname.startsWith("aridDng/first/room10") || mapname.startsWith("aridDng/second/f4")
 			|| mapname.startsWith("aridDng/second/f99") || mapname.startsWith("aridDng/second/elevator") || mapname.startsWith("cargoShip")
@@ -1006,7 +1006,8 @@ sc.AzureLocationBox = ig.BoxGui.extend({
 			|| mapname.startsWith("rhombusDng/boss") || mapname.startsWith("shockDng/f3/roomBoss") || mapname.startsWith("treeDng/f4")
 			|| mapname.startsWith("waveDng/b1/boss") || mapname.startsWith("metaSpace") || mapname.startsWith("jungle/dng/treeExpo")
 			|| mapname.startsWith("dream") || mapname.startsWith("arid/interior") || mapname.startsWith("finalDng/b4/credits")
-			|| mapname.startsWith("finalDng/b1/bridgeMidboss") || mapname.startsWith("finalDng/g/roomW33") || mapname.startsWith("finalDng/g/roomE33")
+			|| mapname.startsWith("finalDng/g/roomS-4") || mapname.startsWith("finalDng/b1/bridgeMidboss")
+			|| mapname.startsWith("finalDng/g/roomW3-3") || mapname.startsWith("finalDng/g/roomE3-3") || mapname.startsWith("finalDng/b3/roomC1")
 			|| mapname.startsWith("finalDng/b2/roomE9Guardian") || mapname.startsWith("finalDng/b2/roomW9Guardian")) 
 				notOnThisMap = true;
 				
