@@ -997,7 +997,7 @@ sc.AzureLocationBox = ig.BoxGui.extend({
 	},
 	show: function (a) {
 		var mapname = ig.vars.currentLevelName;
-		console.warn(mapname);
+		//console.warn(mapname);
 		var notOnThisMap = false;
 		if (mapname.startsWith("bergenTrail/excluded") || mapname.startsWith("aridDng/first/room10") || mapname.startsWith("aridDng/second/f4")
 			|| mapname.startsWith("aridDng/second/f99") || mapname.startsWith("aridDng/second/elevator") || mapname.startsWith("cargoShip")
