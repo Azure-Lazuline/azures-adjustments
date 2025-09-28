@@ -1,0 +1,74 @@
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-bosses\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "BigStone", "action", 2]
+		},{
+			"type": "SET_KEY",
+			"index": "stopBeforeTime",
+			"content": 0.55
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+			
+			
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "HugeStone", "action", 2]
+		},{
+			"type": "SET_KEY",
+			"index": "stopBeforeTime",
+			"content": 0.7
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+
+
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "FireStone", "action", 3]
+		},{
+			"type": "SET_KEY",
+			"index": "stopBeforeTime",
+			"content": 0.55
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+
+
+		},{
+			"type": "ENTER",
+			"index": ["proxies", "HugeFireStone", "action", 3]
+		},{
+			"type": "SET_KEY",
+			"index": "stopBeforeTime",
+			"content": 0.7
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		}
+	]
+}]

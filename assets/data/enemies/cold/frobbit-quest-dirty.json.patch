@@ -1,0 +1,23 @@
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "UberKick", 17, "attack"]
+		},{
+			"type": "SET_KEY",
+			"index": "type",
+			"content": "HEAVY"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		}
+	]
+}]

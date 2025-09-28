@@ -57,10 +57,10 @@ azuretweaks.AzureBalanceMenu = sc.ListInfoMenu.extend({
         this.doStateTransition("DEFAULT");
         this.list.show();
         this.list.doStateTransition("DEFAULT");
-        sc.menu.pushBackCallback(() => {
-            sc.menu.popBackCallback();
-            sc.menu.popMenu();
-        });
+        //sc.menu.pushBackCallback(() => {
+        //    sc.menu.popBackCallback();
+        //    sc.menu.popMenu();
+        //});
     },
     hideMenu() {
         this.parent();
