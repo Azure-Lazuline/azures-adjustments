@@ -1163,6 +1163,53 @@ sc.QuickItemMenu.inject({
 	}
 });
 
+sc.PlayerModel.inject({
+	canAddFavorite(){
+		return this.itemFavs.length < 32; //used to be 12
+	}
+});
+
+sc.ItemStatusFavorites.inject({
+	init(){
+		this.parent();
+
+		this.removeChildGui(this.maxFavs);
+		this.removeChildGui(this.currentFavs);
+
+		var b = sc.model.player,
+		a = {
+			size: sc.NUMBER_SIZE.TINY,
+			color: sc.GUI_NUMBER_COLOR.GREY
+		};
+		this.maxFavs = new sc.NumberGui(32, a);
+		this.maxFavs.setAlign(ig.GUI_ALIGN.X_RIGHT, ig.GUI_ALIGN.Y_TOP);
+		this.maxFavs.setPos(5, 2);
+		this.maxFavs.setNumber(32);
+		this.addChildGui(this.maxFavs);
+		this.currentFavs = new sc.NumberGui(32, a);
+		this.currentFavs.setAlign(ig.GUI_ALIGN.X_RIGHT, ig.GUI_ALIGN.Y_TOP);
+		this.currentFavs.setPos(24, 2);
+		this.currentFavs.setNumber(b.itemFavs.length);
+		this.addChildGui(this.currentFavs);	
+	}
+});
+
+//fix bug where consumable favs would reset if you used the last one and then died
+sc.PlayerModel.inject({
+	preLoad(a){
+		if (a && a.itemFavs)
+		{
+			for (var b = a.itemFavs.length; b--; ) {
+				var c = a.itemFavs[b];
+				if (this.items[c] <= 0) {
+					a.itemFavs.splice(b, 1);
+				}
+			}
+		}
+		this.parent(a);
+	}
+});
+
 //quicker scrolling to menus when you hold the button
 ig.PressRepeater.inject({
 	init(b, a){
@@ -1320,7 +1367,7 @@ sc.QuickMenuAnalysis.inject({
 	update()
 	{
 		if (this.isVisible() && this.buttonGroup.isActive() && !ig.interact.isBlocked() && ig.input.currentDevice == ig.INPUT_DEVICES.GAMEPAD
-			&& sc.options.get("analog-menus"))
+			&& sc.options.get("analog-menus") && !sc.autoControl.isActive())
 		{
 			var oldx = sc.quickmodel.cursor.x;
 			var oldy = sc.quickmodel.cursor.y;
@@ -1357,7 +1404,7 @@ sc.MapAreaContainer.inject({
 	update()
 	{
 		if (!sc.menu.mapLoading && !ig.interact.isBlocked() && this.buttongroup.isActive() && !sc.menu.mapStampMenu && ig.input.currentDevice == ig.INPUT_DEVICES.GAMEPAD
-			&& sc.options.get("analog-menus"))
+			&& sc.options.get("analog-menus") && !sc.autoControl.isActive())
 		{
 			var oldx = sc.menu.mapCursor.x;
 			var oldy = sc.menu.mapCursor.y;
@@ -1401,7 +1448,7 @@ sc.MapWorldMap.inject({
 	update()
 	{
 		if (!ig.interact.isBlocked() && this.buttonGroup.isActive() && ig.input.currentDevice == ig.INPUT_DEVICES.GAMEPAD
-		 && sc.options.get("analog-menus"))
+		 && sc.options.get("analog-menus") && !sc.autoControl.isActive())
 		{
 			var oldx = sc.menu.mapWorldCursor.x;
 			var oldy = sc.menu.mapWorldCursor.y;
@@ -1439,7 +1486,7 @@ sc.CircuitTreeDetailContainer.inject({
 	update()
 	{
 		if (!ig.interact.isBlocked() && !(sc.menu.skillState == sc.MENU_SKILL_STATE.NODE_MENU || sc.menu.skillState == sc.MENU_SKILL_STATE.OVERVIEW || sc.menu.currentSkillTree >= 0 && !this.trees[sc.menu.currentSkillTree].buttonGroup.isActive())
-			&& ig.input.currentDevice == ig.INPUT_DEVICES.GAMEPAD && sc.options.get("analog-menus"))
+			&& ig.input.currentDevice == ig.INPUT_DEVICES.GAMEPAD && sc.options.get("analog-menus") && !sc.autoControl.isActive())
 		{
 			var oldx = sc.menu.skillCursor.x;
 			var oldy = sc.menu.skillCursor.y;
@@ -1577,7 +1624,7 @@ sc.ButtonGroup.inject({
 			var loopbuttonsbackup = this.loopButtons;
 			this.loopButtons = false;
 			if (this.rstickScrollDelay){
-				this.rstickScrollDelay -= ig.system.tick;
+				this.rstickScrollDelay -= ig.system.actualTick;
 				if (this.rstickScrollDelay <= 0)
 					this.rstickScrollDelay = null;
 			}
@@ -1604,7 +1651,7 @@ sc.ButtonListBox.inject({
 			var loopbuttonsbackup = this.buttonGroup.loopButtons;
 			this.buttonGroup.loopButtons = false;
 			if (this.rstickScrollDelay){
-				this.rstickScrollDelay -= ig.system.tick;
+				this.rstickScrollDelay -= ig.system.actualTick;
 				if (this.rstickScrollDelay <= 0)
 					this.rstickScrollDelay = null;
 			}

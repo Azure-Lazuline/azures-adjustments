@@ -73,7 +73,7 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 
 - The equipment comparison menu always puts changed modifiers at the top of the list, so you don't need to expand it each time.
 
-- You can now add/remove favorite consumables directly from the quick menu, instead of only the pause menu.
+- You can now add/remove favorite consumables directly from the quick menu, instead of only the pause menu. Max favorites raised to 32.
 
 - Added the location name in the corner of the screen when you enter a new area.
 
@@ -112,4 +112,4 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 
 To use, install [ccloader](https://github.com/CCDirectLink/CCLoader), and go to the "Mods" menu ingame (the button at the *top* of the Options menu, not the tab on the right) and it should be listed there to select and install. It should automatically grab any prerequisites.
 
-You can also install manually by placing [the .ccmod file](https://github.com/Azure-Lazuline/azures-adjustments/releases) in your ccloader mods folder, and doing the same with [extension-asset-preloader](https://github.com/elluminance/crosscode-extension-asset-preloader/releases) (a prerequisite needed to modify DLC enemies).
+You can also install manually by placing [the .ccmod file](https://github.com/Azure-Lazuline/azures-adjustments/releases) in your ccloader mods folder, and doing the same with the prerequisites [extension-asset-preloader](https://github.com/elluminance/crosscode-extension-asset-preloader/releases) and [alybox](https://github.com/lexisother/cc-alybox/releases/).

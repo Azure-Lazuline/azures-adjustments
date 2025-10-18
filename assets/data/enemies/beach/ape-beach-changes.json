@@ -38,6 +38,12 @@
                     "count": 1,
                     "weight": 1,
                     "activeCondition": "!entity.attrib.forcedSpecialWave"
+                },
+                {
+                    "0": " ",
+                    "count": 1,
+                    "weight": 1,
+                    "activeCondition": "entity.attrib.forcedSpecialHeat && entity.attrib.forcedSpecialCold && entity.attrib.forcedSpecialShock && entity.attrib.forcedSpecialWave"
                 }],
                 "0_0": [
 				{
@@ -82,7 +88,28 @@
 					"stateReset": false,
 					"type": "DO_ENEMY_ACTION_INLINE",
 					"actionName": "SwitchWave"
-                }
+                }],
+                "4_0": [
+				{
+					"type": "SET_ATTRIB_BOOL",
+					"name": "forcedSpecialHeat",
+					"value": false
+				},
+				{
+					"type": "SET_ATTRIB_BOOL",
+					"name": "forcedSpecialCold",
+					"value": false
+				},
+				{
+					"type": "SET_ATTRIB_BOOL",
+					"name": "forcedSpecialShock",
+					"value": false
+				},
+				{
+					"type": "SET_ATTRIB_BOOL",
+					"name": "forcedSpecialWave",
+					"value": false
+				}
 			]
 		}
 	],
