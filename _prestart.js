@@ -1694,3 +1694,46 @@ sc.LoreListBoxNew.inject({
 		return ret;
 	}
 });
+
+//remove one set of rocks in that room in temple mine where you wait for a bomb 3 times in a row
+ig.Game.inject({
+	loadLevel(b, a, d)
+	{
+		this.parent(b, a, d);
+		if (ig.vars.currentLevelName == "coldDng/g/center")
+		{
+			console.warn("thing");
+			if (ig.vars.storage.maps["coldDng/b3/room3"] == null) ig.vars.storage.maps["coldDng/b3/room3"] = {};
+			ig.vars.storage.maps["coldDng/b3/room3"]._entity6_destroyed = true;
+			ig.vars.storage.maps["coldDng/b3/room3"]._entity7_destroyed = true;
+		}
+	}
+});
+
+//make bombs do more damage to fleazers, for the few rooms where that's required
+ig.ENTITY.Enemy.inject({
+	onDamage(a, b, c)
+	{
+		if (this.enemyName == "mine-coldbug" && b && b.hasHint("BOMB"))
+		{
+			var area = sc.map.currentPlayerArea.path;
+			if (area == "arid-dng-2") area = "arid-dng";
+			if (ig.vars.storage[area] && !ig.vars.storage[area].azureDungeonReset)
+			{
+				b.damageFactor = 3; //default is 2
+			}
+		}
+		return this.parent(a, b, c);
+	}
+});
+
+
+//fix the area name disappearing from the map menu when using controller, if the mouse cursor is in the wrong spot even when you're not using mouse
+sc.MapAreaContainer.inject({
+	onMouseInteract(a, b)
+	{
+		if (ig.input.currentDevice == ig.INPUT_DEVICES.GAMEPAD)
+			sc.menu.mapMouseOverFloorButtons = false;
+		return this.parent(a, b);
+	}
+});

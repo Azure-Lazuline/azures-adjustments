@@ -1,0 +1,49 @@
+[{	
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-enemyvisuals\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "CounterBite"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 10,
+			"content":
+			{
+				"duration": 0.3,
+				"align": "CENTER",
+				"rotateFace": 0,
+				"flipLeftFace": false,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect":
+				{
+					"sheet": "azure",
+					"name": "plantWarp"
+				},
+				"offset":
+				{
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 11,
+			"content":
+			{
+				"time": 0.1,
+				"type": "WAIT"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		}
+	]
+}]

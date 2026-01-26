@@ -1244,11 +1244,11 @@
 		},{
 			"type": "SET_KEY",
 			"index": "radius",
-			"content": 64
+			"content": 96
 		},{
 			"type": "SET_KEY",
 			"index": "fadeRadius",
-			"content": 64
+			"content": 32
 		},{
 			"type": "EXIT"
 		},{
@@ -1271,11 +1271,11 @@
 		},{
 			"type": "SET_KEY",
 			"index": "radius",
-			"content": 72
+			"content": 88
 		},{
 			"type": "SET_KEY",
 			"index": "fadeRadius",
-			"content": 48
+			"content": 32
 		},{
 			"type": "EXIT"
 		},{
@@ -1335,10 +1335,6 @@
 		},{
 			"type": "EXIT"
 		},{
-			"type": "SET_KEY",
-			"index": "timer",
-			"content": 1.0
-		},{
 			"type": "EXIT"
 		},{
 			"type": "EXIT"
@@ -1367,11 +1363,11 @@
 		},{
 			"type": "EXIT"
 		},{
+			"type": "EXIT"
+		},{
 			"type": "SET_KEY",
 			"index": "timer",
-			"content": 1.5
-		},{
-			"type": "EXIT"
+			"content": 1.2
 		},{
 			"type": "SET_KEY",
 			"index": "attack",
@@ -1862,13 +1858,22 @@
 						"time": 0.3,
 						"type": "WAIT"
 					}, {
-						"time": 5,
+						"attribName": "time",
+						"changeType": "set",
+						"type": "SET_ATTRIB_NUMBER",
+						"value": 80
+					}, {
+						"name": "repeat",
+						"type": "LABEL"
+					}, {
+						"time": 0.1,
 						"cancelOnHit": true,
+						"withBranches": true,
 						"orthoDirFactor": 0,
 						"ignoreLastHit": false,
 						"type": "TACKLE",
 						"attack": {
-							"type": "HEAVY",
+							"type": "MEDIUM",
 							"element": "COLD",
 							"damageFactor": 0.75,
 							"reverse": false,
@@ -1877,11 +1882,39 @@
 							"status": 1,
 							"guardable": "",
 							"skillBonus": "MELEE_DMG"
-						}
+						},
+						"hit": [{
+								"damage": 1.0,
+								"type": "REDUCE_PROXY_HP"
+							}, {
+								"attribName": "time",
+								"changeType": "sub",
+								"type": "SET_ATTRIB_NUMBER",
+								"value": 2
+							}, {
+								"time": 0.2,
+								"type": "WAIT"
+							}
+						],
+						"missed": []
+					}, {
+						"attribName": "time",
+						"changeType": "sub",
+						"type": "SET_ATTRIB_NUMBER",
+						"value": 1
+					}, {
+						"withElse": false,
+						"type": "IF",
+						"condition": "entity.attrib.time > 0",
+						"thenStep": [{
+								"name": "repeat",
+								"type": "GOTO_LABEL"
+							}
+						]
 					}
 				],
 				"invisible": true,
-				"hp": 0.5,
+				"hp": 1.5,
 				"killEffect": {
 					"sheet": "specials.icicles",
 					"name": "icicleExplodeSmall"
@@ -1966,6 +1999,337 @@
 			"type": "EXIT"
 		},{
 			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies"]
+		},{
+			"type": "SET_KEY",
+			"index": "icicleBigDmg",
+			"content": {
+				"animation": {
+					"shapeType": "Z_EXPAND",
+					"wallY": 1,
+					"frames": [0],
+					"SUB": [{
+							"name": "default",
+							"pivot": {
+								"x": 36,
+								"y": 64
+							},
+							"offset": {
+								"x": 0,
+								"y": 8,
+								"z": 0
+							},
+							"sheet": {
+								"src": "media\/entity\/effects\/icicles.png  ",
+								"offX": 0,
+								"offY": 80,
+								"width": 72,
+								"height": 88
+							}
+						}, {
+							"name": "alt",
+							"pivot": {
+								"x": 44,
+								"y": 64
+							},
+							"offset": {
+								"x": 0,
+								"y": 8,
+								"z": 0
+							},
+							"sheet": {
+								"src": "media\/entity\/effects\/icicles.png  ",
+								"offX": 0,
+								"offY": 0,
+								"width": 88,
+								"height": 80
+							}
+						}
+					]
+				},
+				"copyOwnerAnims": false,
+				"breakType": "COMBATANT",
+				"action": [{
+						"type": "SHOW_RANDOM_ANIMATION",
+						"randAnims": ["default", "alt"]
+					}, {
+						"duration": 0,
+						"align": "BOTTOM",
+						"rotateFace": 0,
+						"flipLeftFace": false,
+						"wait": false,
+						"waitSkip": 0,
+						"actionDetached": false,
+						"fixPos": false,
+						"type": "SHOW_EFFECT",
+						"effect": {
+							"sheet": "specials.icicles",
+							"name": "smallAppear"
+						},
+						"offset": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						}
+					}, {
+						"value": 0,
+						"type": "SET_SPEED"
+					}, {
+						"time": 0.3,
+						"type": "WAIT"
+					}, {
+						"attribName": "time",
+						"changeType": "set",
+						"type": "SET_ATTRIB_NUMBER",
+						"value": 125
+					}, {
+						"name": "repeat",
+						"type": "LABEL"
+					}, {
+						"time": 0.1,
+						"cancelOnHit": true,
+						"withBranches": true,
+						"orthoDirFactor": 0,
+						"ignoreLastHit": false,
+						"type": "TACKLE",
+						"attack": {
+							"type": "HEAVY",
+							"element": "COLD",
+							"damageFactor": 0.75,
+							"reverse": false,
+							"spFactor": 0,
+							"status": 1,
+							"guardable": "",
+							"skillBonus": "MELEE_DMG"
+						},
+						"hit": [{
+								"damage": 0.5,
+								"type": "REDUCE_PROXY_HP"
+							}, {
+								"attribName": "time",
+								"changeType": "sub",
+								"type": "SET_ATTRIB_NUMBER",
+								"value": 2
+							}, {
+								"time": 0.2,
+								"type": "WAIT"
+							}
+						],
+						"missed": []
+					}, {
+						"attribName": "time",
+						"changeType": "sub",
+						"type": "SET_ATTRIB_NUMBER",
+						"value": 1
+					}, {
+						"withElse": false,
+						"type": "IF",
+						"condition": "entity.attrib.time > 0",
+						"thenStep": [{
+								"name": "repeat",
+								"type": "GOTO_LABEL"
+							}
+						]
+					}
+				],
+				"invisible": true,
+				"hp": 2.5,
+				"killEffect": {
+					"sheet": "specials.icicles",
+					"name": "icicleExplodeBig"
+				},
+				"stickToSource": "NONE",
+				"stickFaceAlign": false,
+				"group": "wall",
+				"size": {
+					"x": 32,
+					"y": 32,
+					"z": 32
+				},
+				"config": {
+					"collType": "IGNORE"
+				},
+				"type": "GENERIC"
+			}
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies"]
+		},{
+			"type": "SET_KEY",
+			"index": "icicleSmallTurret",
+			"content": {
+				"animation": {
+					"shapeType": "Y_FLAT",
+					"wallY": 1,
+					"frames": [0],
+					"SUB": [{
+							"name": "default",
+							"pivot": {
+								"x": 20,
+								"y": 40
+							},
+							"offset": {
+								"x": 0,
+								"y": -4,
+								"z": 0
+							},
+							"gfxOffset": {
+								"x": 0,
+								"y": 8
+							},
+							"sheet": {
+								"src": "media\/entity\/effects\/icicles.png  ",
+								"offX": 88,
+								"offY": 0,
+								"width": 40,
+								"height": 56
+							}
+						}, {
+							"name": "alt",
+							"pivot": {
+								"x": 20,
+								"y": 40
+							},
+							"sheet": {
+								"src": "media\/entity\/effects\/icicles.png  ",
+								"offX": 88,
+								"offY": 56,
+								"width": 48,
+								"height": 40
+							}
+						}
+					]
+				},
+				"copyOwnerAnims": false,
+				"breakType": "COMBATANT",
+				"action": [{
+						"type": "SHOW_RANDOM_ANIMATION",
+						"randAnims": ["default", "alt"]
+					}, {
+						"duration": 0,
+						"align": "BOTTOM",
+						"rotateFace": 0,
+						"flipLeftFace": false,
+						"wait": false,
+						"waitSkip": 0,
+						"actionDetached": false,
+						"fixPos": false,
+						"type": "SHOW_EFFECT",
+						"effect": {
+							"sheet": "specials.icicles",
+							"name": "smallAppear"
+						},
+						"offset": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						}
+					}, {
+						"value": 0,
+						"type": "SET_SPEED"
+					}, {
+						"time": 0.3,
+						"type": "WAIT"
+					}, {
+						"attribName": "time",
+						"changeType": "set",
+						"type": "SET_ATTRIB_NUMBER",
+						"value": 105
+					}, {
+						"name": "repeat",
+						"type": "LABEL"
+					}, {
+						"time": 0.1,
+						"cancelOnHit": true,
+						"withBranches": true,
+						"orthoDirFactor": 0,
+						"ignoreLastHit": false,
+						"type": "TACKLE",
+						"attack": {
+							"type": "MEDIUM",
+							"element": "COLD",
+							"damageFactor": 0.75,
+							"reverse": false,
+							"spFactor": 0,
+							"status": 1,
+							"guardable": "",
+							"skillBonus": "MELEE_DMG"
+						},
+						"hit": [{
+								"damage": 0.5,
+								"type": "REDUCE_PROXY_HP"
+							}, {
+								"attribName": "time",
+								"changeType": "sub",
+								"type": "SET_ATTRIB_NUMBER",
+								"value": 2
+							}, {
+								"time": 0.2,
+								"type": "WAIT"
+							}
+						],
+						"missed": []
+					}, {
+						"attribName": "time",
+						"changeType": "sub",
+						"type": "SET_ATTRIB_NUMBER",
+						"value": 1
+					}, {
+						"withElse": false,
+						"type": "IF",
+						"condition": "entity.attrib.time > 0",
+						"thenStep": [{
+								"name": "repeat",
+								"type": "GOTO_LABEL"
+							}
+						]
+					}
+				],
+				"invisible": true,
+				"hp": 1.5,
+				"killEffect": {
+					"sheet": "specials.icicles",
+					"name": "icicleExplodeBig"
+				},
+				"stickToSource": "NONE",
+				"stickFaceAlign": false,
+				"group": "wall",
+				"size": {
+					"x": 32,
+					"y": 32,
+					"z": 32
+				},
+				"config": {
+					"collType": "IGNORE"
+				},
+				"type": "GENERIC"
+			}
 		},{
 			"type": "EXIT"
 	}]},{
@@ -2121,41 +2485,394 @@
 	[
 		{
 			"type": "ENTER",
-			"index": ["proxies", "waveDummy2", "action"]
+			"index": ["actions", "COLD", "THROW_SPECIAL3_A", "steps", 8, "shield", "settings"]
 		},{
 			"type": "SET_KEY",
-			"index": 6,
+			"index": "strength",
+			"content": "BLOCK_ALL"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "SHOCK", "DASH_SPECIAL1_B", "steps"]
+		},{
+			"type": "ENTER",
+			"index": 4
+		},{
+			"type": "SET_KEY",
+			"index": "value",
+			"content": 3000
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 4,
+			"content":
+			{
+				"factor": 0.2,
+				"time": 0,
+				"keepEntityStatic": true,
+				"inversAccelerate": false,
+				"type": "ADD_SLOW_MOTION"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 21,
+			"content":
+			{
+				"time": 0,
+				"removeEntityStatic": false,
+				"type": "CLEAR_SLOW_MOTION"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-nerfs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "COLD", "DASH_SPECIAL2_A", "steps"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 1,
 			"content": 
 			{
 				"wait": false,
 				"viaWalkConfig": false,
 				"type": "SHOW_ANIMATION",
-				"anim": "guard"
+				"anim": "startCharge"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 2,
+			"content": 
+			{
+				"duration": 0.4,
+				"align": "BOTTOM",
+				"rotateFace": 0,
+				"flipLeftFace": true,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect": {
+					"sheet": "specials.cold",
+					"name": "coldSubCharge"
+				},
+				"offset": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 3,
+			"content": 
+			{
+				"type": "WAIT",
+				"time": 0.25
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-nerfs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "HEAT", "DASH_SPECIAL2_A", "steps"]
+		},{
+			"type": "SET_KEY",
+			"index": 0,
+			"content":
+			{
+				"type": "SET_PLAYER_ACTION_BLOCK",
+				"blockData": {
+					"dash": 0.85,
+					"action": 0.75,
+					"move": 0.85,
+					"reaim": 0.85
+				}
 			}
 		},{
 			"type": "ADD_ARRAY_ELEMENT",
 			"index": 1,
 			"content": 
 			{
-				"searchType": "CLOSE_RANGE",
-				"distance": 512,
-				"type": "SET_CLOSE_TEMP_TARGET"
+				"wait": false,
+				"viaWalkConfig": false,
+				"type": "SHOW_ANIMATION",
+				"anim": "startCharge"
 			}
 		},{
 			"type": "ADD_ARRAY_ELEMENT",
-			"index": 8,
+			"index": 2,
 			"content": 
 			{
-			  "withElse": false,
-			  "type": "IF",
-			  "condition": "entity.hasTmpTarget",
-			  "thenStep": [
-				{
-				  "value": true,
-				  "type": "FACE_TO_TARGET"
+				"duration": 0.4,
+				"align": "BOTTOM",
+				"rotateFace": 0,
+				"flipLeftFace": true,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect": {
+					"sheet": "specials.heat",
+					"name": "heatSubCharge"
+				},
+				"offset": {
+					"x": 0,
+					"y": 0,
+					"z": 0
 				}
-			  ]
 			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 3,
+			"content": 
+			{
+				"type": "WAIT",
+				"time": 0.25
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-nerfs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "WAVE", "DASH_SPECIAL2_A", "steps"]
+		},{
+			"type": "SET_KEY",
+			"index": 27,
+			"content": 
+			{
+				"duration": 0.2,
+				"align": "BOTTOM",
+				"rotateFace": 0,
+				"flipLeftFace": true,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect": {
+					"sheet": "azure",
+					"name": "waveChargeLea"
+				},
+				"offset": {
+					"x": 0,
+					"y": 0,
+					"z": 10
+				}
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 1,
+			"content": 
+			{
+				"wait": false,
+				"viaWalkConfig": false,
+				"type": "SHOW_ANIMATION",
+				"anim": "startCharge"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 2,
+			"content": 
+			{
+				"duration": 0.4,
+				"align": "BOTTOM",
+				"rotateFace": 0,
+				"flipLeftFace": true,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect": {
+					"sheet": "specials.wave",
+					"name": "waveSubCharge"
+				},
+				"offset": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 3,
+			"content": 
+			{
+				"type": "WAIT",
+				"time": 0.25
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-nerfs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "SHOCK", "DASH_SPECIAL2_A", "steps"]
+		},{
+			"type": "ENTER",
+			"index": [13, "hit"]
+		},{
+			"type": "SET_KEY",
+			"index": 7,
+			"content":
+			{
+				"duration": 0.2,
+				"align": "BOTTOM",
+				"rotateFace": 0,
+				"flipLeftFace": true,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"ignoreSlowMo": true,
+				"effect": {
+					"sheet": "azure",
+					"name": "shockChargeLea"
+				},
+				"offset": {
+					"x": 0,
+					"y": 0,
+					"z": 10
+				}
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 1,
+			"content": 
+			{
+				"wait": false,
+				"viaWalkConfig": false,
+				"type": "SHOW_ANIMATION",
+				"anim": "startCharge"
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 2,
+			"content": 
+			{
+				"duration": 0.4,
+				"align": "BOTTOM",
+				"rotateFace": 0,
+				"flipLeftFace": true,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect": {
+					"sheet": "specials.shock",
+					"name": "shockSubCharge"
+				},
+				"offset": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 3,
+			"content": 
+			{
+				"type": "WAIT",
+				"time": 0.20
+			}
+		},{
+			"type": "EXIT"
 		},{
 			"type": "EXIT"
 		},{

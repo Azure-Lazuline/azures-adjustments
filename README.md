@@ -32,37 +32,39 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 <details>
 <summary><b>Combat Arts</b></summary>
 
-- First Cut / Final Showdown: VFX improvements, and you're not stuck in place for as long if you whiff.
+- **First Cut / Final Showdown**: VFX improvements, and you're not stuck in place for as long if you whiff.
 
-- Azure Surge: VFX improvements for quite a bit more punch.
+- **Azure Surge**: VFX improvements for quite a bit more punch.
 
-- Ball of Boomerang: It hits multiple times, and deals more damage overall.
+- **Ball of Boomerang**: It hits multiple times, and deals more damage overall.
 
-- Ashen Mine / Mine Valley: Small damage boost, to match their difficulty and lack of iframes compared to the alternative skills.
+- **Ashen Mine / Mine Valley**: Small damage boost, to match their difficulty and lack of iframes compared to the alternative skills.
 
-- Ring of Fire (all 3): VFX improvements to all of them, and a damage boost to base Ring of Fire itself.
+- **Ring of Fire / Burning Pulse / Ancient Sun**: VFX improvements to all of them, and a damage boost to base Ring of Fire itself.
 
-- Hail Storm: Wider spread but better homing, to make it somewhat more reliable but still situational.
+- **Hail Storm**: Wider spread but better homing, to make it somewhat more reliable but still situational.
 
-- Brisk Barrier / Icy Bastion: Icicles have more stopping force (the same as a charged ball).
+- **Brisk Barrier / Icy Bastion / Fimbulvetr**: Icicles last longer, are more durable, and have more stopping force.
 
-- Frigid Flawke: Only does the camera pan if you actually hit an enemy, to prevent jarring camera movements.
+- **Frigid Flawke**: Only does the camera pan if you actually hit an enemy.
 
-- Tesla Twist / Tesla Waltz: Small damage boost, and a little easier to control.
+- **Tesla Twist / Tesla Waltz**: Small damage boost, and a little easier to control.
 
-- Thunder Dart / Storm Walker: Slows down time during the dash, so enemies are less likely to escape it before it goes off.
+- **Thunder Dart / Storm Walker**: Slows down time during the dash, so enemies are less likely to escape it before it goes off.
 
-- Guarding Gale / Poltergeist: Stronger push force.
+- **Guarding Gale / Poltergeist**: Stronger push force.
 
-- Wave Decoy / Toxic Revenant: The decoy uses the guard animation instead of being motionless.
+- **Wave Decoy / Toxic Revenant**: The decoy uses the guard animation instead of being motionless.
 
-- Ether Snipe: Lower damage at first, but ramps back up to its old extremely high power level as it bounces more. You gotta go for the bank shots!
+- **Ether Snipe**: Lower damage at first, but ramps back up to its old extremely high power level as it bounces more. You gotta go for the bank shots!
 
-- Guard Sphere: SP gain greatly reduced while it's active, so it's still powerful when used sparingly but you can't keep it up permanently.
+- **Guard Sphere**: SP gain greatly reduced while it's active, so it's still powerful when used sparingly but you can't keep it up permanently.
 
-- Clock Block / Glitch Time: SP gain moderately reduced while it's active, keeping its extreme utility and combo potential but making it not literally pay for itself anymore.
+- **Clock Block / Glitch Time**: SP gain moderately reduced while it's active, keeping its extreme utility and combo potential but making it not literally pay for itself anymore.
 
-- Most flying enemies no longer follow you into the air during jumping arts like Flare Burn, inadvertently dodging your attacks. (Parrots still do though since they're jerks and it forced a more interesting approach.)
+- **Crimson Stream / Indigo Rush / Amber Breaker / Verdant Stream**: Added a short delay before the dash, so there's a slight risk. They're still very powerful ways to deal big damage while repositioning yourself, but they're not frame-1 invincible anymore.
+
+- Most flying enemies no longer inadvertently dodge your attacks by following you into the air during jumping arts like Flare Burn. (Parrots still do though since they're jerks and it forced a more interesting approach.)
 
 - A few other small VFX improvements for various arts, and added sound effects to ones that were missing them.
 </details>

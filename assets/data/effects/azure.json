@@ -571,6 +571,130 @@
         {
             "type": "STOP_SOUNDS"
         }],
+        "plantWarp": [
+        {
+            "volume": 0.7,
+            "global": false,
+            "loop": false,
+			"speed": 1.2,
+            "sound": "media\/sound\/battle\/enemies\/discharge.ogg",
+            "type": "PLAY_SOUND"
+        },
+        {
+            "volume": 0.5,
+            "global": false,
+            "loop": true,
+            "speed": 1.5,
+            "sound": "media\/sound\/puzzle\/shock-charge.ogg",
+            "type": "PLAY_SOUND"
+        },
+        {
+            "size": "L",
+            "fadeIn": 0.1,
+            "fadeOut": 0.1,
+            "duration": -1,
+            "glow": true,
+            "type": "LIGHT"
+        },
+        {
+            "useTargetAngle": false,
+            "keepAngleSync": false,
+            "pAlpha":
+            {
+                "init": 0,
+                "start":
+                {
+                    "value": 0.8,
+                    "spline": ""
+                }
+            },
+            "pScale":
+            {
+                "init":
+                {
+                    "x": 2.2,
+                    "y": 3.2
+                },
+                "start":
+                {
+                    "value":
+                    {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "spline": "EASE_OUT"
+                }
+            },
+            "pRotate":
+            {
+                "init": 0.6,
+                "start":
+                {
+                    "value": 0.3,
+                    "spline": ""
+                }
+            },
+            "moveWithTarget": 1,
+            "particleDuration": 0.35,
+            "anim": "SHOCKWAVE_B_SHK",
+            "type": "PLAY_ANIM"
+        },
+        {
+            "useTargetAngle": false,
+            "keepAngleSync": false,
+            "pAlpha":
+            {
+                "init": 0,
+                "start":
+                {
+                    "value": 0.9,
+                    "spline": ""
+                }
+            },
+            "pScale":
+            {
+                "init":
+                {
+                    "x": 4.2,
+                    "y": 2.2
+                },
+                "start":
+                {
+                    "value":
+                    {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "spline": "EASE_OUT"
+                }
+            },
+            "pRotate":
+            {
+                "init": 0,
+                "start":
+                {
+                    "value": 0.3,
+                    "spline": ""
+                }
+            },
+            "moveWithTarget": 1,
+            "particleDuration": 0.35,
+            "anim": "SHOCKWAVE_B_SHK",
+            "type": "PLAY_ANIM"
+        },
+        {
+            "type": "LOOP_START"
+        },
+        {
+            "time": 0.1,
+            "type": "WAIT"
+        },
+        {
+            "type": "LOOP_END"
+        },
+        {
+            "type": "STOP_SOUNDS"
+        }],
         "shockCharge": [
         {
             "volume": 0.7,
@@ -647,6 +771,98 @@
                 }
             },
             "particleDuration": 0.35,
+            "anim": "SHOCK_DOT1",
+            "type": "OFFSET_PARTICLE_CIRCLE"
+        },
+        {
+            "type": "LOOP_START"
+        },
+        {
+            "time": 0.1,
+            "type": "WAIT"
+        },
+        {
+            "type": "LOOP_END"
+        },
+        {
+            "type": "STOP_SOUNDS"
+        }],
+        "shockChargeLea": [
+        {
+            "volume": 0.7,
+            "global": false,
+            "loop": false,
+			"speed": 1.2,
+            "sound": "media\/sound\/battle\/enemies\/discharge.ogg",
+            "type": "PLAY_SOUND"
+        },
+        {
+            "useTargetAngle": false,
+            "keepAngleSync": false,
+            "pAlpha":
+            {
+                "init": 1,
+                "start":
+                {
+                    "value": 0,
+                    "spline": ""
+                }
+            },
+            "pScale":
+            {
+                "init":
+                {
+                    "x": 0.0,
+                    "y": 0.0
+                },
+                "start":
+                {
+                    "value":
+                    {
+                        "x": 1.5,
+                        "y": 1.5
+                    },
+                    "spline": "EASE_IN"
+                }
+            },
+            "pRotate":
+            {
+                "init": 0.6,
+                "start":
+                {
+                    "value": 0.3,
+                    "spline": ""
+                }
+            },
+            "moveWithTarget": 1,
+            "particleDuration": 0.3,
+            "anim": "SHOCKWAVE_B_SHK",
+            "type": "PLAY_ANIM"
+        },
+        {
+            "numParticles": 15,
+            "duration": 0.2,
+            "centralAngle": 1,
+            "startDist": 12,
+            "random": true,
+            "particleRotate": true,
+            "moveDist": 50,
+            "moveVariance": 10,
+            "keySpline": "EASE_OUT",
+            "moveRotate": 0,
+            "inverse": true,
+            "collision": false,
+            "pAlpha":
+            {
+                "init": 1,
+                "end":
+                {
+                    "value": 0.15,
+                    "time": 0.15,
+                    "spline": ""
+                }
+            },
+            "particleDuration": 0.15,
             "anim": "SHOCK_DOT1",
             "type": "OFFSET_PARTICLE_CIRCLE"
         },
@@ -1031,6 +1247,98 @@
         {
             "type": "STOP_SOUNDS"
         }],
+        "waveChargeLea": [
+        {
+            "volume": 0.7,
+            "global": false,
+            "loop": false,
+			"speed": 0.9,
+            "sound": "media\/sound\/battle\/enemies\/discharge.ogg",
+            "type": "PLAY_SOUND"
+        },
+        {
+            "useTargetAngle": false,
+            "keepAngleSync": false,
+            "pAlpha":
+            {
+                "init": 1,
+                "start":
+                {
+                    "value": 0,
+                    "spline": ""
+                }
+            },
+            "pScale":
+            {
+                "init":
+                {
+                    "x": 0.0,
+                    "y": 0.0
+                },
+                "start":
+                {
+                    "value":
+                    {
+                        "x": 2.0,
+                        "y": 2.0
+                    },
+                    "spline": "EASE_IN"
+                }
+            },
+            "pRotate":
+            {
+                "init": 0.6,
+                "start":
+                {
+                    "value": 0.3,
+                    "spline": ""
+                }
+            },
+            "moveWithTarget": 1,
+            "particleDuration": 0.3,
+            "anim": "SHOCKWAVE_B_WAVE",
+            "type": "PLAY_ANIM"
+        },
+        {
+            "numParticles": 15,
+            "duration": 0.4,
+            "centralAngle": 1,
+            "startDist": 12,
+            "random": true,
+            "particleRotate": true,
+            "moveDist": 50,
+            "moveVariance": 10,
+            "keySpline": "EASE_OUT",
+            "moveRotate": 0,
+            "inverse": true,
+            "collision": false,
+            "pAlpha":
+            {
+                "init": 1,
+                "end":
+                {
+                    "value": 0.2,
+                    "time": 0.15,
+                    "spline": ""
+                }
+            },
+            "particleDuration": 0.15,
+            "anim": "WAVE_DOT1",
+            "type": "OFFSET_PARTICLE_CIRCLE"
+        },
+        {
+            "type": "LOOP_START"
+        },
+        {
+            "time": 0.1,
+            "type": "WAIT"
+        },
+        {
+            "type": "LOOP_END"
+        },
+        {
+            "type": "STOP_SOUNDS"
+        }],
         "tinyExplosion": [
         {
             "rumbleType": "RANDOM",
@@ -1130,7 +1438,93 @@
             "anim": "EXPLOSION_3",
             "type": "OFFSET_PARTICLE_CIRCLE"
         }],
-        "flameRingCustom": [
+		"elePillarCharge": [
+		{
+            "volume": 0.8,
+            "global": false,
+            "loop": false,
+			"speed": 1.0,
+            "sound": "media\/sound\/battle\/enemies\/discharge.ogg",
+            "type": "PLAY_SOUND"
+        },
+		{
+            "volume": 0.8,
+            "global": false,
+            "loop": false,
+			"speed": 0.5,
+            "sound": "media\/sound\/battle\/enemies\/discharge.ogg",
+            "type": "PLAY_SOUND"
+		},
+		{
+			"useTargetAngle": false,
+			"keepAngleSync": false,
+			"pAlpha": {
+				"init": 1,
+				"start": {
+					"value": 0,
+					"spline": ""
+				}
+			},
+			"pScale": {
+				"init": {
+					"x": 0.0,
+					"y": 0.0
+				},
+				"start": {
+					"value": {
+						"x": 2.5,
+						"y": 2.5
+					},
+					"spline": ""
+				}
+			},
+			"moveWithTarget": 1,
+			"particleDuration": 0.35,
+			"cancelable": true,
+			"anim": "SHOCKWAVE_BIG_GUI",
+			"type": "PLAY_ANIM"
+        },
+		{
+            "numParticles": 60,
+            "duration": 1.0,
+            "centralAngle": 1,
+            "startDist": 12,
+            "random": true,
+            "particleRotate": true,
+            "moveDist": 100,
+            "moveVariance": 10,
+            "keySpline": "EASE_IN",
+            "moveRotate": 0,
+            "inverse": true,
+            "collision": false,
+            "pAlpha":
+            {
+                "init": 1,
+                "end":
+                {
+                    "value": 0.2,
+                    "time": 0.8,
+                    "spline": ""
+                }
+            },
+            "particleDuration": 0.8,
+            "anim": "NEUTRAL_DOT1",
+            "type": "OFFSET_PARTICLE_CIRCLE"
+        },
+        {
+            "type": "LOOP_START"
+        },
+        {
+            "time": 0.1,
+            "type": "WAIT"
+        },
+        {
+            "type": "LOOP_END"
+        },
+        {
+            "type": "STOP_SOUNDS"
+        }],
+		"flameRingCustom": [
         {
             "size": "XXL",
             "fadeIn": 0.1,
@@ -1399,6 +1793,71 @@
             "collision": false,
             "anim": "EXPLOSION_SLIGHTLY_LESS_BIG",
             "type": "OFFSET_PARTICLE_CIRCLE"
+        }],
+        "firespiritCharge": [
+                {
+            "volume": 0.7,
+            "global": false,
+            "loop": false,
+			"speed": 1.0,
+            "sound": "media\/sound\/battle\/enemies\/discharge.ogg",
+            "type": "PLAY_SOUND"
+        },
+        {
+            "useTargetAngle": false,
+            "keepAngleSync": false,
+            "pAlpha":
+            {
+                "init": 1,
+                "start":
+                {
+                    "value": 1,
+                    "spline": ""
+                }
+            },
+            "pScale":
+            {
+                "init":
+                {
+                    "x": 1.3,
+                    "y": 1.3
+                },
+                "start":
+                {
+                    "value":
+                    {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "spline": "EASE_IN"
+                }
+            },
+            "pRotate":
+            {
+                "init": 0.6,
+                "start":
+                {
+                    "value": 0.3,
+                    "spline": ""
+                }
+            },
+            "moveWithTarget": 1,
+            "particleDuration": 0.25,
+            "anim": "SHOCKWAVE_B_HEAT",
+            "type": "PLAY_ANIM"
+        },
+        {
+            "type": "LOOP_START"
+        },
+        {
+            "time": 0.1,
+            "type": "WAIT"
+        },
+        {
+            "type": "LOOP_END"
+        },
+        {
+            "type": "STOP_SOUNDS"
         }]
 	}
 }
