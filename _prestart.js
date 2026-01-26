@@ -1702,7 +1702,6 @@ ig.Game.inject({
 		this.parent(b, a, d);
 		if (ig.vars.currentLevelName == "coldDng/g/center")
 		{
-			console.warn("thing");
 			if (ig.vars.storage.maps["coldDng/b3/room3"] == null) ig.vars.storage.maps["coldDng/b3/room3"] = {};
 			ig.vars.storage.maps["coldDng/b3/room3"]._entity6_destroyed = true;
 			ig.vars.storage.maps["coldDng/b3/room3"]._entity7_destroyed = true;
