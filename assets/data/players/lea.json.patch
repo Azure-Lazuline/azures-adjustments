@@ -2607,7 +2607,7 @@
 			"content": 
 			{
 				"type": "WAIT",
-				"time": 0.25
+				"time": 0.20
 			}
 		},{
 			"type": "EXIT"
@@ -2639,10 +2639,10 @@
 			{
 				"type": "SET_PLAYER_ACTION_BLOCK",
 				"blockData": {
-					"dash": 0.85,
-					"action": 0.75,
-					"move": 0.85,
-					"reaim": 0.85
+					"dash": 0.80,
+					"action": 0.70,
+					"move": 0.80,
+					"reaim": 0.80
 				}
 			}
 		},{
@@ -2685,7 +2685,7 @@
 			"content": 
 			{
 				"type": "WAIT",
-				"time": 0.25
+				"time": 0.20
 			}
 		},{
 			"type": "EXIT"
@@ -2774,7 +2774,7 @@
 			"content": 
 			{
 				"type": "WAIT",
-				"time": 0.25
+				"time": 0.20
 			}
 		},{
 			"type": "EXIT"
