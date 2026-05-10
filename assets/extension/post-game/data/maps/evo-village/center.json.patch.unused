@@ -1,0 +1,34 @@
+[{	
+		"type": "ENTER",
+		"index": ["entities"]
+	},{
+		"type": "ADD_ARRAY_ELEMENT",
+		"content":
+		{
+			"type": "EventTrigger",
+			"x": 99,
+			"y": 99,
+			"level": 1,
+			"settings": {
+				"size": {
+					"x": 16,
+					"y": 16
+				},
+				"event": [
+					{
+						"type": "CHANGE_VAR_BOOL",
+						"changeType": "set",
+						"value": true,
+						"varName": "azureBeatDlcPostgame"
+					}
+				],
+				"name": "beatPostgame",
+				"eventType": "PARALLEL",
+				"startCondition": "plot.line >= 50000",
+				"endCondition": "false",
+				"triggerType": "ONCE_PER_ENTRY"
+			}
+		}
+	},{
+		"type": "EXIT"
+}]

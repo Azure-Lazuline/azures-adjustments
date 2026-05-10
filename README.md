@@ -38,6 +38,8 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 
 - **Ball of Boomerang**: It hits multiple times, and deals more damage overall.
 
+- **Blade Sphere**: Larger radius and a little more damage.
+
 - **Ashen Mine / Mine Valley**: Small damage boost, to match their difficulty and lack of iframes compared to the alternative skills.
 
 - **Ring of Fire / Burning Pulse / Ancient Sun**: VFX improvements to all of them, and a damage boost to base Ring of Fire itself.
@@ -64,7 +66,7 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 
 - **Crimson Stream / Indigo Rush / Amber Breaker / Verdant Stream**: Added a short delay before the dash, so there's a slight risk. They're still very powerful ways to deal big damage while repositioning yourself, but they're not frame-1 invincible anymore.
 
-- Most flying enemies no longer inadvertently dodge your attacks by following you into the air during jumping arts like Flare Burn. (Parrots still do though since they're jerks and it forced a more interesting approach.)
+- Most flying enemies no longer inadvertently dodge your attacks by following you into the air during jumping arts like Flare Burn. (Parrots still do though since it feels somehow fitting.)
 
 - A few other small VFX improvements for various arts, and added sound effects to ones that were missing them.
 </details>
@@ -104,6 +106,8 @@ This was designed for a first playthrough in mind, but has nice additions for ex
 - The sandbag (Baggy-kun) at the First Scholars HQ gives SP when hit. What kind of guild has a non-functional training dummy?
 
 - Pets are automatically hidden during emotional or important scenes.
+
+- Completing the DLC gives you a new special icon on the file select, similar to completing the main game.
 
 - A few small typo fixes and miscellaneous bugfixes.
 </details>

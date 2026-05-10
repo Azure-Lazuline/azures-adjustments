@@ -1013,7 +1013,7 @@ sc.AzureLocationBox = ig.BoxGui.extend({
 				
 		var currentarea = sc.map.getCurrentAreaName() + sc.map.getCurrentMapName();
 		
-		if (!notOnThisMap && !sc.arena.active && this.lastlocation != currentarea && sc.options.get("enter-map-names"))
+		if (!notOnThisMap && !sc.arena.active && this.lastlocation != currentarea && (sc.options.get("enter-map-names") || sc.options.get("quick-location") == sc.QUICK_LOCATION_OPTION.MAP))
 		{
 			this.hidden = false;
 			this.updateLocationName();
@@ -1049,6 +1049,15 @@ sc.CrossCode.inject({
 		ig.gui.addGuiElement(sc.gui.azureLocationBox);
     }
 });
+
+//remove the built-in "name when entering map" function since i didn't realize there was overlap... mine covers a lot more edge cases though
+sc.QuickLocationBox.inject({
+	show(a){
+		if(sc.quickmodel.visible)
+			this.parent(a);
+	}
+});
+
 
 //make "teleport ready" prompt from the NG+ landmark teleport modifier go away after 1 second, and also not appear in cutscenes.
 //i don't think anyone uses this NG+ modifier except me but it was very annoying visually, there'd be like five minute stretches where it just says "teleport ready" the whole time
@@ -1295,7 +1304,7 @@ sc.EnemyMeleeRanged = ig.GuiElementBase.extend({
 		}
 	},
 	setStats: function (a, b) {
-		if (sc.options.get("enter-map-names"))
+		if (sc.options.get("melee-ranged-res"))
 			this.doStateTransition("DEFAULT", true);
 		else
 			this.doStateTransition("HIDDEN", true);
@@ -1695,31 +1704,21 @@ sc.LoreListBoxNew.inject({
 	}
 });
 
-//remove one set of rocks in that room in temple mine where you wait for a bomb 3 times in a row
-ig.Game.inject({
-	loadLevel(b, a, d)
-	{
-		this.parent(b, a, d);
-		if (ig.vars.currentLevelName == "coldDng/g/center")
-		{
-			if (ig.vars.storage.maps["coldDng/b3/room3"] == null) ig.vars.storage.maps["coldDng/b3/room3"] = {};
-			ig.vars.storage.maps["coldDng/b3/room3"]._entity6_destroyed = true;
-			ig.vars.storage.maps["coldDng/b3/room3"]._entity7_destroyed = true;
-		}
-	}
-});
 
-//make bombs do more damage to fleazers, for the few rooms where that's required
+//make bombs do more damage to fleazers and bombbots, for the few rooms where that's required
 ig.ENTITY.Enemy.inject({
 	onDamage(a, b, c)
 	{
-		if (this.enemyName == "mine-coldbug" && b && b.hasHint("BOMB"))
+		if(b && b.hasHint("BOMB"))
 		{
-			var area = sc.map.currentPlayerArea.path;
-			if (area == "arid-dng-2") area = "arid-dng";
-			if (ig.vars.storage[area] && !ig.vars.storage[area].azureDungeonReset)
+			//var area = sc.map.currentPlayerArea.path;
+			//if (area == "arid-dng-2") area = "arid-dng";
+			//var wasReset = ig.vars.storage[area] && ig.vars.storage[area].azureDungeonReset;
+
+			if (this.enemyName == "mine-coldbug"// && !wasReset
+				|| this.enemyName == "mine-kamikatze")
 			{
-				b.damageFactor = 3; //default is 2
+				b.damageFactor = 3.2; //default is 2
 			}
 		}
 		return this.parent(a, b, c);
@@ -1734,5 +1733,52 @@ sc.MapAreaContainer.inject({
 		if (ig.input.currentDevice == ig.INPUT_DEVICES.GAMEPAD)
 			sc.menu.mapMouseOverFloorButtons = false;
 		return this.parent(a, b);
+	}
+});
+
+//fix ferro icedisk aiming line not showing up
+sc.FerroEntity.inject({
+	isBallDestroyer(){
+		if (this.currentAnim == "icedisk")
+			return sc.model.player.currentElementMode == sc.ELEMENT.HEAT;
+		
+		return this.parent();
+	}
+});
+
+//replace save slot icon with new one when the DLC is complete, instead of being stuck on chapter 14 which looks really dreary
+sc.SaveSlotButton.inject({
+	setSave(a, b, c){
+		this.parent(a, b, c);
+		
+		//return; //remove the two slashes at the start of this line to disable this feature
+
+		if(this.chapter)
+		{
+			//if(a && a.vars && a.vars.storage && a.vars.storage.azureBeatDlcPostgame){ //this worked but required you to re-beat the final sequence
+			//ctronStays gets set to "false" when you reset back to ch14, but it'll be null if you haven't done it at all
+			if(a && a.vars && a.vars.storage && a.vars.storage.plot && a.vars.storage.plot.ctronStays != null){
+				this.chapter.beatDLC = true;
+				this.chapter.textGui.setText("COMPLETE");
+				this.chapter.chapterGui.doStateTransition("HIDDEN", true)
+			}
+			else
+				this.chapter.beatDLC = null;
+		}
+	}
+});
+
+sc.SaveSlotChapter.inject({
+	init(){
+		this.parent();
+		this.gfxDlcComplete = new ig.Image("media/gui/chapter-dlc-complete.png");
+	},
+	updateDrawables(a){
+		if (this.beatDLC)
+		{
+			a.addGfx(this.gfxDlcComplete, 0, 0, 0, 0, 147, 34)
+		}
+		else
+			this.parent(a);
 	}
 });

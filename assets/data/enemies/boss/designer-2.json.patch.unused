@@ -1,0 +1,130 @@
+[{
+	"type": "ENTER",
+	"index": ["proxies", "shieldFX", "action"]
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 1,
+	"content": {
+		"withElse": false,
+		"type": "IF",
+		"condition": "entity.ownerAttrib.shield == \"HEAT\"",
+		"thenStep": [{
+				"duration": -1,
+				"target": "PROXY_OWNER",
+				"align": "CENTER",
+				"rotateFace": 0,
+				"flipLeftFace": false,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect": {
+					"sheet": "azure",
+					"name": "shieldElementHeat"
+				},
+				"offset": {
+					"x": 0,
+					"y": -24,
+					"z": 2
+				}
+			}
+		]
+	}
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 1,
+	"content": {
+		"withElse": false,
+		"type": "IF",
+		"condition": "entity.ownerAttrib.shield == \"COLD\"",
+		"thenStep": [{
+				"duration": -1,
+				"target": "PROXY_OWNER",
+				"align": "CENTER",
+				"rotateFace": 0,
+				"flipLeftFace": false,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect": {
+					"sheet": "azure",
+					"name": "shieldElementCold"
+				},
+				"offset": {
+					"x": 0,
+					"y": -24,
+					"z": 2
+				}
+			}
+		]
+	}
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 1,
+	"content": {
+		"withElse": false,
+		"type": "IF",
+		"condition": "entity.ownerAttrib.shield == \"SHOCK\"",
+		"thenStep": [{
+				"duration": -1,
+				"target": "PROXY_OWNER",
+				"align": "CENTER",
+				"rotateFace": 0,
+				"flipLeftFace": false,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect": {
+					"sheet": "azure",
+					"name": "shieldElementShock"
+				},
+				"offset": {
+					"x": 0,
+					"y": -24,
+					"z": 2
+				}
+			}
+		]
+	}
+},{
+	"type": "ADD_ARRAY_ELEMENT",
+	"index": 1,
+	"content": {
+		"withElse": false,
+		"type": "IF",
+		"condition": "entity.ownerAttrib.shield == \"WAVE\"",
+		"thenStep": [{
+				"duration": -1,
+				"target": "PROXY_OWNER",
+				"align": "CENTER",
+				"rotateFace": 0,
+				"flipLeftFace": false,
+				"wait": false,
+				"waitSkip": 0,
+				"actionDetached": false,
+				"fixPos": false,
+				"type": "SHOW_EFFECT",
+				"effect": {
+					"sheet": "azure",
+					"name": "shieldElementWave"
+				},
+				"offset": {
+					"x": 0,
+					"y": -24,
+					"z": 2
+				}
+			}
+		]
+	}
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+},{
+	"type": "EXIT"
+}]

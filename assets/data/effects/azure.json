@@ -263,6 +263,124 @@
 				"renderMode": "lighter",
 				"time": 0.4,
 				"frames": [0]
+		},{
+			"name": "SWEEP_NEUTRAL",
+				"sheet": {
+					"src": "media\/entity\/effects\/sweep2.png",
+					"width": 32,
+					"height": 32
+				},
+				"time": 0.04,
+				"repeat": false,
+				"pivot": {
+					"x": 16,
+					"y": 16
+				},
+				"frames": [0, 1, 2, 3]
+        },{
+            "name": "SHIELD_HEAT",
+				"sheet": {
+					"src": "media\/entity\/effects\/azureElements.png",
+					"offX": 0,
+					"offY": 0,
+					"width": 12,
+					"height": 12
+				},
+				"renderMode": "source-over",
+				"guiSprites": true,
+				"time": 0.4,
+				"frames": [0]
+        },{
+            "name": "SHIELD_HEAT2",
+				"sheet": {
+					"src": "media\/entity\/effects\/azureElements.png",
+					"offX": 0,
+					"offY": 0,
+					"width": 12,
+					"height": 12
+				},
+				"renderMode": "lighter",
+				"guiSprites": false,
+				"time": 0.4,
+				"frames": [0]
+        },{
+            "name": "SHIELD_COLD",
+				"sheet": {
+					"src": "media\/entity\/effects\/azureElements.png",
+					"offX": 12,
+					"offY": 0,
+					"width": 12,
+					"height": 12
+				},
+				"renderMode": "source-over",
+				"guiSprites": true,
+				"time": 0.4,
+				"frames": [0]
+        },{
+            "name": "SHIELD_COLD2",
+				"sheet": {
+					"src": "media\/entity\/effects\/azureElements.png",
+					"offX": 12,
+					"offY": 0,
+					"width": 12,
+					"height": 12
+				},
+				"renderMode": "lighter",
+				"guiSprites": false,
+				"time": 0.4,
+				"frames": [0]
+        },{
+            "name": "SHIELD_SHOCK",
+				"sheet": {
+					"src": "media\/entity\/effects\/azureElements.png",
+					"offX": 24,
+					"offY": 0,
+					"width": 12,
+					"height": 12
+				},
+				"renderMode": "source-over",
+				"guiSprites": true,
+				"time": 0.4,
+				"frames": [0]
+        },{
+            "name": "SHIELD_SHOCK2",
+				"sheet": {
+					"src": "media\/entity\/effects\/azureElements.png",
+					"offX": 24,
+					"offY": 0,
+					"width": 12,
+					"height": 12
+				},
+				"renderMode": "lighter",
+				"guiSprites": false,
+				"time": 0.4,
+				"frames": [0]
+        },{
+            "name": "SHIELD_WAVE",
+				"sheet": {
+					"src": "media\/entity\/effects\/azureElements.png",
+					"offX": 36,
+					"offY": 0,
+					"width": 12,
+					"height": 12
+				},
+				"renderMode": "source-over",
+				"guiSprites": true,
+				"time": 0.4,
+				"frames": [0]
+        },{
+            "name": "SHIELD_WAVE2",
+				"sheet": {
+					"src": "media\/entity\/effects\/azureElements.png",
+					"offX": 36,
+					"offY": 0,
+					"width": 12,
+					"height": 12
+				},
+				"renderMode": "lighter",
+				"guiSprites": false,
+				"time": 0.4,
+				"frames": [0]
 		}]
     },
     "EFFECTS":
@@ -1858,6 +1976,289 @@
         },
         {
             "type": "STOP_SOUNDS"
-        }]
+        }],
+		"shieldSpikesBigger": [{
+				"type": "LOOP_START"
+			}, {
+				"numParticles": 22,
+				"duration": 0.55,
+				"clockwise": false,
+				"centralAngle": 1,
+				"startAngle": 0,
+				"startDist": 24,
+				"particleRotate": true,
+				"moveDist": 14,
+				"keySpline": "EASE",
+				"collision": false,
+				"moveWithTarget": 1,
+				"anim": "SWEEP_NEUTRAL",
+				"type": "OFFSET_PARTICLE_CIRCLE"
+			}, {
+				"numParticles": 22,
+				"duration": 0.55,
+				"clockwise": false,
+				"centralAngle": 1,
+				"startAngle": 0.33,
+				"startDist": 24,
+				"particleRotate": true,
+				"moveDist": 14,
+				"keySpline": "EASE",
+				"collision": false,
+				"moveWithTarget": 1,
+				"anim": "SWEEP_NEUTRAL",
+				"type": "OFFSET_PARTICLE_CIRCLE"
+			}, {
+				"numParticles": 22,
+				"duration": 0.55,
+				"clockwise": false,
+				"centralAngle": 1,
+				"startAngle": 0.66,
+				"startDist": 24,
+				"particleRotate": true,
+				"moveDist": 14,
+				"keySpline": "EASE",
+				"collision": false,
+				"moveWithTarget": 1,
+				"anim": "SWEEP_NEUTRAL",
+				"type": "OFFSET_PARTICLE_CIRCLE"
+			}, {
+				"time": 0.55,
+				"type": "WAIT"
+			}, {
+				"type": "LOOP_END"
+			}
+		],
+		"shieldElementHeat": [{
+				"numParticles": 1,
+				"duration": 0,
+				"centralAngle": 1,
+				"keySpline": "EASE_IN_OUT",
+				"moveRotate": 0,
+				"rotateWithTime": true,
+				"inverse": true,
+				"collision": false,
+				"moveWithTarget": 1,
+				"particleDuration": 600,
+				"cancelable": true,
+				"anim": "SHIELD_HEAT",
+				"type": "OFFSET_PARTICLE_CIRCLE",
+				"pAlpha": 0.6
+			}, {
+				"type": "LOOP_START"
+			}, {
+				"numParticles": 1,
+				"duration": 0,
+				"centralAngle": 1,
+				"keySpline": "EASE_OUT",
+				"moveRotate": 0,
+				"rotateWithTime": true,
+				"inverse": true,
+				"collision": false,
+				"moveWithTarget": 0.5,
+				"particleDuration": 0.5,
+				"cancelable": true,
+				"anim": "SHIELD_HEAT2",
+				"type": "OFFSET_PARTICLE_CIRCLE",
+				"pScale": {
+					"init": {
+						"x": 1,
+						"y": 1
+					},
+					"start": {
+						"value": {
+							"x": 2.5,
+							"y": 2.5
+						},
+						"spline": ""
+					}
+				},
+				"pAlpha": {
+					"init": 1,
+					"start": {
+						"value": 0,
+						"spline": ""
+					}
+				}
+			}, {
+				"time": 0.3,
+				"type": "WAIT"
+			}, {
+				"type": "LOOP_END"
+			}
+		],
+		"shieldElementCold": [{
+				"numParticles": 1,
+				"duration": 0,
+				"centralAngle": 1,
+				"keySpline": "EASE_IN_OUT",
+				"moveRotate": 0,
+				"rotateWithTime": true,
+				"inverse": true,
+				"collision": false,
+				"moveWithTarget": 1,
+				"particleDuration": 600,
+				"cancelable": true,
+				"anim": "SHIELD_COLD",
+				"type": "OFFSET_PARTICLE_CIRCLE",
+				"pAlpha": 0.6
+			}, {
+				"type": "LOOP_START"
+			}, {
+				"numParticles": 1,
+				"duration": 0,
+				"centralAngle": 1,
+				"keySpline": "EASE_OUT",
+				"moveRotate": 0,
+				"rotateWithTime": true,
+				"inverse": true,
+				"collision": false,
+				"moveWithTarget": 0.5,
+				"particleDuration": 0.5,
+				"cancelable": true,
+				"anim": "SHIELD_COLD2",
+				"type": "OFFSET_PARTICLE_CIRCLE",
+				"pScale": {
+					"init": {
+						"x": 1,
+						"y": 1
+					},
+					"start": {
+						"value": {
+							"x": 2.5,
+							"y": 2.5
+						},
+						"spline": ""
+					}
+				},
+				"pAlpha": {
+					"init": 1,
+					"start": {
+						"value": 0,
+						"spline": ""
+					}
+				}
+			}, {
+				"time": 0.3,
+				"type": "WAIT"
+			}, {
+				"type": "LOOP_END"
+			}
+		],
+		"shieldElementShock": [{
+				"numParticles": 1,
+				"duration": 0,
+				"centralAngle": 1,
+				"keySpline": "EASE_IN_OUT",
+				"moveRotate": 0,
+				"rotateWithTime": true,
+				"inverse": true,
+				"collision": false,
+				"moveWithTarget": 1,
+				"particleDuration": 600,
+				"cancelable": true,
+				"anim": "SHIELD_SHOCK",
+				"type": "OFFSET_PARTICLE_CIRCLE",
+				"pAlpha": 0.6
+			}, {
+				"type": "LOOP_START"
+			}, {
+				"numParticles": 1,
+				"duration": 0,
+				"centralAngle": 1,
+				"keySpline": "EASE_OUT",
+				"moveRotate": 0,
+				"rotateWithTime": true,
+				"inverse": true,
+				"collision": false,
+				"moveWithTarget": 0.5,
+				"particleDuration": 0.5,
+				"cancelable": true,
+				"anim": "SHIELD_SHOCK2",
+				"type": "OFFSET_PARTICLE_CIRCLE",
+				"pScale": {
+					"init": {
+						"x": 1,
+						"y": 1
+					},
+					"start": {
+						"value": {
+							"x": 2.5,
+							"y": 2.5
+						},
+						"spline": ""
+					}
+				},
+				"pAlpha": {
+					"init": 1,
+					"start": {
+						"value": 0,
+						"spline": ""
+					}
+				}
+			}, {
+				"time": 0.3,
+				"type": "WAIT"
+			}, {
+				"type": "LOOP_END"
+			}
+		],
+		"shieldElementWave": [{
+				"numParticles": 1,
+				"duration": 0,
+				"centralAngle": 1,
+				"keySpline": "EASE_IN_OUT",
+				"moveRotate": 0,
+				"rotateWithTime": true,
+				"inverse": true,
+				"collision": false,
+				"moveWithTarget": 1,
+				"particleDuration": 600,
+				"cancelable": true,
+				"anim": "SHIELD_WAVE",
+				"type": "OFFSET_PARTICLE_CIRCLE",
+				"pAlpha": 0.6
+			}, {
+				"type": "LOOP_START"
+			}, {
+				"numParticles": 1,
+				"duration": 0,
+				"centralAngle": 1,
+				"keySpline": "EASE_OUT",
+				"moveRotate": 0,
+				"rotateWithTime": true,
+				"inverse": true,
+				"collision": false,
+				"moveWithTarget": 0.5,
+				"particleDuration": 0.5,
+				"cancelable": true,
+				"anim": "SHIELD_WAVE2",
+				"type": "OFFSET_PARTICLE_CIRCLE",
+				"pScale": {
+					"init": {
+						"x": 1,
+						"y": 1
+					},
+					"start": {
+						"value": {
+							"x": 2.5,
+							"y": 2.5
+						},
+						"spline": ""
+					}
+				},
+				"pAlpha": {
+					"init": 1,
+					"start": {
+						"value": 0,
+						"spline": ""
+					}
+				}
+			}, {
+				"time": 0.3,
+				"type": "WAIT"
+			}, {
+				"type": "LOOP_END"
+			}
+		]
 	}
 }

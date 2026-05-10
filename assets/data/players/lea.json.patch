@@ -171,7 +171,8 @@
 	}]},{
 
 
-
+	
+	
 
 
 
@@ -1637,6 +1638,65 @@
 				"type": "GENERIC"
 			}
 		},{
+			"type": "SET_KEY",
+			"index": "azureSlashSoundBig",
+			"content": {
+				"copyOwnerAnims": false,
+				"breakType": "COMBATANT",
+				"action": 
+				[{
+					"volume": 1,
+					"variance": 0.1,
+					"global": false,
+					"loop": false,
+					"type": "PLAY_SOUND",
+					"speed": 1.3,
+					"sound": "media\/sound\/battle\/airon\/close-combat-hit-hard1.ogg"
+				},{
+					"volume": 1.0,
+					"variance": 0.1,
+					"global": false,
+					"loop": false,
+					"type": "PLAY_SOUND",
+					"speed": 0.9,
+					"sound": "media\/sound\/battle\/airon\/close-combat-hit-hard4.ogg"
+				},{
+					"duration": 0,
+					"target": "SELF",
+					"align": "BOTTOM",
+					"rotateFace": 0,
+					"flipLeftFace": false,
+					"wait": false,
+					"waitSkip": 0,
+					"actionDetached": true,
+					"ignoreSlowMo": true,
+					"fixPos": false,
+					"type": "SHOW_EFFECT",
+					"effect":
+					{
+						"sheet": "default-hit",
+						"name": "heavy"
+					},
+					"offset":
+					{
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}				
+				}],
+				"invisible": false,
+				"hp": 0,
+				"stickToSource": "TARGET",
+				"stickFaceAlign": false,
+				"size": {
+					"x": 8,
+					"y": 8,
+					"z": 8
+				},
+				"config": {},
+				"type": "GENERIC"
+			}
+		},{
 			"type": "EXIT"
 	}]},{
 
@@ -2556,6 +2616,120 @@
 			"type": "EXIT"
 	}]},{
 
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-nerfs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "shockHomingGen", "action", 1, "hit", 10]
+		},{
+			"type": "SET_KEY",
+			"index": "count",
+			"content": 8
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-visuals\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["actions", "NEUTRAL", "ATTACK_SPECIAL2_A", "steps"]
+		},{
+			"type": "ADD_ARRAY_ELEMENT",
+			"index": 0,
+			"content": {
+				"posType": "TARGET",
+				"align": "CENTER",
+				"type": "SET_HIT_PROXY",
+				"proxy": "azureSlashSoundBig",
+				"offset": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
+
+
+
+
+
+	"type": "IF",
+	"cond": "window.localStorage.getItem(\"azure-balance-arts-buffs\") != \"false\"",
+	"thenSteps":
+	[
+		{
+			"type": "ENTER",
+			"index": ["proxies", "neutralDmgShield", "action", 2]
+		},{
+			"type": "SET_KEY",
+			"index": "attack",
+			"content": {
+				"type": "NONE",
+				"visualType": "LIGHT",
+				"element": "NEUTRAL",
+				"damageFactor": 0.7,
+				"reverse": true,
+				"spFactor": 0,
+				"guardable": "",
+				"skillBonus": "MELEE_DMG"
+			}
+		},{
+			"type": "SET_KEY",
+			"index": "radius",
+			"content": 52
+		},{
+			"type": "EXIT"
+		},{
+			"type": "ENTER",
+			"index": 1
+		},{
+			"type": "SET_KEY",
+			"index": "effect",
+			"content": {
+				"sheet": "azure",
+				"name": "shieldSpikesBigger"
+			}
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+		},{
+			"type": "EXIT"
+	}]},{
 
 
 
