@@ -1726,6 +1726,63 @@ ig.ENTITY.Enemy.inject({
 });
 
 
+ig.Game.inject({
+	loadingComplete(...args){
+		this.parent(...args);
+		
+		var hasAutumnsGenesis = false;
+		for (var c=0;c<window.activeMods.length;c++)
+			if (window.activeMods[c].name == "autumns-genesis")
+				hasAutumnsGenesis = true;
+		
+		if (hasAutumnsGenesis && localStorage.getItem("IG_LANG") == "en_US")
+		{
+			if (localStorage.getItem("didAutumnsGenesisWarning") == "true")
+			{
+			}
+			else
+			{
+				ig.ENTITY.Player.doAutumnsGenesisWarning = true;
+			}
+		}
+		else
+		{
+			localStorage.setItem("didAutumnsGenesisWarning", "false");
+			ig.ENTITY.Player.doAutumnsGenesisWarning = null;
+		}
+	}
+});
+
+
+ig.ENTITY.Player.inject({
+	update(...args) {
+	 		  
+		if(ig.ENTITY.Player.doAutumnsGenesisWarning && ig.game.events.runningEventCalls.length == 0)
+		{
+			localStorage.setItem("didAutumnsGenesisWarning", "true");
+
+			ig.ENTITY.Player.doAutumnsGenesisWarning = null;
+			var autumnsGenesisWarningEvent = {
+				steps: [{
+						titleText: {
+							"en_US": "Note: \\c[3]Autumn's Genesis\\c[0] is unfinished, and causes problems with certain quests and features.",
+						},
+						text: {
+							"en_US": "\nIt's recommended to disable it unless you're specifically doing its content, which is all at endgame in the Arena.",
+						},
+						center: false,
+						autoContinue: false,
+						type: "SHOW_CENTER_MSG"
+					}
+				]
+			};
+			var b = new ig.Event(autumnsGenesisWarningEvent);
+			sc.Cutscene.startCutscene(b);
+		}
+		return this.parent(...args);
+	}
+});
+
 //fix the area name disappearing from the map menu when using controller, if the mouse cursor is in the wrong spot even when you're not using mouse
 sc.MapAreaContainer.inject({
 	onMouseInteract(a, b)
